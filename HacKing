@@ -157,13 +157,7 @@ c9="$red[$green$n9$red]$white"
 c10="$red[$green$n10$red]$white"
 c11="$red[$green$n11$red]$white"
 
-logo="${yellow}
-  ___  _ __   ___${red} __  __
-${yellow} / _ \\| '_ \\ / _ ${red} \\ \\/ /
-${yellow}| (_) | | | |  __/${red} >  <
-${yellow} \___/|_| |_|\\___${red} /_/\_\\
-"
-prompt="${purple}[${blue}HacKing${cyan}@${blue}space${purple}]$"
+prompt="${purple}[${blue}Anlominus${cyan}@${blue}HacKing${purple}]$"
 
 # checking for system home dir
 if [ -d $HOME ]; then
@@ -972,7 +966,7 @@ menu() {
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
-    echo " ${c1} ${green} All tools ${nc}(${red}$tools tools${nc})"
+    echo " ${c1} ${green} All tools" ${red}[${purple}$tools${red} ]
     echo " ${c2} ${green} Tools category"
     echo " ${c3} ${green} Update HacKing"
     echo " ${c4} ${green} About us\n"
