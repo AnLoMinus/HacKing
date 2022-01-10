@@ -135,7 +135,7 @@ n18="18"
 ##################
 #    VTCOLOR     #
 ##################
-c0="$red[$green$n0$red]$white"
+c0="$red[$green$n00$red]$white"
 c1="$red[$green$n1$red]$white"
 c2="$red[$green$n2$red]$white"
 c3="$red[$green$n3$red]$white"
