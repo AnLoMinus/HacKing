@@ -1,5 +1,5 @@
 <h1 align="center"> 👨‍💻 HคcKᎥήg 👨‍💻 </h1>
-  
+
 
 <div align="center">
 
@@ -8,16 +8,16 @@
 ![image](https://user-images.githubusercontent.com/51442719/148802714-105e91e0-4d5e-4045-ad81-7033e79bc221.png)
 
 
-<h1 align="center"> 
-  
+<h1 align="center">
+
 ` 🌏 Copied from all over the world 🌍`
 
-</h1> 
+</h1>
 
 <div align="center">
 
 
-Hacking Tools are computer programs and scripts that help you find and exploit weaknesses in computer systems, web applications, servers and networks. 
+Hacking Tools are computer programs and scripts that help you find and exploit weaknesses in computer systems, web applications, servers and networks.
 
 </div>
 
@@ -44,7 +44,7 @@ Hackers are classified according to the intent of their actions. The following l
 * [CAINE](http://www.caine-live.net/): CAINE offers a complete forensic environment that is organized to integrate existing software tools as software modules and to provide a friendly graphical interface.
 * [Parrot Security OS](http://www.parrotsec.org/): Parrot is a worldwide community of developers and security specialists that work together to build a shared framework of tools to make their job easier, standardized and more reliable and secure.
 * [BlackArch Linux](http://www.blackarch.org/): BlackArch Linux is an Arch Linux-based penetration testing distribution for penetration testers and security researchers.
-* [ArchStrike](https://archstrike.org/): ArchStrike is a non-profit organization aiming to create a simple and clean penetration testing distribution for security researchers and enthusiasts. 
+* [ArchStrike](https://archstrike.org/): ArchStrike is a non-profit organization aiming to create a simple and clean penetration testing distribution for security researchers and enthusiasts.
 * [Tsurugi Linux](https://tsurugi-linux.org/index.php): Tsurugi Linux is a DFIR open source project that is and will be totally free, independent, without involving any commercial brand
 
 Thanks to: [Offensive Security - Kali Linux Menu](https://www.offensive-security.com) helped me a lot on the decision on the hierarchical order of the folders  
