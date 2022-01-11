@@ -50,6 +50,21 @@
 #
 #
 #
+################
+#    VColors   #
+################
+white="\033[1;37m"
+grey="\033[0;37m"
+purple="\033[0;35m"
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+purple="\033[0;35m"
+cyan="\033[0;36m"
+cafe="\033[0;33m"
+fiuscha="\033[0;35m"
+blue="\033[1;34m"
+nc=""
 ###############
 #    Banner   #
 ###############
@@ -102,26 +117,10 @@ echo -e "$purple
 echo -e "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]"
 }
 
-nc="\033[00m"
-################
-#    VColors   #
-################
-white="\033[1;37m"
-grey="\033[0;37m"
-purple="\033[0;35m"
-red="\033[1;31m"
-green="\033[1;32m"
-yellow="\033[1;33m"
-purple="\033[0;35m"
-cyan="\033[0;36m"
-cafe="\033[0;33m"
-fiuscha="\033[0;35m"
-blue="\033[1;34m"
-nc=""
-
 #################
 #    VNumbers   #
 #################
+nx="x"
 n00="00"
 n1="1"
 n2="2"
@@ -144,7 +143,7 @@ n18="18"
 ##################
 #    VTCOLOR     #
 ##################
-c0="$red[$green$n00$red]$white"
+cx="$red[$green$nx$red]$white"
 c1="$red[$green$n1$red]$white"
 c2="$red[$green$n2$red]$white"
 c3="$red[$green$n3$red]$white"
@@ -180,8 +179,8 @@ fi
 # checking for configuration dir
 if [ -d /data/data/com.termux/files/usr/etc ]; then
   conf_dir="/data/data/com.termux/files/usr/etc"
-elif [ -d /etc ]; then
-  conf_dir="/etc"
+elif [ -d ./data ]; then
+  conf_dir="../"
 fi
 
 # configuration files
@@ -229,6 +228,79 @@ elif [ `command -v brew` ]; then
   system="mac"
   sudo=""
 fi
+
+menu() {
+  while true; do
+    clear
+    Banner
+    tools=`grep -n '.' $tools_data | wc -l`
+    # echo "$logo"
+    echo "\t ${c1} ${green} All Tools" ${red}[${purple}$tools${red} ]
+    echo "\t ${c2} ${green} Cover My Ass"
+    echo "\t ${c3} ${green} Categories"
+    echo "\t ${c4} ${green} Update\n"
+    echo "\t ${c5} ${green} About\n"
+    echo "\t ${cx} ${green} Exit\n"
+    echo "  $prompt "
+    read cmd
+    case ${cmd} in
+      1)
+        all_tools
+      ;;
+      2)
+        covermyAss
+      ;;
+      3)
+        category
+      ;;
+      4)
+        update
+      ;;
+      5)
+        about
+      ;;
+      x|0|00|exit|Exit)
+        echo "${green}Exiting ...."
+        clear
+        exit
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
+covermyAss() {
+  while true; do
+    clear
+    Banner
+    echo "\t ${c1} ${green} Anonymouslly surfing"
+    echo "\t ${c2} ${green} Cover My Ass"
+    echo "\t ${cx} ${green} Back\n"
+    echo "  $prompt "
+    read cmd
+    case ${cmd} in
+      1)
+        echo "${green}Exiting ....${nc}"
+      ;;
+      2)
+        echo "${green}Exiting ....${nc}"
+        sh CoverMyAss.sh
+      ;;
+      0|00|x|exit|Exit)
+        echo "${green}Exiting ....${nc}"
+        break
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
 
 # install tools
 install() {
@@ -942,62 +1014,6 @@ update() {
     esac
   done
 }
-
-# about HacKing function
-about() {
-  clear
-  echo "$logo"
-  echo " ${yellow}HacKing ${red} v0.1${nc}"
-  echo " HacKing is a library of"
-  echo " hacking tools for termux"
-  echo " and other linux distribution.\n"
-  echo " ${red}Warning:${nc}"
-  echo " We are not responsible for any misuse"
-  echo " or damage caused by this program."
-  echo " Use this tool at your own risk!"
-  echo "$prompt "
-  read tmp
-}
-
-# this is the main function
-menu() {
-  while true; do
-    clear
-    Banner
-    tools=`grep -n '.' $tools_data | wc -l`
-    # echo "$logo"
-    echo " ${c1} ${green} All tools" ${red}[${purple}$tools${red} ]
-    echo " ${c2} ${green} Tools category"
-    echo " ${c3} ${green} Update HacKing"
-    echo " ${c4} ${green} About us\n"
-    echo " ${c5} ${green} Exit\n"
-    echo "$prompt "
-    read cmd
-    case ${cmd} in
-      1)
-        all_tools
-      ;;
-      2)
-        category
-      ;;
-      3)
-        update
-      ;;
-      4)
-        about
-      ;;
-      5|exit|Exit)
-        echo "${green}Exiting ....${nc}"
-        break
-      ;;
-      *)
-        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
-        sleep 1
-      ;;
-    esac
-  done
-}
-
 
 # list all tools from data
 cli_list_all() {

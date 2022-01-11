@@ -1,5 +1,6 @@
+|TOOL|NAME|CATEGORY|LINK|Package Manager|requirements|
+|---|---|---|---|---|---|
 4nonimizer|4nonimizer|null|https://github.com/Hackplayers/4nonimizer.git|git|git
-4nonimizer|4nonimizer|locally_information|https://github.com/Hackplayers/4nonimizer.git|git|git
 A-Rat|A-Rat|exploitation_tools|https://github.com/RexTheGod/A-Rat.git|git|python,git
 ADB-Toolkit|ADB-Toolkit|null|https://github.com/ASHWIN990/ADB-Toolkit.git|git|git
 ATSCAN|ATSCAN|exploitation_tools|https://github.com/AlisamTechnology/ATSCAN.git|git|git
