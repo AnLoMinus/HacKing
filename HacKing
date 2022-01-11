@@ -340,13 +340,13 @@ privEsc_Linux() {
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     echo "\t ${c1} ${cafe} AutoLocalPrivilegeEscalation:$cyan An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically."
-    echo "\t ${c2} ${cafe} BeRoot:$cyan BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege. exploits."
+    echo "\t ${c2} ${cafe} BeRoot:$cyan Project Check common misconfigurations to find a way to escalate our privilege."
     echo "\t ${c3} ${cafe} LinEnum:$cyan Scripted local Linux enumeration & privilege escalation checks"
     echo "\t ${c4} ${cafe} LinPEAS:$cyan Linux Privilege Escalation Awesome Script"
     echo "\t ${c5} ${cafe} Linux Exploit Suggester 2:$cyan Exploit suggester based on Linux_Exploit_Suggester"
     echo "\t ${c6} ${cafe} Linux Exploit Suggester:$cyan based on operating system release number."
     echo "\t ${c7} ${cafe} Linux Kernel Exploits"
-    echo "\t ${c8} ${cafe} Linux PrivChecker:$cyan locally Linux enumerate system info, common privilege escalation, world writable files, misconfigurations, clear-text passwords and applicable exploits."
+    echo "\t ${c8} ${cafe} Linux PrivChecker:$cyan Enumerate system info, privilege escalation, writable files, misconfigurations, clear-text passwords, applicable exploits."
     echo "\t ${c9} ${cafe} Linux Smart Enumeration:$cyan Linux enumeration tools for pentesting and CTFs"
     echo "\t ${c10} ${cafe} Linux Soft Exploit Suggester:$cyan Linux enumeration tools for pentesting and CTFs"
     echo "\t ${c11} ${cafe} PrivEsc:$cyan collection of Windows, Linux and MySQL privilege escalation scripts and exploits."
