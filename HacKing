@@ -95,6 +95,7 @@ echo "$VPrivEsc"
 #################
 nx="x"
 na="A"
+nb="ab"
 n00="00"
 n1="1"
 n2="2"
@@ -123,6 +124,7 @@ cInfo="$red[$yellow!$red]$white"
 cPlus="$red[$green+$red]$white"
 cx="$red[$green$nx$red]$cafe"
 ca="$red[$green$na$red]$cafe"
+cb="$red[$green$nb$red]$cafe"
 c1="$red[$green$n1$red]$cafe"
 c2="$red[$green$n2$red]$cafe"
 c3="$red[$green$n3$red]$cafe"
@@ -221,14 +223,14 @@ menu() {
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
-    echo "\n\t ${ca} ${cafe} Anlominus\n"
-    echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\t ${c2} ${cafe} Categories\n"
+    echo "\n\t ${ca} ${cafe} Anlominus" ${red}[${blue} Local Tools ${red}]
+    echo "\n\t ${c1} ${cafe} All Tools" ${red}[${blue}$tools${red} ]
+    echo "\t ${c2} ${cafe} All Categories\n"
     echo "\t ${c3} ${cafe} "
     echo "\t ${c4} ${cafe} "
     echo "\t ${c5} ${cafe} "
     echo "\t ${c6} ${cafe} \n"
-    echo "\t ${c7} ${cafe} About"
+    echo "\t ${cb} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
     read cmd
@@ -260,7 +262,7 @@ menu() {
       aa)
         Anonymity
       ;;
-      9)
+      ab)
         about
       ;;
       x|0|00|exit|Exit)
@@ -282,19 +284,20 @@ Anlominus() {
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
-    echo "\t ${c1} ${cafe} Anonymity"
-    echo "\t ${c2} ${cafe} Priveledge Escalation"
+    echo "\t ${ca} ${cafe} Anonymity$blue Clearing Logs tool"
+    echo "\n\t ${c2} ${cafe} Priveledge Escalation"
     echo "\t ${c3} ${cafe} "
     echo "\t ${c4} ${cafe} "
     echo "\t ${c5} ${cafe} "
     echo "\t ${c6} ${cafe} \n"
-    echo "\t ${c7} ${cafe} About"
+    echo "\t ${cb} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
     read cmd
     case ${cmd} in
-      1)
-
+      a|A)
+      echo "\t ${c18} ${cafe} Cover My Ass:$cyan Cover your tracks on UNIX systems."
+      sh CoverMyAss
       ;;
       2)
         privEsc_Linux
@@ -317,13 +320,12 @@ Anlominus() {
       aa)
         Anonymity
       ;;
-      9)
+      ab)
         about
       ;;
       x|0|00|exit|Exit)
         echo "${cafe}Exiting ...."
-        clear
-        exit
+        break
       ;;
       *)
         echo "${red}${cmd}: ${purple}invalid option!!${nc}"
@@ -356,7 +358,7 @@ privEsc_Linux() {
     echo "\t ${c15} ${cafe} Unix Privesc Check:$cyan Check for simple privilege escalation vectors on Unix systems"
     echo "\t ${c16} ${cafe} Unix Privilege Escalation Exploits Pack:$cyan Exploits for getting local root on$green Linux, BSD, AIX, HP-UX, Solaris, RHEL, SUSE etc."
     echo "\t ${c17} ${cafe} Uptux:$cyan Specialized privilege escalation checks for Linux systems."
-    echo "\t ${c18} ${cafe} Cover My Ass:$cyan Cover your tracks on UNIX systems."
+    echo "\t ${c18} ${cafe} "
     echo "\t ${cx} ${cafe} Back\n"
     echo "  $prompt "
     read cmd
@@ -437,7 +439,7 @@ privEsc_Linux() {
         sleep 5
       ;;
       18)
-        echo "${cafe}Cover My Ass ....${nc}"
+        echo "${cafe} ....${nc}"
         sleep 5
       ;;
       0|00|x|exit|Exit)
