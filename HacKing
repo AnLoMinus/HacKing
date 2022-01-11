@@ -65,6 +65,7 @@ cafe="\033[0;33m"
 fiuscha="\033[0;35m"
 blue="\033[1;34m"
 nc=""
+
 ###############
 #    Banner   #
 ###############
@@ -262,7 +263,7 @@ Anonymity() {
       ;;
       3)
         echo "${cafe}Exiting ....${nc}"
-        sh LinEnum
+        sh PrivEsc/Linux/LinEnum.sh
       ;;
       4)
         echo "${cafe}Exiting ....${nc}"
