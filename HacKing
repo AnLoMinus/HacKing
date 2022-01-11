@@ -140,7 +140,6 @@ c17="$red[$green$n17$red]$cafe"
 c18="$red[$green$n18$red]$cafe"
 
 prompt="${purple}[${blue} Anlominus ${cyan}@${blue} HacKing ${purple}] $"
-VPrivEsc="\n$red[$green+$red]$cyan Priviledge Escalation $red[$green+$red]\n"
 # checking for system home dir
 if [ -d $HOME ]; then
   home=$HOME
@@ -255,6 +254,17 @@ menu() {
   done
 }
 
+VPrivEsc="\n$red[$green+$red]$cyan Priviledge Escalation $red[$green+$red]\n"
+# Linux Privilege Escalation Check Script: Originally forked from the linuxprivchecker.py (Mike Czumak), this script is intended to be executed locally on a Linux box to enumerate basic system info and search for common privilege escalation vectors such as word writable files, misconfigurations, clear-text password and applicable exploits.
+# linux-smart-enumeration: Linux enumeration tools for pentesting and CTFs
+# linux-soft-exploit-suggester: linux-soft-exploit-suggester finds exploits for all vulnerable software in a system helping with the privilege escalation.
+# PrivEsc: A collection of Windows, Linux and MySQL privilege escalation scripts and exploits.
+# pspy: unprivileged Linux process snooping
+# traitor: Automatically exploit low-hanging fruit to pop a root shell. Linux privilege escalation made easy!
+# unix-privesc-check: Shell script to check for simple privilege escalation vectors on Unix systems
+# Unix-Privilege-Escalation-Exploits-Pack: Exploits for getting local root on Linux, BSD, AIX, HP-UX, Solaris, RHEL, SUSE etc.
+# uptux: Specialized privilege escalation checks for Linux systems.
+
 privEsc() {
   while true; do
     clear
@@ -263,10 +273,10 @@ privEsc() {
     echo "\t ${c2} ${cafe} BeRoot:$cyan BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege. exploits."
     echo "\t ${c3} ${cafe} LinEnum:$cyan Scripted local Linux enumeration & privilege escalation checks"
     echo "\t ${c4} ${cafe} LinPEAS:$cyan Linux Privilege Escalation Awesome Script"
-    echo "\t ${c5} ${cafe} Linux Priviledge Checker"
-    echo "\t ${c6} ${cafe} Linux Smart Enumeratin"
-    echo "\t ${c7} ${cafe} Macgic Recon:$cyan Passive\Active reconnaissance, vulnerability analysis, subdomain scan and more!"
-    echo "\t ${c8} ${cafe} Expliot Suggester:$cyan Linux privilege escalation auditing tool"
+    echo "\t ${c5} ${cafe} Linux Exploit Suggester 2:$cyan Exploit suggester based on Linux_Exploit_Suggester"
+    echo "\t ${c6} ${cafe} Linux Exploit Suggester:$cyan based on operating system release number."
+    echo "\t ${c7} ${cafe} Linux Kernel Exploits"
+    echo "\t ${c8} ${cafe} Linux PrivChecker:$cyan locally Linux enumerate system info, common privilege escalation, world writable files, misconfigurations, clear-text passwords and applicable exploits."
     echo "\t ${c9} ${cafe} Yodo:$cyan Local Privilege Escalation"
     echo "\t ${c10} ${cafe} Lynis:$cyan Security auditing based on UNIX like Linux, macOS, BSD, and others."
     echo "\t ${c11} ${cafe} Cover My Ass:$cyan Cover your tracks on UNIX systems."
@@ -275,38 +285,38 @@ privEsc() {
     read cmd
     case ${cmd} in
       1)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}AutoLocalPrivilegeEscalation ....${nc}"
       ;;
       2)
-        echo "${cafe}Exiting ....${nc}"
-        python PrivEsc/Linux/Enumeration/SUID3NUM/suid3num.py
+        echo "${cafe}BeRoot ....${nc}"
+        # python PrivEsc/Linux/Enumeration/SUID3NUM/suid3num.py
       ;;
       3)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}LinEnum ....${nc}"
         sh PrivEsc/Linux/LinEnum.sh
       ;;
       4)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}LinPEAS ....${nc}"
         sh PrivEsc/Linux/Enumeration/linpeas_base.sh
         sleep 5
       ;;
       5)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}Linux Priviledge Checker ....${nc}"
         python PrivEsc/Linux/Enumeration/LinuxPrivChecker/linuxprivchecker.py
         sleep 5
       ;;
       6)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}Linux Smart Enumeratin ....${nc}"
         bash PrivEsc/Linux/Enumeration/SmartEnumeration/lse.sh
         sleep 5
       ;;
       7)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}Macgic Recon ....${nc}"
         bash PrivEsc/Linux/Enumeration/mag1cr3c0n
         sleep 5
       ;;
       8)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}Expliot Suggester ....${nc}"
         bash PrivEsc/Linux/PriviledgeEscalation/ExploitSuggester.sh
         sleep 5
       ;;
