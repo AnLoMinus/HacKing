@@ -83,40 +83,6 @@ echo "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing 
 
 }
 
-##################
-#    ManBanner   #
-##################
-function ManBanner(){
-echo -e "$purple
-                           .
-                       ..',,'..
-                     .',,,,,,,,,.
-                    .',,,'..',,,,'.
-                   .',,'.     .,,,'
-                  .',,.        .,,,.
-                 .',..           .,,.
-                 .'.              ..,.
-                 .                  .'
-                ..    $green Aภl๏miuภuຮ $purple   .
-                ..                   .
-                ..                  ...
-         ....''''.     $blue HacKing$purple     .','''....
-       .',,,,,,,,'..               ..',,,,,,,,'.
-      ...'',,,,,,,'...          ....',,,,,,,,'...
-     ....'',;;;;;;;,,'''......'''',,;;;;;;;,'''...
-    ......'',,;;;:::cccllllooooooooooooollll:'.....
-    .....'.'',,;;::ccloodxxxdddddddooooollll,.'....
-    .......',,;;::clloddxkkkkxxxdddoooollllc,......
-    .'''''',,;;::cclooooDATOS0000Oxoooollllc,.......
-   ..'''',',;;::ccclllooodk0xdddddxdoollllcc,'''''...
-  ........';;::ccclllooodddxkkkkkkxdollllcc:'.........
- ......  .':::ccllloooodddxxxddddoddolllcc::'..  ......
- ......:.;:::ccllloooodddxxxddddooooollcc::;'c,':......
-  .''..cc.''''''',,,,,,,;;;;;,,,,,,,,''''....:.cc..''.
-"
-echo -e "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]"
-}
-
 #################
 #    VNumbers   #
 #################
