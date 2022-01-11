@@ -9,7 +9,7 @@
 ###############################################
 #
 # Source Name : Covermyass.sh
-# Source: https://github.com/sundowndev/covermyass/master/covermyass
+# Source: https://github.com/sundowndev/covermyass
 #
 # New Name : HacKing
 # New Date : 11 January 2022
