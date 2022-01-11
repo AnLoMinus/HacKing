@@ -5,7 +5,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-<img width="684" alt="Screen Shot 2022-01-11 at 2 04 47" src="https://user-images.githubusercontent.com/51442719/148858505-a9a0e43c-6824-45d2-ae6d-09d2cc8e4a6d.png">
+<img width="684" alt="Screen Shot 2022-01-11 at 2 19 34" src="https://user-images.githubusercontent.com/51442719/148859697-3bbd7e3c-945b-469d-a4c8-5146a64ac3ef.png">
 
  <img width="681" alt="Screen Shot 2022-01-11 at 2 06 02" src="https://user-images.githubusercontent.com/51442719/148858557-0f234f04-9539-40a6-a317-f9258d4e4dba.png">
 
