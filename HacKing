@@ -214,7 +214,7 @@ menu() {
         all_tools
       ;;
       2)
-        covermyAss
+        Anonymity
       ;;
       3)
         category
@@ -238,12 +238,16 @@ menu() {
   done
 }
 
-covermyAss() {
+Anonymity() {
   while true; do
     clear
     Banner
     echo "\t ${c1} ${cafe} Anonymouslly surfing"
     echo "\t ${c2} ${cafe} Cover My Ass"
+    echo "\t ${c3} ${cafe} LinEnum"
+    echo "\t ${c4} ${cafe} LinPeas"
+    echo "\t ${c5} ${cafe} Lynis"
+    echo "\t ${c6} ${cafe} Linus Smart Enumeratin"
     echo "\t ${cx} ${cafe} Back\n"
     echo "  $prompt "
     read cmd
@@ -254,6 +258,22 @@ covermyAss() {
       2)
         echo "${cafe}Exiting ....${nc}"
         sh CoverMyAss.sh
+      ;;
+      3)
+        echo "${cafe}Exiting ....${nc}"
+        sh LinEnum
+      ;;
+      4)
+        echo "${cafe}Exiting ....${nc}"
+        sh PrivEsc/Linux/Enumeration/linpeas_base.sh
+        sleep
+      ;;
+      5)
+        echo "${cafe}Exiting ....${nc}"
+      ;;
+      6)
+        echo "${cafe}Exiting ....${nc}"
+        bash PrivEsc/Linux/Enumeration/SmartEnumeration/lse.sh
       ;;
       0|00|x|exit|Exit)
         echo "${cafe}Exiting ....${nc}"

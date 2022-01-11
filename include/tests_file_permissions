@@ -1,0 +1,75 @@
+#!/bin/sh
+
+#################################################################################
+#
+#   Lynis
+# ------------------
+#
+# Copyright 2007-2013, Michael Boelen
+# Copyright 2007-2021, CISOfy
+#
+# Website  : https://cisofy.com
+# Blog     : http://linux-audit.com
+# GitHub   : https://github.com/CISOfy/lynis
+#
+# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# welcome to redistribute it under the terms of the GNU General Public License.
+# See LICENSE file for usage of this software.
+#
+#################################################################################
+#
+#  File permissions
+#
+#################################################################################
+#
+    InsertSection "${SECTION_FILE_PERMISSIONS}"
+#
+#################################################################################
+#
+    # Test        : FILE-7524
+    # Description : Perform file permissions check
+    Register --test-no FILE-7524 --weight L --network NO --category security --description "Perform file permissions check"
+    if [ ${SKIPTEST} -eq 0 ]; then
+        Display --indent 2 --text "- Starting file permissions check"
+        LogText "Test: Checking file permissions"
+        FOUND=0
+        for PROFILE in ${PROFILES}; do
+            LogText "Using profile ${PROFILE} for baseline."
+            FILES=$(${EGREPBINARY} '^permfile=|^permdir=' ${PROFILE} | ${CUTBINARY} -d= -f2 | ${CUTBINARY} -d: -f1)
+            for F in ${FILES}; do
+                LogText "Test: checking file/directory ${F}"
+                if [ -f "${F}" ]; then
+                    PERMS=$(${GREPBINARY} '^permfile=' ${PROFILE} | ${GREPBINARY} "=${F}:" | ${CUTBINARY} -d: -f2)
+                    if HasCorrectFilePermissions "${F}" "${PERMS}"; then
+                        Display --indent 4 --text "File: ${F}" --result "${STATUS_OK}" --color GREEN
+                    else
+                        Display --indent 4 --text "File: ${F}" --result "${STATUS_SUGGESTION}" --color YELLOW
+                        FOUND=1
+                    fi
+                elif [ -d "${F}" ]; then
+                    PERMS=$(${GREPBINARY} '^permdir=' ${PROFILE} | ${GREPBINARY} "=${F}:" | ${CUTBINARY} -d: -f2)
+                    if HasCorrectFilePermissions "${F}" "${PERMS}"; then
+                        Display --indent 4 --text "Directory: ${F}" --result "${STATUS_OK}" --color GREEN
+                    else
+                        Display --indent 4 --text "Directory: ${F}" --result "${STATUS_SUGGESTION}" --color YELLOW
+                        FOUND=1
+                    fi
+                else
+                    if IsVerbose; then Display --indent 4 --text "${F}" --result "${STATUS_NOT_FOUND}" --color WHITE; fi
+                    LogText "Skipping file/directory ${F} as it does not exist on this system"
+                fi
+            done
+        done
+        if [ ${FOUND} -eq 1 ]; then
+            ReportSuggestion "${TEST_NO}" "Consider restricting file permissions" "See screen output or log file" "text:Use chmod to change file permissions"
+        fi
+    fi
+#
+#################################################################################
+#
+
+WaitForKeyPress
+
+#
+#================================================================================
+# Lynis - Copyright 2007-2021, CISOfy - https://cisofy.com
