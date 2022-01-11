@@ -236,7 +236,7 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
     echo "\t ${c1} ${green} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\t ${c2} ${green} Cover My Ass"
+    echo "\t ${c2} ${green} Anonymity"
     echo "\t ${c3} ${green} Categories"
     echo "\t ${c4} ${green} Update\n"
     echo "\t ${c5} ${green} About\n"
