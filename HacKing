@@ -301,31 +301,37 @@ privEscLinux() {
       ;;
       3)
         echo "${cafe}LinEnum ....${nc}"
-        sh PrivEsc/Linux/Enumeration/LinEnum.sh
+        sh PrivEsc/Linux/LinEnum/LinEnum.sh
         sleep 5
       ;;
       4)
         echo "${cafe}LinPEAS ....${nc}"
+        sh PrivEsc/Linux/linPEAS/linpeas_base.sh
         sleep 5
       ;;
       5)
-        echo "${cafe}Linux Priviledge Checker ....${nc}"
+        echo "${cafe}Linux Exploit Suggester 2 ....${nc}"
+        perl PrivEsc/Linux/linux-exploit-suggester-2/linux-exploit-suggester-2.pl
         sleep 5
       ;;
       6)
-        echo "${cafe}Linux Smart Enumeratin ....${nc}"
-        sleep 5
+      echo "${cafe}Linux Exploit Suggester ....${nc}"
+      sh PrivEsc/Linux/linux-exploit-suggester/linux-exploit-suggester.sh
+      sleep 5
       ;;
       7)
-        echo "${cafe}Macgic Recon ....${nc}"
-        sleep 5
+      echo "${cafe}Linux kernel Exploits ....${nc}"
+      # sh PrivEsc/Linux/linux-kernel-exploits/linux-exploit-suggester.sh
+      #   sleep 5
       ;;
       8)
-        echo "${cafe}Expliot Suggester ....${nc}"
-        sleep 5
+        echo "${cafe}Linux PrivChecker ....${nc}"
+        sh PrivEsc/Linux/linuxprivchecker/linuxprivchecker.sh
+        sleep 10
       ;;
       9)
-        echo "${cafe}Exiting ....${nc}"
+        echo "${cafe}Linux Smart Enumeration ....${nc}"
+        bash PrivEsc/Linux/linux-smart-enumeration/lse.sh
         sleep 5
       ;;
       10)
