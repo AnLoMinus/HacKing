@@ -4,7 +4,7 @@
 
 <h1 align="center"> 👨‍💻 HคcKᎥήg 👨‍💻 </h1>
 
-<img width="684" alt="Screen Shot 2022-01-11 at 2 19 34" src="https://user-images.githubusercontent.com/51442719/148859697-3bbd7e3c-945b-469d-a4c8-5146a64ac3ef.png">
+<img width="598" alt="Screen Shot 2022-01-11 at 20 29 11" src="https://user-images.githubusercontent.com/51442719/149000550-51937aad-9ddf-4c20-b3e6-535b9159560d.png">
 
 ![image](https://user-images.githubusercontent.com/51442719/148944587-10ed5bfa-42bc-4e87-972e-54ecdb60afa5.png)
 
