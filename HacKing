@@ -144,7 +144,8 @@ c16="$red[$green$n16$red]$cafe"
 c17="$red[$green$n17$red]$cafe"
 c18="$red[$green$n18$red]$cafe"
 
-prompt="${purple}[${blue} Anlominus ${cyan}@${blue} HacKing ${purple}] $"
+promptOption="${purple}[${blue} Anlominus ${cyan}@${blue} HacKing ${purple}] $"
+
 # checking for system home dir
 if [ -d $HOME ]; then
   home=$HOME
@@ -167,7 +168,7 @@ fi
 if [ -d /data/data/com.termux/files/usr/etc ]; then
   conf_dir="/data/data/com.termux/files/usr/etc"
 elif [ -d ./data ]; then
-  conf_dir="../"
+  conf_dir=".."
 fi
 
 # configuration files
@@ -232,7 +233,7 @@ menu() {
     # echo "\t ${c6} ${cafe} \n"
     echo "\t ${cb} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
-    echo "  $prompt "
+    echo "  $promptOption "
     read cmd
     case ${cmd} in
       a|A)
@@ -292,7 +293,7 @@ Anlominus() {
     echo "\t ${c6} ${cafe} \n"
     echo "\t ${cb} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
-    echo "  $prompt "
+    echo "  $promptOption "
     read cmd
     case ${cmd} in
       a|A)
@@ -360,7 +361,7 @@ privEsc_Linux() {
     echo "\t ${c17} ${cafe} Uptux:$cyan Specialized privilege escalation checks for Linux systems."
     echo "\t ${c18} ${cafe} "
     echo "\t ${cx} ${cafe} Back\n"
-    echo "  $prompt "
+    echo "  $promptOption "
     read cmd
     case ${cmd} in
       1)
@@ -469,7 +470,7 @@ privEsc_Windows() {
     echo "\t ${c6} ${cafe} exit\n"
     echo "\t ${c7} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
-    echo "  $prompt "
+    echo "  $promptOption "
     read cmd
     case ${cmd} in
       1)
@@ -776,7 +777,7 @@ install() {
     esac
   fi
   # wait for user any input
-  echo "$prompt "
+  echo "$promptOption "
   read tmp_inp
 }
 
@@ -1044,7 +1045,7 @@ install_category_tool() {
     esac
   fi
   # wait for user any input
-  echo "$prompt "
+  echo "$promptOption "
   read tmp_inp
 }
 
@@ -1063,7 +1064,7 @@ all_tools() {
       done
     done
     echo " ${cafe} 0 Back"
-    echo "$prompt "
+    echo "$promptOption "
     read cmd
     # count total number of tools
     list=`grep -n "." $tools_data | wc -l`
@@ -1104,7 +1105,7 @@ category() {
       done
     done
     echo " ${cafe} 0 Back"
-    echo "$prompt "
+    echo "$promptOption "
     read cmd
     # count total number of category
     list=`grep -n "." $category_data | wc -l`
@@ -1128,7 +1129,7 @@ category() {
               done
             done
             echo " ${cafe} 0 Back"
-            echo "$prompt "
+            echo "$promptOption "
             read tmp_cmd
             # count total number of tools in category
             list=`grep -n "." $tools_data | sed -n "/$category/p" | wc -l`
@@ -1175,7 +1176,7 @@ update() {
     echo "$logo"
     echo " ${nc}[1] ${cafe} Update${nc}"
     echo " ${nc}[0] ${cafe} Back"
-    echo "$prompt "
+    echo "$promptOption "
     read cmd
     case ${cmd} in
       1)
