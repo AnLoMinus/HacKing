@@ -226,10 +226,10 @@ menu() {
     echo "\n\t ${ca} ${cafe} Anlominus" ${red}[${blue} Local Tools ${red}]
     echo "\n\t ${c1} ${cafe} All Tools" ${red}[${blue}$tools${red} ]
     echo "\t ${c2} ${cafe} All Categories\n"
-    echo "\t ${c3} ${cafe} "
-    echo "\t ${c4} ${cafe} "
-    echo "\t ${c5} ${cafe} "
-    echo "\t ${c6} ${cafe} \n"
+    # echo "\t ${c3} ${cafe} "
+    # echo "\t ${c4} ${cafe} "
+    # echo "\t ${c5} ${cafe} "
+    # echo "\t ${c6} ${cafe} \n"
     echo "\t ${cb} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
