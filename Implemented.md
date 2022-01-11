@@ -1,5 +1,5 @@
 <div align="center">
-  
+
 <table width="100%" border="24" cellspacing="24" cellpadding="24">
   <tbody>
     <tr>
@@ -61,7 +61,7 @@
   </tbody>
   </table>  
 
-  
+
 ## Scans That've Been Implemented
 
 Below is the ever growing list of scans that have been implemented.
@@ -92,11 +92,16 @@ Below is the ever growing list of scans that have been implemented.
 
   Note to print results marked as :x:, enable audit mode with the `-a` flag.
 
+  | Syntax      | Description | Test Text     |
+  | :---        |    :----:   |          ---: |
+  | Header      | Title       | Here's this   |
+  | Paragraph   | Text        | And more      |
+  
 </div>
 
 ---
-  
-  
+
+
   ## How To Contribute
 
 - If you can think of a scan idea that has not been implemented, raise it as an issue.
