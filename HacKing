@@ -337,7 +337,8 @@ Anlominus() {
 privEsc_Linux() {
   while true; do
     clear
-    Banner2
+    Banner
+    tools=`grep -n '.' $tools_data | wc -l`
     echo "\t ${c1} ${cafe} AutoLocalPrivilegeEscalation:$cyan An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically."
     echo "\t ${c2} ${cafe} BeRoot:$cyan BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege. exploits."
     echo "\t ${c3} ${cafe} LinEnum:$cyan Scripted local Linux enumeration & privilege escalation checks"
