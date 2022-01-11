@@ -110,6 +110,9 @@ n18="18"
 ##################
 #    VTCOLOR     #
 ##################
+cSharp="$red[$yellow#$red]$white"
+cInfo="$red[$yellow!$red]$white"
+cPlus="$red[$green+$red]$white"
 cx="$red[$green$nx$red]$cafe"
 c1="$red[$green$n1$red]$cafe"
 c2="$red[$green$n2$red]$cafe"
@@ -122,6 +125,13 @@ c8="$red[$green$n8$red]$cafe"
 c9="$red[$green$n9$red]$cafe"
 c10="$red[$green$n10$red]$cafe"
 c11="$red[$green$n11$red]$cafe"
+c12="$red[$green$n12$red]$cafe"
+c13="$red[$green$n13$red]$cafe"
+c14="$red[$green$n14$red]$cafe"
+c15="$red[$green$n15$red]$cafe"
+c16="$red[$green$n16$red]$cafe"
+c17="$red[$green$n17$red]$cafe"
+c18="$red[$green$n18$red]$cafe"
 
 prompt="${purple}[${blue}Anlominus${cyan}@${blue}HacKing${purple}]$"
 
@@ -244,14 +254,16 @@ Anonymity() {
     clear
     Banner
     echo "\t ${c1} ${cafe} Anonymouslly surfing"
-    echo "\t ${c2} ${cafe} Cover My Ass"
+    echo "\t ${c2} ${cafe} SUID3NUM:$cyan List all Default SUID Binaries "
     echo "\t ${c3} ${cafe} LinEnum"
     echo "\t ${c4} ${cafe} LinPeas"
     echo "\t ${c5} ${cafe} Linux Priviledge Checker"
     echo "\t ${c6} ${cafe} Linux Smart Enumeratin"
-    echo "\t ${c7} ${cafe} Macgic Recon"
-    echo "\t ${c8} ${cafe} Expliot Suggester:${cyan} Linux privilege escalation auditing tool"
+    echo "\t ${c7} ${cafe} Macgic Recon:$cyan Passive\Active reconnaissance, vulnerability analysis, subdomain scan and more!"
+    echo "\t ${c8} ${cafe} Expliot Suggester:$cyan Linux privilege escalation auditing tool"
     echo "\t ${c9} ${cafe} Yodo:$cyan Local Privilege Escalation"
+    echo "\t ${c10} ${cafe} Lynis:$cyan Security auditing based on UNIX like Linux, macOS, BSD, and others."
+    echo "\t ${c11} ${cafe} Cover My Ass:$cyan Cover your tracks on UNIX systems."
     echo "\t ${cx} ${cafe} Back\n"
     echo "  $prompt "
     read cmd
@@ -261,7 +273,7 @@ Anonymity() {
       ;;
       2)
         echo "${cafe}Exiting ....${nc}"
-        sh CoverMyAss.sh
+        python PrivEsc/Linux/Enumeration/SUID3NUM/suid3num.py
       ;;
       3)
         echo "${cafe}Exiting ....${nc}"
@@ -295,6 +307,16 @@ Anonymity() {
       9)
         echo "${cafe}Exiting ....${nc}"
         bash PrivEsc/Linux/PriviledgeEscalation/Yodo.sh
+        sleep 5
+      ;;
+      10)
+        echo "${cafe}Exiting ....${nc}"
+        sh PrivEsc/Linux/Enumeration/Lynis/lynis
+        sleep 5
+      ;;
+      11)
+        echo "${cafe}Exiting ....${nc}"
+        sh CoverMyAss
         sleep 5
       ;;
       0|00|x|exit|Exit)

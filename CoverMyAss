@@ -131,6 +131,13 @@ c8="$red[$green$n8$red]$white"
 c9="$red[$green$n9$red]$white"
 c10="$red[$green$n10$red]$white"
 c11="$red[$green$n11$red]$white"
+c12="$red[$green$n12$red]$cafe"
+c13="$red[$green$n13$red]$cafe"
+c14="$red[$green$n14$red]$cafe"
+c15="$red[$green$n15$red]$cafe"
+c16="$red[$green$n16$red]$cafe"
+c17="$red[$green$n17$red]$cafe"
+c18="$red[$green$n18$red]$cafe"
 
 prompt="${purple}[${blue}Anlominus${cyan}@${blue}CoverMyAss${purple}]$"
 
