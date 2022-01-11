@@ -1,9 +1,9 @@
 <div align="center">
   
-<table width="99%" border="1" cellspacing="1" cellpadding="1">
+<table width="100%" border="24" cellspacing="24" cellpadding="24">
   <tbody>
     <tr>
-      <td bgcolor="#CCCCCC">
+      <td bacgcolor="#CCCCCC">
         <div align="center"><b>System Variable </b></div>
       </td>
       <td bgcolor="#CCCCCC">
@@ -59,7 +59,8 @@
       <td height="2">User name who is currently login to this PC</td>
     </tr>
   </tbody>
-</table>  
+  </table>  
+
   
 ## Scans That've Been Implemented
 
