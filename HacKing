@@ -109,18 +109,18 @@ n18="18"
 ##################
 #    VTCOLOR     #
 ##################
-cx="$red[$green$nx$red]$white"
-c1="$red[$green$n1$red]$white"
-c2="$red[$green$n2$red]$white"
-c3="$red[$green$n3$red]$white"
-c4="$red[$green$n4$red]$white"
-c5="$red[$green$n5$red]$white"
-c6="$red[$green$n6$red]$white"
-c7="$red[$green$n7$red]$white"
-c8="$red[$green$n8$red]$white"
-c9="$red[$green$n9$red]$white"
-c10="$red[$green$n10$red]$white"
-c11="$red[$green$n11$red]$white"
+cx="$red[$green$nx$red]$cafe"
+c1="$red[$green$n1$red]$cafe"
+c2="$red[$green$n2$red]$cafe"
+c3="$red[$green$n3$red]$cafe"
+c4="$red[$green$n4$red]$cafe"
+c5="$red[$green$n5$red]$cafe"
+c6="$red[$green$n6$red]$cafe"
+c7="$red[$green$n7$red]$cafe"
+c8="$red[$green$n8$red]$cafe"
+c9="$red[$green$n9$red]$cafe"
+c10="$red[$green$n10$red]$cafe"
+c11="$red[$green$n11$red]$cafe"
 
 prompt="${purple}[${blue}Anlominus${cyan}@${blue}HacKing${purple}]$"
 
@@ -201,12 +201,12 @@ menu() {
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
-    echo "\t ${c1} ${green} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\t ${c2} ${green} Anonymity"
-    echo "\t ${c3} ${green} Categories"
-    echo "\t ${c4} ${green} Update\n"
-    echo "\t ${c5} ${green} About\n"
-    echo "\t ${cx} ${green} Exit\n"
+    echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
+    echo "\n\t ${c2} ${cafe} Anonymity\n"
+    echo "\t ${c3} ${cafe} Categories\n"
+    echo "\t ${c4} ${cafe} Update\n"
+    echo "\t ${c5} ${cafe} About\n"
+    echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
     read cmd
     case ${cmd} in
@@ -226,7 +226,7 @@ menu() {
         about
       ;;
       x|0|00|exit|Exit)
-        echo "${green}Exiting ...."
+        echo "${cafe}Exiting ...."
         clear
         exit
       ;;
@@ -242,21 +242,21 @@ covermyAss() {
   while true; do
     clear
     Banner
-    echo "\t ${c1} ${green} Anonymouslly surfing"
-    echo "\t ${c2} ${green} Cover My Ass"
-    echo "\t ${cx} ${green} Back\n"
+    echo "\t ${c1} ${cafe} Anonymouslly surfing"
+    echo "\t ${c2} ${cafe} Cover My Ass"
+    echo "\t ${cx} ${cafe} Back\n"
     echo "  $prompt "
     read cmd
     case ${cmd} in
       1)
-        echo "${green}Exiting ....${nc}"
+        echo "${cafe}Exiting ....${nc}"
       ;;
       2)
-        echo "${green}Exiting ....${nc}"
+        echo "${cafe}Exiting ....${nc}"
         sh CoverMyAss.sh
       ;;
       0|00|x|exit|Exit)
-        echo "${green}Exiting ....${nc}"
+        echo "${cafe}Exiting ....${nc}"
         break
       ;;
       *)
@@ -295,7 +295,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -317,7 +317,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -340,10 +340,10 @@ install() {
         if [ ! `command -v $tool_pac` ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for github tools
@@ -355,7 +355,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -377,7 +377,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -400,10 +400,10 @@ install() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${purple}'$tool_name' ${green} is installed successfully !!${nc}"
+          echo "${purple}'$tool_name' ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for curl tools
@@ -415,7 +415,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -437,7 +437,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -460,10 +460,10 @@ install() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for wget tools
@@ -475,7 +475,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -497,7 +497,7 @@ install() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -520,10 +520,10 @@ install() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
 
@@ -563,7 +563,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -585,7 +585,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -608,10 +608,10 @@ install_category_tool() {
         if [ ! `command -v $tool_pac` ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for github tools
@@ -623,7 +623,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -645,7 +645,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -668,10 +668,10 @@ install_category_tool() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for curl tools
@@ -683,7 +683,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -705,7 +705,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -728,10 +728,10 @@ install_category_tool() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for wget tools
@@ -743,7 +743,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -765,7 +765,7 @@ install_category_tool() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -788,10 +788,10 @@ install_category_tool() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: '$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
 
@@ -815,10 +815,10 @@ all_tools() {
     for data in `grep "." $tools_data | sort -f | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
       # display tools name from data
       for tool in $data; do
-        echo " ${green} $tool" | tr '|' ' ' | tr '@' ' '
+        echo " ${cafe} $tool" | tr '|' ' ' | tr '@' ' '
       done
     done
-    echo " ${green} 0 Back"
+    echo " ${cafe} 0 Back"
     echo "$prompt "
     read cmd
     # count total number of tools
@@ -856,10 +856,10 @@ category() {
     for data in `grep "." $category_data | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
       # display category alias name from data
       for category in $data; do
-        echo " ${green} $category" | tr '|' ' ' | tr '@' ' '
+        echo " ${cafe} $category" | tr '|' ' ' | tr '@' ' '
       done
     done
-    echo " ${green} 0 Back"
+    echo " ${cafe} 0 Back"
     echo "$prompt "
     read cmd
     # count total number of category
@@ -880,10 +880,10 @@ category() {
             for data in `grep "." $tools_data | sort -f | sed -n "/$category/p" | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
               # display tools name from data
               for tool in $data; do
-                echo " ${green} $tool" | tr '|' ' ' | tr '@' ' '
+                echo " ${cafe} $tool" | tr '|' ' ' | tr '@' ' '
               done
             done
-            echo " ${green} 0 Back"
+            echo " ${cafe} 0 Back"
             echo "$prompt "
             read tmp_cmd
             # count total number of tools in category
@@ -929,8 +929,8 @@ update() {
   while true; do
     clear
     echo "$logo"
-    echo " ${nc}[1] ${green} Update${nc}"
-    echo " ${nc}[0] ${green} Back"
+    echo " ${nc}[1] ${cafe} Update${nc}"
+    echo " ${nc}[0] ${cafe} Back"
     echo "$prompt "
     read cmd
     case ${cmd} in
@@ -938,7 +938,7 @@ update() {
         # check user is online or not
         wget -q --spider http://google.com
         if [ $? -eq 0 ]; then
-          echo "${green}Updating ...${nc}"
+          echo "${cafe}Updating ...${nc}"
           sleep 1
           if [ `command -v git` ]; then
             if [ $sudo ]; then
@@ -963,7 +963,7 @@ update() {
               sh ~/HacKing/install
             fi
           fi
-          echo "${green} HacKing updated !!${nc}"
+          echo "${cafe} HacKing updated !!${nc}"
           sleep 1
         else
           echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
@@ -986,7 +986,7 @@ cli_list_all() {
   # get all tools data
   tool=`grep "." $tools_data | sort -f | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr '|' ' '`
   # display tools name from data
-  echo "${green} $tool${nc}"
+  echo "${cafe} $tool${nc}"
 }
 
 # category function
@@ -995,7 +995,7 @@ cli_category() {
   for data in `grep "." $category_data | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
     # display category alias name from data
     for category in $data; do
-      echo " ${green} $category${nc}" | tr '|' ' ' | tr '@' ' '
+      echo " ${cafe} $category${nc}" | tr '|' ' ' | tr '@' ' '
     done
   done
 }
@@ -1042,7 +1042,7 @@ cli_update() {
   # check user is online or not
   wget -q --spider http://google.com
   if [ $? -eq 0 ]; then
-    echo "${green}Updating ...${nc}"
+    echo "${cafe}Updating ...${nc}"
     sleep 1
     if [ `command -v git` ]; then
       if [ $sudo ]; then
@@ -1063,7 +1063,7 @@ cli_update() {
         update_process
       fi
     fi
-    echo "${nc}'HacKing' ${green} updated successfully !!${nc}"
+    echo "${nc}'HacKing' ${cafe} updated successfully !!${nc}"
   else
     echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
   fi
@@ -1096,7 +1096,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1118,7 +1118,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1141,10 +1141,10 @@ install_process() {
         if [ ! `command -v $tool_pac` ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for github tools
@@ -1156,7 +1156,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1178,7 +1178,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1201,10 +1201,10 @@ install_process() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for curl tools
@@ -1216,7 +1216,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1238,7 +1238,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1261,10 +1261,10 @@ install_process() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
     # for wget tools
@@ -1277,7 +1277,7 @@ install_process() {
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
             # install tool dependency
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             if [ $tool_dependency != "null" ]; then
               for dep_name in `echo $tool_dependency | tr ',' ' '`; do
@@ -1298,7 +1298,7 @@ install_process() {
           #check user is online or not
           wget -q --spider http://google.com
           if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
+            echo "${cafe}Installing ...${nc}"
             sleep 1
             # install tool dependency
             if [ $tool_dependency != "null" ]; then
@@ -1321,10 +1321,10 @@ install_process() {
         if [ ! -e "./$tool_pac" ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+          echo "${nc}'$tool_name' ${nc}: ${cafe} is installed successfully !!${nc}"
         fi
       else
-        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${cafe} is already installed !!${nc}"
       fi
     ;;
 
@@ -1354,7 +1354,7 @@ cli_install() {
     similar=`grep -i "^$1" $tools_data | cut -d"|" -f1`
     if [ "$similar" ]; then
       echo "${blue}Did you mean${nc}:"
-      echo -n "${green} "
+      echo -n "${cafe} "
       grep -i "^$1" $tools_data | cut -d"|" -f1
       echo -n "${nc}"
     fi
@@ -1366,7 +1366,7 @@ cli_search() {
   # get tools data
   similar=`grep -i "^$1" $tools_data | cut -d"|" -f1`
   if [ "$similar" ]; then
-    echo -n "${green}"
+    echo -n "${cafe}"
     grep -i "^$1" $tools_data | cut -d"|" -f1
     echo -n "${nc}"
   else
@@ -1392,7 +1392,7 @@ cli_remove() {
   # check HacKing removed or not
   if [ ! -e $bin/HacKing ]; then
     if [ ! -d $conf_dir/HacKing ]; then
-      echo "${nc}'HacKing' : ${green} uninstalled successfully !!${nc}"
+      echo "${nc}'HacKing' : ${cafe} uninstalled successfully !!${nc}"
     fi
   fi
 }
