@@ -94,6 +94,7 @@ echo "$VPrivEsc"
 #    VNumbers   #
 #################
 nx="x"
+na="A"
 n00="00"
 n1="1"
 n2="2"
@@ -121,6 +122,7 @@ cSharp="$red[$yellow#$red]$white"
 cInfo="$red[$yellow!$red]$white"
 cPlus="$red[$green+$red]$white"
 cx="$red[$green$nx$red]$cafe"
+ca="$red[$green$na$red]$cafe"
 c1="$red[$green$n1$red]$cafe"
 c2="$red[$green$n2$red]$cafe"
 c3="$red[$green$n3$red]$cafe"
@@ -212,34 +214,110 @@ elif [ `command -v brew` ]; then
   sudo=""
 fi
 
+# Main Menu
 menu() {
   while true; do
     clear
     Banner
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
+    echo "\n\t ${ca} ${cafe} Anlominus\n"
     echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\n\t ${c2} ${cafe} PrivEscLinux"
-    echo "\t ${c3} ${cafe} Categories"
-    echo "\t ${c4} ${cafe} Update"
-    echo "\t ${c5} ${cafe} About\n"
+    echo "\t ${c2} ${cafe} Categories\n"
+    echo "\t ${c3} ${cafe} "
+    echo "\t ${c4} ${cafe} "
+    echo "\t ${c5} ${cafe} "
+    echo "\t ${c6} ${cafe} \n"
+    echo "\t ${c7} ${cafe} About"
+    echo "\t ${cx} ${cafe} Exit\n"
+    echo "  $prompt "
+    read cmd
+    case ${cmd} in
+      a|A)
+        Anlominus
+      ;;
+      1)
+        all_tools
+      ;;
+      2)
+        category
+      ;;
+      3)
+        privEsc_Linux
+      ;;
+      4)
+        Anonymity
+      ;;
+      5)
+        exit
+      ;;
+      6)
+        exit
+      ;;
+      7)
+        exit
+      ;;
+      aa)
+        Anonymity
+      ;;
+      9)
+        about
+      ;;
+      x|0|00|exit|Exit)
+        echo "${cafe}Exiting ...."
+        clear
+        exit
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
+        sleep 1
+      ;;
+    esac
+  done
+}
+# Anlominus Menu: Anonymity, Escalation, Rooting Scripts..
+Anlominus() {
+  while true; do
+    clear
+    Banner
+    tools=`grep -n '.' $tools_data | wc -l`
+    # echo "$logo"
+    echo "\t ${c1} ${cafe} Anonymity"
+    echo "\t ${c2} ${cafe} Priveledge Escalation"
+    echo "\t ${c3} ${cafe} "
+    echo "\t ${c4} ${cafe} "
+    echo "\t ${c5} ${cafe} "
+    echo "\t ${c6} ${cafe} \n"
+    echo "\t ${c7} ${cafe} About"
     echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
     read cmd
     case ${cmd} in
       1)
-        all_tools
+
       ;;
       2)
-        privEscLinux
+        privEsc_Linux
       ;;
       3)
-        category
+
       ;;
       4)
-        update
+
       ;;
       5)
+        exit
+      ;;
+      6)
+        exit
+      ;;
+      7)
+        exit
+      ;;
+      aa)
+        Anonymity
+      ;;
+      9)
         about
       ;;
       x|0|00|exit|Exit)
@@ -255,15 +333,8 @@ menu() {
   done
 }
 
-VPrivEsc="\n$red[$green+$red]$cyan Priviledge Escalation $red[$green+$red]\n"
-
-# unix-privesc-check: Shell script to check for simple privilege escalation vectors on Unix systems
-
-# Unix-Privilege-Escalation-Exploits-Pack: Exploits for getting local root on Linux, BSD, AIX, HP-UX, Solaris, RHEL, SUSE etc.
-
-# uptux: Specialized privilege escalation checks for Linux systems.
-
-privEscLinux() {
+# PrivEsc Linux tools
+privEsc_Linux() {
   while true; do
     clear
     Banner2
@@ -365,7 +436,7 @@ privEscLinux() {
         sleep 5
       ;;
       18)
-        echo "${cafe}Macgic Recon ....${nc}"
+        echo "${cafe}Cover My Ass ....${nc}"
         sleep 5
       ;;
       0|00|x|exit|Exit)
@@ -380,6 +451,63 @@ privEscLinux() {
   done
 }
 
+# PrivEsc Windows tools
+privEsc_Windows() {
+  while true; do
+    clear
+    Banner
+    tools=`grep -n '.' $tools_data | wc -l`
+    # echo "$logo"
+    echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
+    echo "\n\t ${c2} ${cafe} Categories"
+    echo "\t ${c3} ${cafe} Priviledge Escalation"
+    echo "\t ${c4} ${cafe} exit"
+    echo "\t ${c5} ${cafe} exit"
+    echo "\t ${c6} ${cafe} exit\n"
+    echo "\t ${c7} ${cafe} About"
+    echo "\t ${cx} ${cafe} Exit\n"
+    echo "  $prompt "
+    read cmd
+    case ${cmd} in
+      1)
+        all_tools
+      ;;
+      2)
+        category
+      ;;
+      3)
+        privEsc_Linux
+      ;;
+      4)
+        Anonymity
+      ;;
+      5)
+        exit
+      ;;
+      6)
+        exit
+      ;;
+      7)
+        exit
+      ;;
+      aa)
+        Anonymity
+      ;;
+      9)
+        about
+      ;;
+      x|0|00|exit|Exit)
+        echo "${cafe}Exiting ...."
+        clear
+        exit
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
+        sleep 1
+      ;;
+    esac
+  done
+}
 
 # install tools
 install() {
