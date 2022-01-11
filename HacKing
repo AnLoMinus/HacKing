@@ -213,7 +213,7 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
     echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\n\t ${c2} ${cafe} Anonymity\n"
+    echo "\n\t ${c2} ${cafe} PrivEsc\n"
     echo "\t ${c3} ${cafe} Categories\n"
     echo "\t ${c4} ${cafe} Update\n"
     echo "\t ${c5} ${cafe} About\n"
@@ -225,7 +225,7 @@ menu() {
         all_tools
       ;;
       2)
-        Anonymity
+        privEsc
       ;;
       3)
         category
@@ -249,14 +249,14 @@ menu() {
   done
 }
 
-Anonymity() {
+privEsc() {
   while true; do
     clear
     Banner
-    echo "\t ${c1} ${cafe} Anonymouslly surfing"
-    echo "\t ${c2} ${cafe} SUID3NUM:$cyan List all Default SUID Binaries "
-    echo "\t ${c3} ${cafe} LinEnum"
-    echo "\t ${c4} ${cafe} LinPeas"
+    echo "\t ${c1} ${cafe} AutoLocalPrivilegeEscalation:$cyan An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically."
+    echo "\t ${c2} ${cafe} BeRoot:$cyan BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege. exploits."
+    echo "\t ${c3} ${cafe} LinEnum:$cyan Scripted local Linux enumeration & privilege escalation checks"
+    echo "\t ${c4} ${cafe} LinPEAS:$cyan Linux Privilege Escalation Awesome Script"
     echo "\t ${c5} ${cafe} Linux Priviledge Checker"
     echo "\t ${c6} ${cafe} Linux Smart Enumeratin"
     echo "\t ${c7} ${cafe} Macgic Recon:$cyan Passive\Active reconnaissance, vulnerability analysis, subdomain scan and more!"
