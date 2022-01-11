@@ -248,6 +248,7 @@ Anonymity() {
     echo "\t ${c4} ${cafe} LinPeas"
     echo "\t ${c5} ${cafe} Linux Priviledge Checker"
     echo "\t ${c6} ${cafe} Linux Smart Enumeratin"
+    echo "\t ${c7} ${cafe} Macgic Recon"
     echo "\t ${cx} ${cafe} Back\n"
     echo "  $prompt "
     read cmd
@@ -276,6 +277,11 @@ Anonymity() {
       6)
         echo "${cafe}Exiting ....${nc}"
         bash PrivEsc/Linux/Enumeration/SmartEnumeration/lse.sh
+        sleep 5
+      ;;
+      7)
+        echo "${cafe}Exiting ....${nc}"
+        bash PrivEsc/Linux/Enumeration/mag1cr3c0n
         sleep 5
       ;;
       0|00|x|exit|Exit)

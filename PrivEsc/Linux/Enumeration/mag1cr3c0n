@@ -1,0 +1,299 @@
+#! /usr/bin/bash
+echo "    __  ___           ___        ____ _____      ____           _____          ___      __
+   /  |/  /___ _____ <  /____   / __ \__  /_____/ __ \____     / ___/_________<  /___  / /_
+  / /|_/ / __  / __  / / ___/  / /_/ //_ </ ___/ / / / __ \    \__ \/ ___/ ___/ / __ \/ __/
+ / /  / / /_/ / /_/ / / /__   / _, _/__/ / /__/ /_/ / / / /   ___/ / /__/ /  / / /_/ / /_
+/_/  /_/\__,_/\__, /_/\___/  /_/ |_/____/\___/\____/_/ /_/   /____/\___/_/  /_/ .___/\__/
+             /____/                                                          /_/           "
+echo "		   _______________                        |*\_/*|________
+		  |  ___________  |     .-.     .-.      ||_/-\_|______  |
+		  | |           | |    .****. .****.     | |           | |
+		  | |   0   0   | |    .*****.*****.     | |   0   0   | |
+		  | |     -     | |     .*********.      | |     -     | |
+		  | |   \___/   | |      .*******.       | |   \___/   | |
+		  | |___     ___| |       .*****.        | |___________| |
+		  |_____|\_/|_____|        .***.         |_______________|
+		    _|__|/ \|_|_.............*.............._|________|_
+		   / ********** \                          / ********** \ "
+echo "		 /  ************  \                      /  ************  \ "
+echo "		--------------------                    -------------------- "
+echo "				╔╗ ┬ ┬  ╔╦╗┌─┐┌─┐┌─┐┌┐┌┌┬┐┌─┐┬─┐
+				╠╩╗└┬┘   ║║├┤ ├┤ ├┤ │││ ││├┤ ├┬┘
+				╚═╝ ┴   ═╩╝└─┘└  └─┘┘└┘─┴┘└─┘┴└─ "
+echo "				https://github.com/d3f3nd3r-888/"
+echo "			If you like my script give respect on Hackthebox.eu"
+echo "			https://www.hackthebox.eu/home/users/profile/19685"
+echo " "
+echo "Please Enter name of folder where you want to save all recon files  "
+echo "Note: Folder will be saved to Desktop Directory "
+read folder
+mkdir $folder
+echo " "
+echo "A folder named $folder will be created in Desktop and if the folder already exists then the files will be stored into it"
+echo " "
+echo "Select the type of scan: "
+echo " 	1. nmap Scan			2. gobuster Scan
+	3. enum4linux Scan		4. nikto scan"
+echo "!!!!!!      Select scan type      !!!!!!"
+read choice
+if [ "$choice" = 1 ]
+then
+echo "███    ██ ███    ███  █████  ██████      ███████  ██████  █████  ███    ██ 
+████   ██ ████  ████ ██   ██ ██   ██     ██      ██      ██   ██ ████   ██ 
+██ ██  ██ ██ ████ ██ ███████ ██████      ███████ ██      ███████ ██ ██  ██ 
+██  ██ ██ ██  ██  ██ ██   ██ ██               ██ ██      ██   ██ ██  ██ ██ 
+██   ████ ██      ██ ██   ██ ██          ███████  ██████ ██   ██ ██   ████ 
+                                                                           
+
+
+"
+echo "Enter an IP: "
+read ip
+echo " "
+echo "You've entered $ip "
+echo " "
+mkdir $folder/nmapscan
+echo " Output Files will be stored in $folder/nmapscan folder "
+echo " "
+echo "Select type of Scan: "
+echo " 	1. Quick Scan			2. Regular Scan
+	3. Scan Top Ports		4. Scan All TCP Ports
+	5. Scan All UDP ports "
+read nmap
+if [ "$nmap" = 1 ]
+then
+echo "Quick Scan "
+echo "nmap -T4 -F $ip "
+echo " "
+nmap -T4 -F $ip -oN $folder/nmapscan/quickscan.txt
+elif [ "$nmap" = 2 ]
+then
+echo "Regular Scan "
+echo "nmap $ip "
+echo " "
+nmap $ip -oN $folder/nmapscan/regularscan.txt
+elif [ "$nmap" = 3 ]
+then
+echo "Scan Top Ports "
+echo "nmap -T4 -A -v $ip "
+echo " "
+nmap -T4 -A -v $ip -oN $folder/nmapscan/topportsscan.txt
+elif [ "$nmap" = 4 ]
+then
+echo "Scan All TCP Ports "
+echo "nmap -p 1-65535 -T4 -A -v $ip "
+echo " "
+nmap -p 1-65535 -T4 -A -v $ip -oN $folder/nmapscan/alltcpportsscan.txt
+elif [ "$nmap" = 5 ]
+then
+echo "Scan All UDP Ports "
+echo "nmap -sS -sU -T4 -A -v $ip "
+echo " "
+nmap -sS -sU -T4 -A -v $ip -oN $folder/nmapscan/alludpportsscan.txt
+else
+echo "Invalid Input "
+fi
+elif [ "$choice" = 2 ]
+then
+echo "██████   ██████  ██████  ██    ██ ███████ ████████ ███████ ██████ 
+██       ██    ██ ██   ██ ██    ██ ██         ██    ██      ██   ██ 
+██   ███ ██    ██ ██████  ██    ██ ███████    ██    █████   ██████  
+██    ██ ██    ██ ██   ██ ██    ██      ██    ██    ██      ██   ██ 
+ ██████   ██████  ██████   ██████  ███████    ██    ███████ ██   ██ 
+                                                                    
+                                                                    "
+echo " "
+mkdir $folder/gobuster
+echo "Files will be stored in '$folder/gobuster' folder"
+echo "Select type of scan: "
+echo "1. Directory Scan i.e http://website.com/FUZZ
+2. Subdomain Scan i.e FUZZ.website.com"
+echo " "
+read go
+if [ "$go" = 1 ]
+then
+echo "You've Selected Directory Mode of scan "
+echo " "
+mkdir $folder/gobuster/directorymode
+echo "Files will be stored in '$folder/gobuster/directorymode' folder"
+echo "Enter Url in 'http://url.com/' Format"
+read url
+echo "This '$url' will be scanned"
+echo " "
+echo "Select type of Directory Scan "
+echo "1. Scan Without Extensions i.e Normal Scan
+2. Scan With Extensions i.e scanning for pages or files with known extensions"
+read goa
+if [ "$goa" = 1 ]
+then
+echo "You've Selected Normal Mode of Directory Scan "
+echo " "
+mkdir $folder/gobuster/directorymode/normalscan
+echo "Files will be stored in '$folder/gobuster/directorymode/normalscan' folder"
+echo " Select Type of Wordlist "
+echo "1. Small Wordlist
+2. Medium Wordlist
+3. Large Wordlist
+4. Custom Wordlist "
+echo "Note: Dirbuster wordlists will be used in first 3 options, if you don't have dirbuster then select 4 and provide path to wordlist"
+read word
+if [ "$word" = 1 ]
+then
+echo "Gobuster Scan Using Small Wordlist "
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -o $folder/gobuster/directorymode/normalscan/smallscan.txt
+elif [ "$word" = 2 ]
+then
+echo "Gobuster Scan Using Medium Wordlist"
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o $folder/gobuster/directorymode/normalscan/mediumscan.txt
+elif [ "$word" = 3 ]
+then
+echo "Gobuster Scan Using Large Wordlist"
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -o $folder/gobuster/directorymode/normalscan/largescan.txt
+elif [ "$word" = 4 ]
+then
+echo "Gobuster Scan Using Custom Wordlist"
+echo "Enter full path to wordlist"
+read path
+echo " "
+echo "You've entered '$path' wordlist"
+echo " "
+gobuster dir -u $url -w $path -o $folder/gobuster/directorymode/normalscan/customscan.txt
+else
+echo " Invalid Input "
+fi
+elif [ "$goa" = 2 ]
+then
+echo "You've Selected Scan with Custom Extensions"
+echo " "
+mkdir $folder/gobuster/directorymode/scanwithextension
+echo "Files will be stored in '$folder/gobuster/directorymode/scanwithextension' folder"
+echo " Enter extensions separated by comma ',' Example: php,html,txt and for single extension Example: php"
+echo " "
+read exten
+echo " You've entered '$exten' extensions "
+echo " "
+echo " Select Type of Wordlist "
+echo "1. Small Wordlist
+2. Medium Wordlist
+3. Large Wordlist
+4. Custom Wordlist "
+echo "Note: Dirbuster wordlists will be used in first 3 options, if you dont have dirbuster then select 4 and provide path to wordlist"
+read worde
+if [ "$worde" = 1 ]
+then
+echo "Gobuster Scan Using Small Wordlist "
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x $exten -o $folder/gobuster/directorymode/scanwithextension/smallscan.txt
+elif [ "$worde" = 2 ]
+then
+echo "Gobuster Scan Using Medium Wordlist"
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x $exten -o $folder/gobuster/directorymode/scanwithextension/mediumscan.txt
+elif [ "$worde" = 3 ]
+then
+echo "Gobuster Scan Using Large Wordlist"
+echo " "
+gobuster dir -u $url -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -x $exten -o $folder/gobuster/directorymode/scanwithextension/largescan.txt
+elif [ "$worde" = 4 ]
+then
+echo "Gobuster Scan Using Custom Wordlist"
+echo "Enter full path to wordlist"
+read patheee
+echo " "
+echo " you've entered '$patheee' wordlist"
+echo " "
+gobuster dir -u $url -w $patheee -x $exten -o $folder/gobuster/directorymode/scanwithextension/customscan.txt
+else
+echo " Invalid Input "
+fi
+else
+echo " Invalid Input"
+fi
+elif [ "$go" = 2 ]
+then
+echo "You've Selected Subdomain Mode of scan "
+mkdir $folder/gobuster/subdomainmode
+echo "Files will be stored in '$folder/gobuster/subdomainmode' folder"
+echo " "
+echo "Enter url without 'http://' example: test.com "
+read urla
+echo " "
+echo "Select Type of Wordlist "
+echo "1. Small Wordlist
+2. Medium Wordlist
+3. Large Wordlist
+4. Custom Wordlist "
+echo "Note: Dirbuster wordlists will be used in first 3 options, if you don't have dirbuster then select 4 and provide path to wordlist "
+read wordee
+if [ "$wordee" = 1 ]
+then
+echo "Gobuster Scan Using Small Wordlist "
+echo " "
+gobuster dns -d $urla -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -i -o $folder/gobuster/subdomainmode/smallscan.txt
+elif [ "$wordee" = 2 ]
+then
+echo "Gobuster Scan Using Medium Wordlist"
+echo " "
+gobuster dns -d $urla -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -i -o $folder/gobuster/subdomainmode/mediumscan.txt
+elif [ "$wordee" = 3 ]
+then
+echo "Gobuster Scan Using Large Wordlist"
+echo " "
+gobuster dns -d $urla -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt -i -o $folder/gobuster/subdomainmode/largescan.txt
+elif [ "$wordee" = 4 ]
+then
+echo "Gobuster Scan Using Custom Wordlist"
+echo "Enter full path to wordlist"
+read pathee
+echo " "
+echo " you've entered '$pathee' wordlist"
+echo " "
+gobuster dns -d $urla -w $pathee -i -o $folder/gobuster/subdomainmode/customscan.txt
+else
+echo "Invalid Input "
+fi
+else
+echo "Invalid Input"
+fi
+elif [ "$choice" = 3 ]
+then
+echo "███████ ███    ██ ██    ██ ███    ███ ██   ██ ██      ██ ███    ██ ██    ██ ██   ██ 
+██      ████   ██ ██    ██ ████  ████ ██   ██ ██      ██ ████   ██ ██    ██  ██ ██  
+█████   ██ ██  ██ ██    ██ ██ ████ ██ ███████ ██      ██ ██ ██  ██ ██    ██   ███  
+██      ██  ██ ██ ██    ██ ██  ██  ██      ██ ██      ██ ██  ██ ██ ██    ██  ██ ██ 
+███████ ██   ████  ██████  ██      ██      ██ ███████ ██ ██   ████  ██████  ██   ██ 
+                                                                                    
+                                                                                     "
+echo " Enter IP of Target Machine"
+read ipa
+echo " "
+echo " You've Entered '$ipa' ip for Target Machine "
+echo " "
+mkdir $folder/enum4linux
+echo "Files will be stored in '$folder/enum4linux' folder"
+echo " "
+echo " Simple Enum Scan will be Performed "
+echo " "
+enum4linux -a $ipa > $folder/enum4linux/enum4linux.txt
+elif [ "$choice" = 4 ]
+then
+echo "███    ██ ██ ██   ██ ████████  ██████      ███████  ██████  █████  ███    ██ 
+████   ██ ██ ██  ██     ██    ██    ██     ██      ██      ██   ██ ████   ██ 
+██ ██  ██ ██ █████      ██    ██    ██     ███████ ██      ███████ ██ ██  ██ 
+██  ██ ██ ██ ██  ██     ██    ██    ██          ██ ██      ██   ██ ██  ██ ██ 
+██   ████ ██ ██   ██    ██     ██████      ███████  ██████ ██   ██ ██   ████ 
+                                                                             
+                                                                             "
+echo "Enter URL to Perform Nikto Scan"
+echo " "
+read niko
+echo "You've entered URL: '$niko'"
+mkdir mkdir $folder/nikto
+echo " "
+nikto -h $niko -o $folder/nikto/niktoscan.txt
+else
+	echo " Happy Hacking "
+fi
