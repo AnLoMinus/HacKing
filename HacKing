@@ -219,7 +219,7 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     # echo "$logo"
     echo "\t ${c1} ${cafe} All Tools" ${red}[${purple}$tools${red} ]
-    echo "\n\t ${c2} ${cafe} PrivEsc"
+    echo "\n\t ${c2} ${cafe} PrivEscLinux"
     echo "\t ${c3} ${cafe} Categories"
     echo "\t ${c4} ${cafe} Update"
     echo "\t ${c5} ${cafe} About\n"
@@ -231,7 +231,7 @@ menu() {
         all_tools
       ;;
       2)
-        privEsc
+        privEscLinux
       ;;
       3)
         category
@@ -263,7 +263,7 @@ VPrivEsc="\n$red[$green+$red]$cyan Priviledge Escalation $red[$green+$red]\n"
 
 # uptux: Specialized privilege escalation checks for Linux systems.
 
-privEsc() {
+privEscLinux() {
   while true; do
     clear
     Banner2
