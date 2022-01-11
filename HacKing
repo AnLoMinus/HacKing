@@ -290,54 +290,76 @@ privEscLinux() {
     read cmd
     case ${cmd} in
       1)
-        echo "${cafe}AutoLocalPrivilegeEscalation ....${nc}"
+        echo "${cafe} AutoLocalPrivilegeEscalation:$cyan An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically."
+        sh PrivEsc/Linux/AutoLocalPrivilegeEscalation/auto_priv_exploit.sh
+        sleep 5
       ;;
       2)
         echo "${cafe}BeRoot ....${nc}"
-        # python PrivEsc/Linux/Enumeration/SUID3NUM/suid3num.py
+        python PrivEsc/Linux/BeRoot/Linux/beroot.py
+        sleep 5
       ;;
       3)
         echo "${cafe}LinEnum ....${nc}"
-        sh PrivEsc/Linux/LinEnum.sh
+        sh PrivEsc/Linux/Enumeration/LinEnum.sh
+        sleep 5
       ;;
       4)
         echo "${cafe}LinPEAS ....${nc}"
-        sh PrivEsc/Linux/Enumeration/linpeas_base.sh
         sleep 5
       ;;
       5)
         echo "${cafe}Linux Priviledge Checker ....${nc}"
-        python PrivEsc/Linux/Enumeration/LinuxPrivChecker/linuxprivchecker.py
         sleep 5
       ;;
       6)
         echo "${cafe}Linux Smart Enumeratin ....${nc}"
-        bash PrivEsc/Linux/Enumeration/SmartEnumeration/lse.sh
         sleep 5
       ;;
       7)
         echo "${cafe}Macgic Recon ....${nc}"
-        bash PrivEsc/Linux/Enumeration/mag1cr3c0n
         sleep 5
       ;;
       8)
         echo "${cafe}Expliot Suggester ....${nc}"
-        bash PrivEsc/Linux/PriviledgeEscalation/ExploitSuggester.sh
         sleep 5
       ;;
       9)
         echo "${cafe}Exiting ....${nc}"
-        bash PrivEsc/Linux/PriviledgeEscalation/Yodo.sh
         sleep 5
       ;;
       10)
         echo "${cafe}Exiting ....${nc}"
-        sh PrivEsc/Linux/Enumeration/Lynis/lynis
         sleep 5
       ;;
       11)
         echo "${cafe}Exiting ....${nc}"
-        sh CoverMyAss
+        sleep 5
+      ;;
+      12)
+        echo "${cafe}AutoLocalPrivilegeEscalation ....${nc}"
+      ;;
+      13)
+        echo "${cafe}BeRoot ....${nc}"
+        # python PrivEsc/Linux/Enumeration/SUID3NUM/suid3num.py
+      ;;
+      14)
+        echo "${cafe}LinEnum ....${nc}"
+      ;;
+      15)
+        echo "${cafe}LinPEAS ....${nc}"
+        sleep 5
+      ;;
+      16)
+        echo "${cafe}Linux Priviledge Checker ....${nc}"
+        sleep 5
+      ;;
+      17)
+        echo "${cafe}Linux Smart Enumeratin ....${nc}"
+        sleep 5
+      ;;
+      18)
+        echo "${cafe}Macgic Recon ....${nc}"
         sleep 5
       ;;
       0|00|x|exit|Exit)

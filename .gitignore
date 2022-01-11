@@ -6,3 +6,4 @@ PrivEsc/Linux/PriviledgeEscalation/Reports/passwords.txt
 PrivEsc/Linux/PriviledgeEscalation/Reports/Path.txt
 PrivEsc/Linux/PriviledgeEscalation/Reports/Var_Directory.txt
 PrivEsc/Linux/PriviledgeEscalation/passwordfiles.txt
+*.pyc
