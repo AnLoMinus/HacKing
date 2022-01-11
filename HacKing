@@ -83,6 +83,12 @@ echo "$red       ###############################################"
 echo "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]\n\n"
 
 }
+###############
+#    Banner2   #
+###############
+function Banner2(){
+echo "$VPrivEsc"
+}
 
 #################
 #    VNumbers   #
@@ -133,8 +139,8 @@ c16="$red[$green$n16$red]$cafe"
 c17="$red[$green$n17$red]$cafe"
 c18="$red[$green$n18$red]$cafe"
 
-prompt="${purple}[${blue}Anlominus${cyan}@${blue}HacKing${purple}]$"
-
+prompt="${purple}[${blue} Anlominus ${cyan}@${blue} HacKing ${purple}] $"
+VPrivEsc="\n$red[$green+$red]$cyan Priviledge Escalation $red[$green+$red]\n"
 # checking for system home dir
 if [ -d $HOME ]; then
   home=$HOME
@@ -217,7 +223,7 @@ menu() {
     echo "\t ${c3} ${cafe} Categories"
     echo "\t ${c4} ${cafe} Update"
     echo "\t ${c5} ${cafe} About\n"
-    echo "\t ${cx} ${cafe} Exit"
+    echo "\t ${cx} ${cafe} Exit\n"
     echo "  $prompt "
     read cmd
     case ${cmd} in
@@ -252,7 +258,7 @@ menu() {
 privEsc() {
   while true; do
     clear
-    Banner
+    Banner2
     echo "\t ${c1} ${cafe} AutoLocalPrivilegeEscalation:$cyan An automated script that download potential exploit for linux kernel from exploitdb, and compile them automatically."
     echo "\t ${c2} ${cafe} BeRoot:$cyan BeRoot Project is a post exploitation tool to check common misconfigurations to find a way to escalate our privilege. exploits."
     echo "\t ${c3} ${cafe} LinEnum:$cyan Scripted local Linux enumeration & privilege escalation checks"
