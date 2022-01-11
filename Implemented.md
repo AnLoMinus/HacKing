@@ -1,5 +1,66 @@
 <div align="center">
   
+<table width="99%" border="1" cellspacing="1" cellpadding="1">
+  <tbody>
+    <tr>
+      <td bgcolor="#CCCCCC">
+        <div align="center"><b>System Variable </b></div>
+      </td>
+      <td bgcolor="#CCCCCC">
+        <div align="center"><b>Meaning </b></div>
+      </td>
+    </tr>
+    <tr valign="top">
+      <td height="17">BASH=/bin/bash</td>
+      <td height="17">Our shell name</td>
+    </tr>
+    <tr valign="top">
+      <td>BASH_VERSION=1.14.7(1)</td>
+      <td>Our shell version name</td>
+    </tr>
+    <tr valign="top">
+      <td>COLUMNS=80</td>
+      <td>No. of columns for our screen</td>
+    </tr>
+    <tr valign="top">
+      <td>HOME=/home/vivek</td>
+      <td>Our home directory</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">LINES=25</td>
+      <td height="2">No. of columns for our screen</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">LOGNAME=students</td>
+      <td height="2">students Our logging name</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">OSTYPE=Linux</td>
+      <td height="2">Our Os type</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">PATH=/usr/bin:/sbin:/bin:/usr/sbin</td>
+      <td height="2">Our path settings</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">PS1=[\u@\h \W]\$</td>
+      <td height="2">Our prompt settings</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">PWD=/home/students/Common</td>
+      <td height="2">Our current working directory</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">SHELL=/bin/bash</td>
+      <td height="2">Our shell name</td>
+    </tr>
+    <tr valign="top">
+      <td height="2">USERNAME=vivek</td>
+      <td height="2">User name who is currently login to this PC</td>
+    </tr>
+  </tbody>
+</table>  
+  
 ## Scans That've Been Implemented
 
 Below is the ever growing list of scans that have been implemented.
