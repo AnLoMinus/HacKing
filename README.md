@@ -7,7 +7,7 @@
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-# HacKing v0.0.1
+# HacKing v0.0.2
 - [x] [HacKing](https://github.com/Anlominus/HacKing)
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
@@ -41,3 +41,13 @@
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
   
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+---
+
+# INCLUDE: Options
+- [X] Features: Starter
+- [X] Features: Installer
+- [X] Features: Remover
+
+# TODO: Algorithm
+- [ ] Adding Anonymity tool:
