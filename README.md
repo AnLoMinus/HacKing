@@ -7,7 +7,7 @@
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-# HacKing v0.0.2
+# HacKing v0.0.1
 - [x] [HacKing](https://github.com/Anlominus/HacKing)
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
