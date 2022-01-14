@@ -1,4 +1,4 @@
-<div align="center">
+<div align="">
 
 <h1> 👨‍💻 HคcKᎥήg 👨‍💻 </h1>
 
