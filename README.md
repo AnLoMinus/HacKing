@@ -3,8 +3,6 @@
 
 <h1> 👨‍💻 HคcKᎥήg 👨‍💻 </h1>
 
-- [HacKingPro](https://github.com/Anlominus/HacKingPro): Working on new ShellTool
-
 <a href=""><br><img title="Made in ISRAEL" src="https://img.shields.io/badge/MADE%20IN-ISRAEL-blue?style=for-the-badge"></a>
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
@@ -53,3 +51,4 @@
 
 # TODO: Algorithm
 - [ ] Adding Anonymity tool:
+- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro): Working on new ShellTool
