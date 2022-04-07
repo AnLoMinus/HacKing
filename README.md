@@ -9,6 +9,7 @@
 
 # HacKing v0.0.1
 - [x] [HacKing](https://github.com/Anlominus/HacKing)
+- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
