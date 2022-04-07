@@ -1,0 +1,1337 @@
+#!/bin/sh
+# Name : Onex
+# Date : 1 November 2021
+# Description : Onex is a hacking tools installer and package manager for hacker's.
+
+nc="\033[00m"
+red="\033[01;31m"
+green="\033[01;32m"
+yellow="\033[01;33m"
+blue="\033[01;34m"
+purple="\033[01;35m"
+cyan="\033[01;36m"
+
+logo="${yellow}
+  ___  _ __   ___${red} __  __
+${yellow} / _ \\| '_ \\ / _ ${red} \\ \\/ /
+${yellow}| (_) | | | |  __/${red} >  < 
+${yellow} \___/|_| |_|\\___${red} /_/\_\\
+"
+prompt="${nc}[${blue}onex${nc}@${blue}space${nc}]$"
+
+# checking for system home dir
+if [ -d $HOME ]; then
+  home=$HOME
+else
+  home="~/"
+fi
+
+# checking for system bin dir
+if [ -d /data/data/com.termux/files/usr/bin ]; then
+  bin="/data/data/com.termux/files/usr/bin"
+elif [ -d /usr/local/bin ]; then
+  bin="/usr/local/bin"
+elif [ -d /bin ]; then
+  bin="/bin"
+elif [ -d /sbin ]; then
+  bin="/sbin"
+fi
+
+# checking for configuration dir
+if [ -d /data/data/com.termux/files/usr/etc ]; then
+  conf_dir="/data/data/com.termux/files/usr/etc"
+elif [ -d /etc ]; then
+  conf_dir="/etc"
+fi
+
+# configuration files
+if [ -d $conf_dir/onex ]; then
+  if [ -e $conf_dir/onex/data/tools.dat ]; then
+    tools_data="$conf_dir/onex/data/tools.dat"
+  fi
+  if [ -e $conf_dir/onex/data/category.dat ]; then
+    category_data="$conf_dir/onex/data/category.dat"
+  fi
+else
+  if [ -e data/tools.dat ]; then
+    tools_data="data/tools.dat"
+  fi
+  if [ -e data/category.dat ]; then
+    category_data="data/category.dat"
+  fi
+fi
+
+# checking for system root access
+if [ `command -v sudo` ]; then
+  sudo="sudo"
+else
+  sudo=""
+fi
+
+# checking for system package manager
+if [ -e /data/data/com.termux/files/usr/bin/pkg ]; then
+  pac="pkg"
+  system="termux"
+elif [ `command -v apt` ]; then
+  pac="apt"
+  system="linux"
+elif [ `command -v apt-get` ]; then
+  pac="apt-get"
+  system="linux"
+elif [ `command -v apk` ]; then
+  pac="apk"
+  system="linux"
+elif [ `command -v yum` ]; then
+  pac="yum"
+  system="fedora"
+elif [ `command -v brew` ]; then
+  pac="brew"
+  system="mac"
+  sudo=""
+fi
+
+# install tools
+install() {
+  # get tool alias name
+  tool_name=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f1`
+  # get tool package manager
+  tool_installer=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f5`
+  # tool dependency (requirements)
+  tool_dependency=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
+
+  # check tool name is null or not
+  if [ "$tool_name" ]; then
+
+    case $tool_installer in
+
+    # for default package
+    package_manager)
+      # check tool is already installed or not
+      if [ ! `command -v $tool_pac` ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $sudo $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! `command -v $tool_pac` ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for github tools
+    git)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo git clone $tool_url ~/$tool_name
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              git clone $tool_url ~/$tool_name
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${purple}'$tool_name' ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for curl tools
+    curl)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for wget tools
+    wget)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    
+    # for any new installer
+    # put here
+    esac
+  fi
+  # wait for user any input
+  echo -n "$prompt "
+  read tmp_inp
+}
+
+# install category tools
+install_category_tool() {
+  # get tool alias name
+  tool_name=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f1`
+  # get tools package manager
+  tool_installer=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f5`
+  # tool dependency (requirements)
+  tool_dependency=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
+  
+  # check tool name is null or not
+  if [ "$tool_name" ]; then
+
+    case $tool_installer in
+
+    # for default package
+    package_manager)
+      # check tool is already installed or not
+      if [ ! `command -v $tool_pac` ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $sudo $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! `command -v $tool_pac` ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for github tools
+    git)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo git clone $tool_url ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              git clone $tool_url ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for curl tools
+    curl)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for wget tools
+    wget)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+
+    # for any new installer
+    # put here
+    esac
+  fi
+  # wait for user any input
+  echo -n "$prompt "
+  read tmp_inp
+}
+
+# list all tools from data
+all_tools() {
+  while true; do
+    clear
+    # get all tools data
+    echo " ${red} ___
+//___// ${yellow}All Tools
+"
+    for data in `grep "." $tools_data | sort -f | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
+      # display tools name from data
+      for tool in $data; do
+        echo " ${green} $tool" | tr '|' ' ' | tr '@' ' '
+      done
+    done
+    echo " ${green} 0 Back"
+    echo -n "$prompt "
+    read cmd
+    # count total number of tools
+    list=`grep -n "." $tools_data | wc -l`
+    # process user input
+    case ${cmd} in
+      [1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9])
+        if [ ${cmd} -le $list ]; then
+          # install tools
+          install ${cmd}
+        else
+          echo "${red}${cmd}: ${purple}invalid option!!"
+          sleep 1
+        fi
+      ;;
+      0|back|Back)
+        break
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
+# category function
+category() {
+  while true; do
+    clear
+    # get all category data
+    echo " ${red} ___
+//___// ${yellow}Tool Category
+"
+    for data in `grep "." $category_data | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
+      # display category alias name from data
+      for category in $data; do
+        echo " ${green} $category" | tr '|' ' ' | tr '@' ' '
+      done
+    done
+    echo " ${green} 0 Back"
+    echo -n "$prompt "
+    read cmd
+    # count total number of category
+    list=`grep -n "." $category_data | wc -l`
+    # process user input
+    case ${cmd} in
+      [1-9]|[1-9][0-9])
+        if [ ${cmd} -le $list ]; then
+          while [ true ]; do
+            clear
+            # display all tools of selected category
+            category=`grep '.' $category_data | sed -n "${cmd} p" | cut -d"|" -f2`
+            category_alias=`grep '.' $category_data | sed -n "${cmd} p" | cut -d"|" -f1`
+            # get all tools data and display
+            echo " ${red} ___
+//___// ${yellow}$category_alias
+"
+            for data in `grep "." $tools_data | sort -f | sed -n "/$category/p" | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
+              # display tools name from data
+              for tool in $data; do
+                echo " ${green} $tool" | tr '|' ' ' | tr '@' ' '
+              done
+            done
+            echo " ${green} 0 Back"
+            echo -n "$prompt "
+            read tmp_cmd
+            # count total number of tools in category
+            list=`grep -n "." $tools_data | sed -n "/$category/p" | wc -l`
+            # process user input
+            case $tmp_cmd in
+              [1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9][0-9])
+                if [ $tmp_cmd -le $list ]; then
+                  # install tools
+                  install_category_tool $category $tmp_cmd
+                else
+                  echo "${red}$tmp_cmd: ${purple}invalid option!!"
+                  sleep 1
+                fi
+              ;;
+                0|back|Back)
+                break
+              ;;
+              *)
+                echo "${red}'$tmp_cmd': ${purple}invalid option!!"
+                sleep 1
+              ;;
+            esac
+          done
+        else
+          echo "${red}${cmd}: ${purple}invalid option!!"
+          sleep 1
+        fi
+      ;;
+      0|back|Back)
+        break
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
+# update onex function
+update() {
+  while true; do
+    clear
+    echo "$logo"
+    echo " ${nc}[1] ${green} Update${nc}"
+    echo " ${nc}[0] ${green} Back"
+    echo -n "$prompt "
+    read cmd
+    case ${cmd} in
+      1)
+        # check user is online or not
+        wget -q --spider http://google.com
+        if [ $? -eq 0 ]; then
+          echo "${green}Updating ...${nc}"
+          sleep 1
+          if [ `command -v git` ]; then
+            if [ $sudo ]; then
+              $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
+              $sudo chmod +x ~/onex/install
+              $sudo sh ~/onex/install
+            else
+              git clone https://github.com/rajkumardusad/onex.git ~/onex
+              chmod +x ~/onex/install
+              sh ~/onex/install
+            fi
+          else
+            if [ $sudo ]; then
+              $sudo $pac install git -y
+              $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
+              $sudo chmod +x ~/onex/install
+              $sudo sh ~/onex/install
+            else
+              $pac install git -y
+              git clone https://github.com/rajkumardusad/onex.git ~/onex
+              chmod +x ~/onex/install
+              sh ~/onex/install
+            fi
+          fi
+          echo "${green} onex updated !!${nc}"
+          sleep 1
+        else
+          echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
+          sleep 1
+        fi
+      ;;
+      0)
+        break
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
+# about onex function
+about() {
+  clear
+  echo "$logo"
+  echo " ${yellow}Onex ${red} v0.1${nc}"
+  echo " Onex is a library of"
+  echo " hacking tools for termux"
+  echo " and other linux distribution.\n"
+  echo " ${red}Warning:${nc}"
+  echo " We are not responsible for any misuse"
+  echo " or damage caused by this program."
+  echo " Use this tool at your own risk!"
+  echo -n "$prompt "
+  read tmp
+}
+
+# this is the main function
+menu() {
+  while true; do
+    clear
+    tools=`grep -n '.' $tools_data | wc -l`
+    echo "$logo"
+    echo " ${cyan}[1] ${green} All tools ${nc}(${red}$tools tools${nc})"
+    echo " ${cyan}[2] ${green} Tools category"
+    echo " ${cyan}[3] ${green} Update onex"
+    echo " ${cyan}[4] ${green} About us"
+    echo " ${cyan}[5] ${green} Exit"
+    echo -n "$prompt "
+    read cmd
+    case ${cmd} in
+      1)
+        all_tools
+      ;;
+      2)
+        category
+      ;;
+      3)
+        update
+      ;;
+      4)
+        about
+      ;;
+      5|exit|Exit)
+        echo "${green}Exiting ....${nc}"
+        break
+      ;;
+      *)
+        echo "${red}${cmd}: ${purple}invalid option!!${nc}"
+        sleep 1
+      ;;
+    esac
+  done
+}
+
+
+# list all tools from data
+cli_list_all() {
+  # get all tools data
+  tool=`grep "." $tools_data | sort -f | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr '|' ' '`
+  # display tools name from data
+  echo "${green} $tool${nc}"
+}
+
+# category function
+cli_category() {
+  # get all category data
+  for data in `grep "." $category_data | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
+    # display category alias name from data
+    for category in $data; do
+      echo " ${green} $category${nc}" | tr '|' ' ' | tr '@' ' '
+    done
+  done
+}
+
+# update process
+update_process() {
+  # check file is downloaded or not
+  if [ -e $home/onex/onex ]; then
+    # removing old one
+    if [ -e $bin/onex ]; then
+      if [ -d $conf_dir/onex ]; then
+        if [ $sudo ]; then
+          $sudo rm -rf $bin/onex
+          $sudo rm -rf $conf_dir/onex
+        else
+          rm -rf $bin/onex
+          rm -rf $conf_dir/onex
+        fi
+      fi
+    fi
+  fi
+
+  # updating onex
+  if [ -e $home/onex/onex ]; then
+    if [ $sudo ]; then
+      $sudo mv -v $home/onex/onex $bin
+      $sudo chmod +x $bin/onex
+    else
+      mv -v $home/onex/onex $bin
+      chmod +x $bin/onex
+    fi
+  fi
+  if [ -d $home/onex ]; then
+    if [ $sudo ]; then
+    $sudo mv -v $home/onex $conf_dir
+    else
+      mv -v $home/onex $conf_dir
+    fi
+  fi
+}
+
+# update onex function
+cli_update() {
+  # check user is online or not
+  wget -q --spider http://google.com
+  if [ $? -eq 0 ]; then
+    echo "${green}Updating ...${nc}"
+    sleep 1
+    if [ `command -v git` ]; then
+      if [ $sudo ]; then
+        $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
+        update_process
+      else
+        git clone https://github.com/rajkumardusad/onex.git ~/onex
+        update_process
+       fi
+    else
+      if [ $sudo ]; then
+        $sudo $pac install git -y
+        $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
+        update_process
+      else
+        $pac install git -y
+        git clone https://github.com/rajkumardusad/onex.git ~/onex
+        update_process
+      fi
+    fi
+    echo "${nc}'onex' ${green} updated successfully !!${nc}"
+  else
+    echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+  fi
+}
+
+# cli install process
+install_process() {
+  # get tool alias name
+  tool_name=`echo $1 | cut -d"|" -f1`
+  # get tool package manager
+  tool_installer=`echo $1 | cut -d"|" -f5`
+  # tool dependency (requirements)
+  tool_dependency=`echo $1 | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`echo $1 | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`echo $1 | cut -d"|" -f2`
+
+  # check tool name is null or not
+  if [ "$tool_name" ]; then
+
+    case $tool_installer in 
+
+    # for default package
+    package_manager)
+      # check tool is already installed or not
+      if [ ! `command -v $tool_pac` ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $sudo $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
+              $pac install $tool_pac -y
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! `command -v $tool_pac` ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for github tools
+    git)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo git clone $tool_url ~/$tool_name
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              git clone $tool_url ~/$tool_name
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for curl tools
+    curl)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              curl -o ~/$tool_pac $tool_url
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+    # for wget tools
+    wget)
+      # check tool is already installed or not
+      if [ ! -e ~/$tool_pac ]; then
+        # check sudo is null or not
+        if [ $sudo ]; then
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            # install tool dependency
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $sudo $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              $sudo wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry you are offline !!${nc}"
+          fi
+        else
+          #check user is online or not
+          wget -q --spider http://google.com
+          if [ $? -eq 0 ]; then
+            echo "${green}Installing ...${nc}"
+            sleep 1
+            # install tool dependency
+            if [ $tool_dependency != "null" ]; then
+              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
+                # installing dependency
+                if [ ! `command -v $dep_name` ]; then
+                  $pac install $dep_name -y
+                fi
+              done
+            fi
+            # installing tools
+            if [ $tool_url != "" -a $tool_url != "null" ]; then
+              wget $tool_url -o ~/$tool_pac
+            fi
+          else
+            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
+          fi
+        fi
+        # check tool is installed or not
+        if [ ! -e ~/$tool_pac ]; then
+          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
+        else
+          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
+        fi
+      else
+        echo "${red}Sorry ${nc}: ${nc}'$tool_name' ${green} is already installed !!${nc}"
+      fi
+    ;;
+
+    # for any new installer
+    # put here
+    esac
+  fi
+}
+
+# check tool is exists or not
+cli_install() {
+  # get tools data
+  for data in `grep -i "^$1" $tools_data`; do
+    # display tools name from data
+    for tool in $data; do
+      # convert to lower case and check tool name
+      if [ `echo $tool | cut -d"|" -f1 | tr 'A-Z' 'a-z'` = `echo $1 | tr 'A-Z' 'a-z'` ]; then
+        get_tool_data=$tool
+      fi
+    done
+  done
+  # check data exists or not
+  if [ $get_tool_data ]; then
+    install_process $get_tool_data
+  else
+    echo "${red}Sorry ${nc}: '$1' ${red} tool not found !!${nc}"
+    similar=`grep -i "^$1" $tools_data | cut -d"|" -f1`
+    if [ "$similar" ]; then
+      echo "${blue}Did you mean${nc}:"
+      echo -n "${green} "
+      grep -i "^$1" $tools_data | cut -d"|" -f1
+      echo -n "${nc}"
+    fi
+  fi
+}
+
+# search tool
+cli_search() {
+  # get tools data
+  similar=`grep -i "^$1" $tools_data | cut -d"|" -f1`
+  if [ "$similar" ]; then
+    echo -n "${green}"
+    grep -i "^$1" $tools_data | cut -d"|" -f1
+    echo -n "${nc}"
+  else
+    echo "${red}Sorry ${nc}: '$1' ${red} tool not found !!${nc}"
+  fi
+}
+
+# remove function
+cli_remove() {
+  # add remove tools functionality for remove tools data now it only uninstall onex.
+  # removing onex only
+  if [ -e $bin/onex ]; then
+    if [ -d $conf_dir/onex ]; then
+      if [ $sudo ]; then
+        $sudo rm -rf $bin/onex
+        $sudo rm -rf $conf_dir/onex
+      else
+        rm -rf $bin/onex
+        rm -rf $conf_dir/onex
+      fi
+    fi
+  fi
+  # check onex removed or not
+  if [ ! -e $bin/onex ]; then
+    if [ ! -d $conf_dir/onex ]; then
+      echo "${nc}'onex' : ${green} uninstalled successfully !!${nc}"
+    fi
+  fi
+}
+
+# cli mode
+if [ $# -eq 1 ]; then
+  case $1 in
+    start)
+      menu
+    ;;
+    list|-l)
+      cli_list_all
+    ;;
+    update|-u)
+      cli_update
+    ;;
+    remove|-r)
+      cli_remove
+    ;;
+    help|-h)
+      echo "${yellow}Onex ${red} v0.1"
+      echo "${nc}Usage ${nc}: ${yellow} onex ${nc}[option]... [toolname]...${nc}"
+      echo "\n  ${blue}Option  \tDescription${nc}"
+      echo "  -----------  \t--------------------"
+      echo "  help, -h  \tdisplay this help."
+      echo "  list, -l  \tlist all tools."
+      echo "  list -a  \tlist all tools."
+      echo "  -l a  \tlist all tools."
+      echo "  install, -i  \tinstall any tools."
+      echo "  search, -s  \tsearch tools."
+      echo "  update, -u  \tupdate onex."
+      echo "  start  \tstart onex menu mode."
+    ;;
+    *)
+      echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
+      echo "${blue}type ${nc}:\n  'onex -h' or 'onex help' for help.${nc}"
+    ;;
+  esac
+elif [ $# -eq 2 ]; then
+  case $1 in
+    list|-l)
+      case $2 in
+        -a|a)
+          cli_list_all
+         ;;
+        *)
+          echo "${red}Sorry ${nc}: '$2' ${red} invalid option!!${nc}"
+          echo "${blue}type ${nc}:\n  'onex -h' or 'onex help' for help.${nc}"
+        ;;
+      esac
+    ;;
+    install|-i)
+      cli_install $2
+    ;;
+    search|-s)
+      cli_search $2
+    ;;
+    *)
+      echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
+      echo "${blue}type ${nc}:\n  'onex -h' or 'onex help' for help.${nc}"
+    ;;
+  esac
+else
+  echo "${blue}type ${nc}:\n  'onex -h' or 'onex help' for help.${nc}"
+fi
