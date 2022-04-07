@@ -18,8 +18,8 @@
 </div>
   
 ## HacKing Features:
--  [x] Starting Tools 
 -  [x] Installing Tools 
+-  [x] Updating Tools 
 -  [x] Removing Tools 
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
@@ -32,11 +32,10 @@
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
 ## HacKing Menu:
-- [x]  [1]  Start
-- [x]  [2]  Install
-- [x]  [3]  Remove
-- [X]  [4]  Update
-- [x]  [Q]  Quit to Main Menu
+- [x]  [1]  Install
+- [x]  [2]  Remove
+- [X]  [3]  Update
+- [x]  [q]  Quit to Main Menu
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
   
