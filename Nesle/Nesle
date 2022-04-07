@@ -593,7 +593,7 @@ install_category_tool() {
   # package name or tool name
   tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
   # Category name
-  tool_category=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f3`
+  tool_category=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | cut -d"|" -f3`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
@@ -1147,20 +1147,20 @@ cli_update() {
     sleep 1
     if [ `command -v git` ]; then
       if [ $sudo ]; then
-        $sudo git clone https://github.com/rajkumardusad/Nesle.git ~/Nesle
+        $sudo git clone https://github.com/Anlominus/Nesle.git ~/Nesle
         update_process
       else
-        git clone https://github.com/rajkumardusad/Nesle.git ~/Nesle
+        git clone https://github.com/Anlominus/Nesle.git ~/Nesle
         update_process
        fi
     else
       if [ $sudo ]; then
         $sudo $pac install git -y
-        $sudo git clone https://github.com/rajkumardusad/Nesle.git ~/Nesle
+        $sudo git clone https://github.com/Anlominus/Nesle.git ~/Nesle
         update_process
       else
         $pac install git -y
-        git clone https://github.com/rajkumardusad/Nesle.git ~/Nesle
+        git clone https://github.com/Anlominus/Nesle.git ~/Nesle
         update_process
       fi
     fi
