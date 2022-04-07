@@ -39,6 +39,7 @@ cafe="\033[0;33m"
 fiuscha="\033[0;35m"
 blue="\033[1;34m"
 nc=""
+
 ###############
 #    Banner   #
 ###############
@@ -53,13 +54,13 @@ echo "       #    |  _  | (_| | (__| . \| | | | | (_| |    #"
 echo "       #    |_| |_|\__,_|\___|_|\_\_|_| |_|\__, |    #"
 echo "       #                                   |___/     #"
 echo "$red       ###############################################"
-echo "  $red[$green+$red]$cyan https://www.github.com/Anlominus $red[$green+$red]\n"
+echo "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]\n"
 }
 ##################
 #    ManBanner   #
 ##################
 function ManBanner(){
-echo "$purple
+echo -e "$purple
                            .
                        ..',,'..
                      .',,,,,,,,,.
@@ -86,7 +87,7 @@ echo "$purple
  ......:.;:::ccllloooodddxxxddddooooollcc::;'c,':......
   .''..cc.''''''',,,,,,,;;;;;,,,,,,,,''''....:.cc..''.
 "
-echo "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]"
+echo -e "  $red[$green+$red]$cyan Github: https://www.github.com/Anlominus/HacKing $red[$green+$red]"
 }
 ##################
 #    Variables   #
@@ -118,7 +119,7 @@ n18="18"
 #    VCOLOR     #
 ##################
 uSage="$red[$cyan USAGE $red]$blue"
-currentDir="$red[$grey Current Dir $red]$cyan "
+currentDir="$red[$grey Current Dir $red]$cyan"
 installingDir="$red[$grey Installing Dir $red]$cyan"
 cSharp="$red[$yellow#$red]$white"
 cInfo="$red[$yellow!$red]$yellow"
@@ -150,138 +151,138 @@ promptOption="\n\t${purple}[${blue} Anlominus ${cyan}@${blue} HacKing ${purple}]
 ##########Prompt##########
 
 #######################
-chmod 777  WorKing
+chmod 777  HacKing
 #######################
 
-#   Functions  #
-######Tools######
-AnonSurf(){
-  echo ""
-  cd AnonSurf
-  echo "\t$currentDir $(pwd)"
+#######################
+#   Start: Functions  #
+#######################
+start(){
+  echo "$cInfo Starting HacKingPro"
+  sleep 1
+  cd HacKingPro
+  chmod 777 HacKingPro
+  sh HacKingPro
+  cd ../
+  break
 }
-Forensics(){
-  echo ""
-  cd Forensics
-  echo "\t$currentDir $(pwd)"
+
+install(){
+  Echo "Current Directory"
+  echo "\t$installingDir $(pwd)"
+  sleep 1
+  echo "$cSharp Installing HacKingPro"
+  sleep 1
+  echo "$cInfo Creating $grey HacKingPro"
+  sleep 1
+  mkdir HacKingPro 2> /dev/null
+  echo "$cInfo Creating $grey AnonSurf"
+  sleep 1
+  mkdir HacKingPro/AnonSurf  2> /dev/null
+  echo "$cInfo Creating $grey Forensics"
+  sleep 1
+  mkdir HacKingPro/Forensics 2> /dev/null
+  echo "$cInfo Creating $grey FramXploit"
+  sleep 1
+  mkdir HacKingPro/FramXploit 2> /dev/null
+  echo "$cInfo Creating $grey HasHack"
+  sleep 1
+  mkdir HacKingPro/HasHack 2> /dev/null
+  echo "$cInfo Creating $grey InfoGath"
+  sleep 1
+  mkdir HacKingPro/InfoGath 2> /dev/null
+  echo "$cInfo Creating $grey PayLoads"
+  sleep 1
+  mkdir HacKingPro/PayLoads 2> /dev/null
+  echo "$cInfo Creating $grey PhisHack"
+  sleep 1
+  mkdir HacKingPro/PhisHack 2> /dev/null
+  echo "$cInfo Creating $grey PrivEsc"
+  sleep 1
+  mkdir HacKingPro/PrivEsc 2> /dev/null
+  echo "$cInfo Creating $grey RemoteAccess"
+  sleep 1
+  mkdir HacKingPro/RemoteAccess 2> /dev/null
+  echo "$cInfo Creating $grey ReversEngine"
+  sleep 1
+  mkdir HacKingPro/ReversEngine 2> /dev/null
+  echo "$cInfo Creating $grey Steganograhy"
+  sleep 1
+  mkdir HacKingPro/Steganograhy 2> /dev/null
+  echo "$cInfo Creating $grey VulnHack"
+  sleep 1
+  mkdir HacKingPro/VulnHack 2> /dev/null
+  echo "$cInfo Creating $grey WebHack"
+  sleep 1
+  mkdir HacKingPro/WebHack 2> /dev/null
+  echo "$cInfo Creating $grey WireLess"
+  sleep 1
+  mkdir HacKingPro/WireLess 2> /dev/null
+  echo "$cInfo Creating $grey XInstKits"
+  sleep 1
+  mkdir HacKingPro/XInstKits 2> /dev/null
+  echo "$cInfo Copying WorKing into$blue HacKingPro"
+  sleep 1
+  cp WorKing ./HacKingPro
+  echo "$cInfo Renaming WorKing to$blue HacKingPro"
+  sleep 1
+  mv HacKingPro/WorKing HacKingPro/HacKingPro
+  echo "$cInfo Giving all permission to$blue HacKingPro"
+  sleep 1
+  chmod 777 HacKingPro/HacKingPro  2> /dev/null
+  echo "$cInfo Start$blue HacKingPro"
+  sleep 5
+  start
 }
-FramXploit(){
-  echo ""
-  cd FramXploit
-  echo "\t$currentDir $(pwd)"
+
+remove(){
+  echo "$cInfo Removing HacKingPro"
+  sleep 3
+  rm -r ./HacKingPro*
+  touch RemovedSuccess
+  echo "#!/bin/bash" > RemovedSuccess
+  echo "echo Removing Sucessfully!" > RemovedSuccess
+  bash RemovedSuccess
 }
-HasHack(){
-  echo ""
-  cd HasHack
-  echo "\t$currentDir $(pwd)"
+
+usage(){
+  echo "
+  $uSage bash HacKing start
+  $uSage bash HacKing install
+  $uSage bash HacKing remove
+  "
 }
-InfoGath(){
-  echo ""
-  cd InfoGath
-  echo "\t$currentDir $(pwd)"
-}
-PayLoads(){
-  echo ""
-  cd PayLoads
-  echo "\t$currentDir $(pwd)"
-}
-PhisHack(){
-  echo ""
-  cd PhisHack
-  echo "\t$currentDir $(pwd)"
-}
-PrivEsc(){
-  echo ""
-  cd PrivEsc
-  echo "\t$currentDir $(pwd)"
-}
-RemoteAccess(){
-  echo ""
-  cd RemoteAccess
-  echo "\t$currentDir $(pwd)"
-}
-ReversEngine(){
-  echo ""
-  cd ReversEngine
-  echo "\t$currentDir $(pwd)"
-}
-Steganograhy(){
-  echo ""
-  cd Steganograhy
-  echo "\t$currentDir $(pwd)"
-}
-VulnHack(){
-  echo ""
-  cd VulnHack
-  echo "\t$currentDir $(pwd)"
-}
-WebHack(){
-  echo ""
-  cd WebHack
-  echo "\t$currentDir $(pwd)"
-}
-WireLess(){
-  echo ""
-  cd WireLess
-  echo "\t$currentDir $(pwd)"
-}
-XInstKits(){
-  echo ""
-  cd XInstKits
-  echo "\t$currentDir $(pwd)"
-}
-######Tools######
-######MainMenu######
+
 main(){
-  ManBanner
+  Banner
+  usage
   echo "\t$cInfo Please select an action $cInfo\n"
-  echo "\t ${c1} ${cafe} AnonSurf"
-  echo "\t ${c2} ${cafe} Forensics"
-  echo "\t ${c3} ${cafe} FramXploit"
-  echo "\t ${c4} ${cafe} HasHack"
-  echo "\t ${c5} ${cafe} InfoGath"
-  echo "\t ${c6} ${cafe} PayLoads"
-  echo "\t ${c7} ${cafe} PhisHack"
-  echo "\t ${c8} ${cafe} PrivEsc"
-  echo "\t ${c9} ${cafe} RemoteAccess"
-  echo "\t ${c10} ${cafe} ReversEngine"
-  echo "\t ${c11} ${cafe} Steganograhy"
-  echo "\t ${c12} ${cafe} VulnHack"
-  echo "\t ${c13} ${cafe} WebHack"
-  echo "\t ${c14} ${cafe} WireLess"
-  echo "\t ${c15} ${cafe} XInstKits"
+  echo "\t ${c1} ${cafe} Start "
+  echo "\t ${c2} ${cafe} Install "
+  echo "\t ${c3} ${cafe} Remove "
   echo "\t ${cq} ${cafe} Quit to Main Menu "
   echo ""
   echo "\t$currentDir $(pwd)"
-  echo "  $promptOption " && read -p ":" choice
-	if [[ $choice == '1' ]]; then AnonSurf; fi
-	if [[ $choice == '2' ]]; then Forensics; fi
-	if [[ $choice == '3' ]]; then FramXploit; fi
-	if [[ $choice == '4' ]]; then HasHack; fi
-	if [[ $choice == '5' ]]; then InfoGath; fi
-	if [[ $choice == '6' ]]; then PayLoads; fi
-	if [[ $choice == '7' ]]; then PhisHack; fi
-	if [[ $choice == '8' ]]; then PrivEsc; fi
-	if [[ $choice == '9' ]]; then RemoteAccess; fi
-	if [[ $choice == '10' ]]; then ReversEngine; fi
-	if [[ $choice == '11' ]]; then Steganograhy; fi
-  if [[ $choice == '12' ]]; then VulnHack; fi
-  if [[ $choice == '13' ]]; then WebHack; fi
-  if [[ $choice == '14' ]]; then WireLess; fi
-  if [[ $choice == '15' ]]; then XInstKits; fi
+  echo "  $promptOption "
+	read -p "Enter Choice: " choice
+	if [[ $choice == '1' ]]; then start; fi
+	if [[ $choice == '2' ]]; then install; fi
+	if [[ $choice == '3' ]]; then remove; fi
 	if [[ $choice == 'Q' || $choice == 'q' ]] ; then
 		echo "$cInfo Quit to Main Menu"
-    clear
-    exit
+		clear && exit
 	fi
     echo "$cInfo Returning to main menu..."
-    sleep 0.3
     clear && main
-}
-######MainMenu######
-#   Functions   #
 
-#   Options   #
+}
+######################
+#   End: Functions   #
+######################
+
+######################
+#   Start: Options   #
+######################
 if [ "$1" == "start" ]; then
     start
 elif [ "$1" == "install" ]; then
@@ -289,6 +290,8 @@ elif [ "$1" == "install" ]; then
 elif [ "$1" == "remove" ]; then
     remove
 else
-  main
+    main
 fi
-#   Options   #
+####################
+#   End: Options   #
+####################
