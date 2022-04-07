@@ -1,3 +1,9 @@
+<div align="center">
+
+  <img width="582" alt="image" src="https://user-images.githubusercontent.com/51442719/162283406-6cd40778-1c6b-4c68-bb5e-8542d5f9e05a.png">
+
+  </div>
+
 ![image](https://user-images.githubusercontent.com/51442719/162206190-335a3383-2b6a-42b0-9e41-262c1d9214e8.png)
 
 ## Operating System Requirements
