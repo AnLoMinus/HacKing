@@ -324,12 +324,12 @@ install() {
   tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
   # package name or tool name
   tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
+  # Category name
+  tool_category=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f3`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
-
     case $tool_installer in
-
     # for default package
     package_manager)
       # check tool is already installed or not
@@ -393,7 +393,7 @@ install() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -412,7 +412,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/$tool_name
+              $sudo git clone $tool_url ~/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -434,14 +434,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/$tool_name
+              git clone $tool_url ~/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${purple}'$tool_name' ${green} is installed successfully !!${nc}"
@@ -453,7 +453,7 @@ install() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -472,7 +472,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/$tool_pac $tool_url
+              $sudo curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -494,14 +494,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/$tool_pac $tool_url
+              curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -513,7 +513,7 @@ install() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -532,7 +532,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/$tool_pac
+              $sudo wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -554,14 +554,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/$tool_pac
+              wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -592,6 +592,8 @@ install_category_tool() {
   tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
   # package name or tool name
   tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
+  # Category name
+  tool_category=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f3`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
@@ -661,7 +663,7 @@ install_category_tool() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -680,7 +682,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/$tool_pac
+              $sudo git clone $tool_url ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -702,14 +704,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/$tool_pac
+              git clone $tool_url ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -721,7 +723,7 @@ install_category_tool() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -740,7 +742,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/$tool_pac $tool_url
+              $sudo curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -762,14 +764,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/$tool_pac $tool_url
+              curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -781,7 +783,7 @@ install_category_tool() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -800,7 +802,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/$tool_pac
+              $sudo wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -822,14 +824,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/$tool_pac
+              wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1249,7 +1251,7 @@ install_process() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1297,7 +1299,7 @@ install_process() {
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1309,7 +1311,7 @@ install_process() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1328,7 +1330,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/$tool_pac $tool_url
+              $sudo curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1350,14 +1352,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/$tool_pac $tool_url
+              curl -o ~/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1369,7 +1371,7 @@ install_process() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/$tool_pac ]; then
+      if [ ! -e ~/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1388,7 +1390,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/$tool_pac
+              $sudo wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1410,14 +1412,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/$tool_pac
+              wget $tool_url -o ~/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/$tool_pac ]; then
+        if [ ! -e ~/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
