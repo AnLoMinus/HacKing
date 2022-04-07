@@ -1,4 +1,4 @@
-------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/51442719/162206190-335a3383-2b6a-42b0-9e41-262c1d9214e8.png)
 
 ## Operating System Requirements
 
@@ -7,9 +7,6 @@ Nesle works on any of the following operating systems:
 - **Android** (Using the Termux App)
 - **Linux** (Linux Based Systems)
 - **MacOS** (Linux Based Systems)
-
-
-------------------------------------------------------------------------
 
 ## How to install Nesle?
 
@@ -33,7 +30,8 @@ or
 * `chmod +x NesleInstaller`
 
 * `sh NesleInstaller`
-------------------------------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/51442719/162206190-335a3383-2b6a-42b0-9e41-262c1d9214e8.png)
 
 ## How to use Nesle ?
 
@@ -65,12 +63,13 @@ Enter a Number for a specific output:
 - (4) : If you want to know About Us.
 - (5) : To exit the tool.
 
-------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/51442719/162206190-335a3383-2b6a-42b0-9e41-262c1d9214e8.png)
 
 **Warning**
 
 We are not responsible for any misuse or damage caused by this program. use this tool at your own risk!
 
-------------------------------------------------------------------------
+
+![image](https://user-images.githubusercontent.com/51442719/162206190-335a3383-2b6a-42b0-9e41-262c1d9214e8.png)
 
 * Cloning From: [onex](https://github.com/rajkumardusad/onex.git) 
