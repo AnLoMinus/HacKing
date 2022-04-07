@@ -26,6 +26,13 @@ Open the terminal and type following commands.
 
 * `sh Nesle/install` if not work than use `./Nesle/install`
 
+or
+
+* `curl -fsSL -o NesleInstaller https://raw.githubusercontent.com/Anlominus/HacKing/main/Nesle/install `
+
+* `chmod +x NesleInstaller`
+
+* `sh NesleInstaller`
 ------------------------------------------------------------------------
 
 ## How to use Nesle ?
