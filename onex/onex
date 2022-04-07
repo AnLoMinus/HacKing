@@ -14,7 +14,7 @@ cyan="\033[01;36m"
 logo="${yellow}
   ___  _ __   ___${red} __  __
 ${yellow} / _ \\| '_ \\ / _ ${red} \\ \\/ /
-${yellow}| (_) | | | |  __/${red} >  < 
+${yellow}| (_) | | | |  __/${red} >  <
 ${yellow} \___/|_| |_|\\___${red} /_/\_\\
 "
 prompt="${nc}[${blue}onex${nc}@${blue}space${nc}]$"
@@ -348,7 +348,7 @@ install() {
         echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
       fi
     ;;
-    
+
     # for any new installer
     # put here
     esac
@@ -370,7 +370,7 @@ install_category_tool() {
   tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
   # package name or tool name
   tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
-  
+
   # check tool name is null or not
   if [ "$tool_name" ]; then
 
@@ -764,25 +764,25 @@ update() {
           sleep 1
           if [ `command -v git` ]; then
             if [ $sudo ]; then
-              $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
-              $sudo chmod +x ~/onex/install
-              $sudo sh ~/onex/install
+              $sudo git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+              $sudo chmod +x ~/HacKing/onex/install
+              $sudo sh ~/HacKing/onex/install
             else
-              git clone https://github.com/rajkumardusad/onex.git ~/onex
-              chmod +x ~/onex/install
-              sh ~/onex/install
+              git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+              chmod +x ~/HacKing/onex/install
+              sh ~/HacKing/onex/install
             fi
           else
             if [ $sudo ]; then
               $sudo $pac install git -y
-              $sudo git clone https://github.com/rajkumardusad/onex.git ~/onex
-              $sudo chmod +x ~/onex/install
-              $sudo sh ~/onex/install
+              $sudo git clone https://github.com/Anlominus/HacKing.git ~/onex
+              $sudo chmod +x ~/HacKing/onex/install
+              $sudo sh ~/HacKing/onex/install
             else
               $pac install git -y
-              git clone https://github.com/rajkumardusad/onex.git ~/onex
-              chmod +x ~/onex/install
-              sh ~/onex/install
+              git clone https://github.com/Anlominus/HacKing.git ~/onex
+              chmod +x ~/HacKing/onex/install
+              sh ~/HacKing/onex/install
             fi
           fi
           echo "${green} onex updated !!${nc}"
@@ -962,7 +962,7 @@ install_process() {
   # check tool name is null or not
   if [ "$tool_name" ]; then
 
-    case $tool_installer in 
+    case $tool_installer in
 
     # for default package
     package_manager)
