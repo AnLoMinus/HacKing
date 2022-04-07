@@ -199,7 +199,36 @@ StartAllVariables(){
 # |
 StartAllVariables
 # |
-
+BannerAnlominus(){
+  echo "
+    _          _          __  __ _
+   / \   _ __ | |    ___ |  \/  (_)_ __  _   _ ___
+  / _ \ | '_ \| |   / _ \| |\/| | | '_ \| | | / __/
+ / ___ \| | | | |__| (_) | |  | | | | | | |_| \__ \
+/_/   \_\_| |_|_____\___/|_|  |_|_|_| |_|\__,_|___/
+  "
+}
+Banner(){
+  echo "
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  ░     _   _            _  ___                 ░
+  ░    | | | | __ _  ___| |/ (_)_ __   __ _     ░
+  ░    | |_| |/ _' |/ __| ' /| | '_ \ / _' |    ░
+  ░    |  _  | (_| | (__| . \| | | | | (_| |    ░
+  ░    |_| |_|\__,_|\___|_|\_\_|_| |_|\__, |    ░
+  ░                                   |___/     ░
+  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+  ▒         ▀▀█▀▀ █▀▀█ █▀▀█ █   █▀▀             ▒
+  ▒           █   █  █ █  █ █   ▀▀█             ▒
+  ▒           ▀   ▀▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀$orange v1.6        ${cyan}▒
+  ▒ https://www.github.com/Anlominus/HacKingPro ▒
+  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+  "
+}
+PromptFun(){
+  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}HacKingPro${cyan}$~${orange}]${cyan}"
+  echo "    ${orange}  └──╼${green}"
+}
 nc="\033[00m"
 red="\033[01;31m"
 green="\033[01;32m"
@@ -208,15 +237,9 @@ blue="\033[01;34m"
 purple="\033[01;35m"
 cyan="\033[01;36m"
 
-logo="${yellow}
- _   _                _
-|  \| |   ___   ___  | |   ___
-| . ' |  / _ \ / __| | |  / _ \
-| |\  | |  __/ \__ \ | | |  __/
-|_| \_|  \___| |___/ |_|  \___|
+logo="$(Banner)"
 
-"
-prompt="${nc}[${blue}Nesle${nc}@${blue}space${nc}]$"
+prompt="$(PromptFun)"
 
 # checking for system home dir
 if [ -d $HOME ]; then
@@ -1024,12 +1047,12 @@ menu() {
     clear
     tools=`grep -n '.' $tools_data | wc -l`
     echo "$logo"
-    echo "░ ${cyan} [1] ${green} All tools ${nc}(${red}$tools tools${nc})"
-    echo "░ ${cyan} [2] ${green} Tools category"
-    echo "░ ${cyan} [3] ${green} Update Nesle"
-    echo "░ ${cyan} [4] ${green} About us"
-    echo "░ ${cyan} [5] ${green} Exit"
-    echo "$prompt "
+    echo "  ░ ${cyan} [1] ${green} All tools ${nc}(${red}$tools tools${nc})"
+    echo "  ░ ${cyan} [2] ${green} Tools category"
+    echo "  ░ ${cyan} [3] ${green} Update Nesle"
+    echo "  ░ ${cyan} [4] ${green} About us"
+    echo "  ░ ${cyan} [5] ${green} Exit\n"
+    echo "  $prompt "
     read cmd
     case ${cmd} in
       1)
