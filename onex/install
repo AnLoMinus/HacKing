@@ -1,7 +1,7 @@
 #!/bin/sh
-# Name : Onex
+# Name : Nesle
 # Date : 1 November 2021
-# Description : Onex is a hacking tools installer and package manager for hacker's.
+# Description : Nesle is a hacking tools installer and package manager for hacker's.
 
 nc="\033[00m"
 red="\033[01;31m"
@@ -14,7 +14,7 @@ cyan="\033[01;36m"
 logo="${yellow}
   ___  _ __   ___${red}__  __
 ${yellow} / _ \\| '_ \\ / _ ${red}\\ \\/ /
-${yellow}| (_) | | | |  __/${red}>  < 
+${yellow}| (_) | | | |  __/${red}>  <
 ${yellow} \___/|_| |_|\\___${red}/_/\_\\
 "
 
@@ -44,12 +44,12 @@ elif [ -d /etc ]; then
 fi
 
 # configuration files
-if [ -d $conf_dir/onex ]; then
-  if [ -e $conf_dir/onex/data/tools.dat ]; then
-    tools_data="$conf_dir/onex/data/tools.dat"
+if [ -d $conf_dir/Nesle ]; then
+  if [ -e $conf_dir/Nesle/data/tools.dat ]; then
+    tools_data="$conf_dir/Nesle/data/tools.dat"
   fi
-  if [ -e $conf_dir/onex/data/category.dat ]; then
-    category_data="$conf_dir/onex/data/category.dat"
+  if [ -e $conf_dir/Nesle/data/category.dat ]; then
+    category_data="$conf_dir/Nesle/data/category.dat"
   fi
 else
   if [ -e data/tools.dat ]; then
@@ -109,67 +109,67 @@ for each_pac in "wget" "curl" "git"; do
 done
 
 # removing old one
-if [ -e $bin/onex ]; then
-  if [ -d $conf_dir/onex ]; then
+if [ -e $bin/Nesle ]; then
+  if [ -d $conf_dir/Nesle ]; then
     if [ $sudo ]; then
-      $sudo rm -rf $bin/onex
-      $sudo rm -rf $conf_dir/onex
+      $sudo rm -rf $bin/Nesle
+      $sudo rm -rf $conf_dir/Nesle
     else
-      rm -rf $bin/onex
-      rm -rf $conf_dir/onex
+      rm -rf $bin/Nesle
+      rm -rf $conf_dir/Nesle
     fi
   fi
 fi
 
-# install onex
+# install Nesle
 if [ $0 = "install" -o $0 = "./install" ]; then
-  if [ -e onex ]; then
+  if [ -e Nesle ]; then
     if [ $sudo ]; then
-      $sudo mv -v onex $bin
-      $sudo chmod +x $bin/onex
+      $sudo mv -v Nesle $bin
+      $sudo chmod +x $bin/Nesle
     else
-      mv -v onex $bin
-      chmod +x $bin/onex
+      mv -v Nesle $bin
+      chmod +x $bin/Nesle
     fi
   fi
   cd ..
-  if [ -d onex ]; then
+  if [ -d Nesle ]; then
     if [ $sudo ]; then
-    $sudo mv -v onex $conf_dir
+    $sudo mv -v Nesle $conf_dir
     else
-      mv -v onex $conf_dir
+      mv -v Nesle $conf_dir
     fi
   fi
 else
-  if [ -e onex/onex ]; then
+  if [ -e Nesle/Nesle ]; then
     if [ $sudo ]; then
-      $sudo mv -v onex/onex $bin
-      $sudo chmod +x $bin/onex
+      $sudo mv -v Nesle/Nesle $bin
+      $sudo chmod +x $bin/Nesle
     else
-      mv -v onex/onex $bin
-      chmod +x $bin/onex
+      mv -v Nesle/Nesle $bin
+      chmod +x $bin/Nesle
     fi
   fi
-  if [ -d onex ]; then
+  if [ -d Nesle ]; then
     if [ $sudo ]; then
-    $sudo mv -v onex $conf_dir
+    $sudo mv -v Nesle $conf_dir
     else
-      mv -v onex $conf_dir
+      mv -v Nesle $conf_dir
     fi
   fi
 fi
 
-# check onex is installed or not
-if [ -e $bin/onex ]; then
-  if [ -d $conf_dir/onex ]; then
+# check Nesle is installed or not
+if [ -e $bin/Nesle ]; then
+  if [ -d $conf_dir/Nesle ]; then
     clear
     echo "$logo"
-    echo " ${purple}Onex ${green}installed successfully !!"
-    echo " ${green}type ${nc}'onex -h'${green} for more.${nc}"
+    echo " ${purple}Nesle ${green}installed successfully !!"
+    echo " ${green}type ${nc}'Nesle -h'${green} for more.${nc}"
   else
     clear
     echo "$logo"
-    echo " ${red}Sorry ${cyan}: onex ${red}is not installed !!"
+    echo " ${red}Sorry ${cyan}: Nesle ${red}is not installed !!"
     echo " ${green}Please try again${nc}"
   fi
 fi
