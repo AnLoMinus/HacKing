@@ -76,6 +76,5 @@
 - [X] Features: Installing HacKing Installer on System
 - [X] Features: Updating Installed HacKing Installer
 
-# TODO: Algorithm
-- [ ] Adding Anonymity tool:
-- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro): Working on new ShellTool
+# TODO: Arrange and organize the order
+- [ ] Arrange and organize the order
