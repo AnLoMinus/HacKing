@@ -45,13 +45,6 @@
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-## HacKing Installer Features:
--  [x] Installing Hackers Tools 
--  [x] Updating Tools 
--  [x] Removing Tools 
-
-![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
-
 ## HacKing Installer Usage:
 -  [x] `sh HacKing start`
 -  [x] `sh HacKing install toolname`
