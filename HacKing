@@ -60,7 +60,13 @@ BLACKBG="$(printf '\033[40m')"
 RESETBG="$(printf '\e[0m')"
 BLINK="$(printf '\033[5;31m')"
 logo="$(Banner)"
-prompt="${nc}[${blue}HacKing${nc}@${blue}space${nc}]$"
+
+PromptFun(){
+  echo ""
+  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}HacKing${cyan}$~${orange}]${cyan}"
+  echo "  ${orange}  └──╼${green}"
+}
+prompt="$(PromptFun)"
 
 # checking for system home dir
 if [ -d $HOME ]; then
@@ -399,7 +405,7 @@ install() {
     esac
   fi
   # wait for user any input
-  echo -n "$prompt "
+  echo "$prompt "
   read tmp_inp
 }
 
@@ -669,7 +675,7 @@ install_category_tool() {
     esac
   fi
   # wait for user any input
-  echo -n "$prompt "
+  echo "$prompt"
   read tmp_inp
 }
 
@@ -688,7 +694,7 @@ all_tools() {
       done
     done
     echo " ${green} 0 Back"
-    echo -n "$prompt "
+    echo "$prompt"
     read cmd
     # count total number of tools
     list=`grep -n "." $tools_data | wc -l`
@@ -729,7 +735,7 @@ category() {
       done
     done
     echo " ${green} 0 Back"
-    echo -n "$prompt "
+    echo "$prompt"
     read cmd
     # count total number of category
     list=`grep -n "." $category_data | wc -l`
@@ -753,7 +759,7 @@ category() {
               done
             done
             echo " ${green} 0 Back"
-            echo -n "$prompt "
+            echo "$prompt"
             read tmp_cmd
             # count total number of tools in category
             list=`grep -n "." $tools_data | sed -n "/$category/p" | wc -l`
@@ -800,7 +806,7 @@ update() {
     echo "$logo"
     echo " ${nc}[1] ${green} Update${nc}"
     echo " ${nc}[0] ${green} Back"
-    echo -n "$prompt "
+    echo "$prompt"
     read cmd
     case ${cmd} in
       1)
@@ -862,7 +868,7 @@ about() {
   echo " We are not responsible for any misuse"
   echo " or damage caused by this program."
   echo " Use this tool at your own risk!"
-  echo -n "$prompt "
+  echo "$prompt"
   read tmp
 }
 
@@ -877,7 +883,7 @@ menu() {
     echo " ${cyan}[3] ${green} Update HacKing"
     echo " ${cyan}[4] ${green} About us"
     echo " ${cyan}[5] ${green} Exit"
-    echo -n "$prompt "
+    echo "$prompt"
     read cmd
     case ${cmd} in
       1)
