@@ -28,7 +28,7 @@ DSXS|DSXS|WAH_Web_Application_Hacking|https://github.com/stamparm/DSXS.git|git|p
 Blazy|Blazy|WAH_Web_Application_Hacking|https://github.com/UltimateHackers/Blazy.git|git|python,git
 CMSeeK|CMSeeK|WAH_Web_Application_Hacking|https://github.com/Tuhinshubhra/CMSeeK.git|git|python,git
 CeWL|CeWL|PH_Password_Attacks|https://github.com/digininja/CeWL.git|git|ruby,git
-Black-Hydra|Black-Hydra|PH_Password_Attacks|https://github.com/Gameye98/Black-Hydra.git|git|python,git
+Black-Hydra|Black-Hydra|T_Termux,PH_Password_Attacks|https://github.com/Gameye98/Black-Hydra.git|git|python,git
 AutoPixieWps|AutoPixieWps|WT_Wireless_Testing|https://github.com/nxxxu/AutoPixieWps.git|git|python,git
 Brutal|Brutal|EF_Exploit_Frameworks|https://github.com/Screetsec/Brutal.git|git|git
 A-Rat|A-Rat|EF_Exploit_Frameworks|https://github.com/RexTheGod/A-Rat.git|git|python,git
@@ -143,7 +143,7 @@ airgeddon|airgeddon|WT_Wireless_Testing|https://github.com/v1s1t0r1sh3r3/airgedd
 android_hid|android_hid|A_Android|https://github.com/androidmalware/android_hid.git|git|git
 angryFuzzer|angryFuzzer|WAH_Web_Application_Hacking|https://github.com/ihebski/angryFuzzer.git|git|python,git
 apache2|apache2|WS_Web_Servers,package|null|ST_System_Tools|null
-arch-linux|setupTermuxArch.sh|T_Termux|https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sh|curl|proot,curl
+TermuxArch|TermuxArch|T_Termux|https://github.com/SDRausty/TermuxArch|git
 arp-scan|arp-scan|IG_Information_Gathering|https://github.com/royhills/arp-scan.git|git|clang,gcc,git
 arping|arping|IG_Information_Gathering|https://github.com/ThomasHabets/arping.git|git|,git
 automotive_software|as|A_Automotive|https://github.com/autoas/as.git|git|cmake,gcc,g++,git
@@ -366,8 +366,8 @@ subfinder|subfinder|WAH_Web_Application_Hacking|https://github.com/projectdiscov
 subscraper|subscraper|WAH_Web_Application_Hacking|https://github.com/m8r0wn/subscraper.git|git|python,git
 sucrack|sucrack|PH_Password_Attacks|https://github.com/hemp3l/sucrack.git|git|gcc,git
 termineter|termineter|stress_testing|https://github.com/securestate/termineter.git|git|python,git
-termux-fedora|termux-fedora|T_Termux|https://github.com/nmilosev/termux-fedora.git|git|proot,git
-termux-ubuntu|termux-ubuntu|T_Termux|https://github.com/Neo-Oli/termux-ubuntu.git|git|proot,git
+Termux-Uedora|Termux-Fedora|T_Termux|https://github.com/nmilosev/termux-fedora.git|git|proot,git
+Termux-Ubuntu|Termux-Ubuntu|T_Termux|https://github.com/Neo-Oli/termux-ubuntu.git|git|proot,git
 thc-ipv6|thc-ipv6|IG_Information_Gathering,VA_Vulnerability_Analysis,EF_Exploit_Frameworks|https://github.com/vanhauser-thc/thc-ipv6.git|git|clang,gcc,git
 the-backdoor-factory|the-backdoor-factory|EF_Exploit_Frameworks|https://github.com/secretsquirrel/the-backdoor-factory.git|git|python,git
 theHarvester|theHarvester|IG_Information_Gathering|https://github.com/laramies/theHarvester.git|git|python,git
