@@ -10,10 +10,6 @@
 
  **HacKing Tools Downloader**: Downloading HacKing Tools and exporting by categories to $HOME directory 
 
-
-- [x] [HacKing Installer](https://github.com/Anlominus/HacKing)
-- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
-
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
   ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
@@ -73,3 +69,10 @@
 # TODO: 
 - [ ] Arrange and organize the order
 - [ ] Adding Tools..
+
+---
+
+- [x] [Nesle](https://github.com/Anlominus/Nesle)
+- [x] [HacKing](https://github.com/Anlominus/HacKing)
+- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
+
