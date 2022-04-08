@@ -913,7 +913,6 @@ menu() {
   done
 }
 
-
 # list all tools from data
 cli_list_all() {
   # get all tools data
