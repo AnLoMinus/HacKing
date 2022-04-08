@@ -76,5 +76,6 @@
 - [X] Features: Installing HacKing Installer on System
 - [X] Features: Updating Installed HacKing Installer
 
-# TODO: Arrange and organize the order
+# TODO: 
 - [ ] Arrange and organize the order
+- [ ] Adding Tools..
