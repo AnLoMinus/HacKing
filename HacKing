@@ -878,7 +878,7 @@ menu() {
     clear
     tools=`grep -n '.' $tools_data | wc -l`
     echo "$logo"
-    echo " ${cyan}[1] ${green} All tools ${nc}(${red}$tools tools${nc})"
+    echo " ${cyan}[1] ${green} All tools $RED$tools"
     echo " ${cyan}[2] ${green} Tools category"
     echo " ${cyan}[3] ${green} Update HacKing"
     echo " ${cyan}[4] ${green} About us"
