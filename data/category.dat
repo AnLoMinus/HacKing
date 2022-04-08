@@ -1,21 +1,25 @@
-Anonymity|01_Anonymity
-Information Gathering|02_Information_Gathering
-Vulnerability Scanner|03_Vulnerability_Analysis
-Web Application Hacking|04_Web_Application_Hacking
-Database Assessment|05_Database_Assessment
-Password Attacks|06_Password_Attacks
-Wireless Testing|07_Wireless_Testing
-Reverse Engineering|08_Reverse_Engineering
-Exploit Frameworks|09_Exploit_Frameworks
-Sniffing & Spoofing|10_Sniffing_Spoofing
-Maintaining Access|11_Maintaining_Access
-Digital Forensics|12_Digital_Forensics
-Reporting|13_Reporting
-Social Engineering|14_Social_Engineering
-Malware Analysis|15_Malware_Analysis
-Covering Tracks|16_Covering_Tracks
-Android|17_Android
-Termux|18_Termux
-Programming Languages|19_Programming_Language
-Automotive|20_automotive
-Web Servers|21_Web_Servers
+Anonymity|A_Anonymity
+Information Gathering|IG_Information_Gathering
+Vulnerability Scanner|VA_Vulnerability_Analysis
+Web Application Hacking|WAH_Web_Application_Hacking
+Database Assessment|DA_Database_Assessment
+Password Hacking|PH_Password_Hacking
+Wireless Testing|WT_Wireless_Testing
+Reverse Engineering|RE_Reverse_Engineering
+Exploit Frameworks|EF_Exploit_Frameworks
+Sniffing & Spoofing|SS_Sniffing_Spoofing
+Maintaining Access|MA_Maintaining_Access
+Digital Forensics|DF_Digital_Forensics
+Reporting|R_Reporting
+Social Engineering|SE_Social_Engineering
+Malware Analysis|MA_Malware_Analysis
+Covering Tracks|CT_Covering_Tracks
+Android|A_Android
+Termux|T_Termux
+Programming Languages|PL_Programming_Language
+Automotive|A_Automotive
+Web Servers|WS_Web_Servers
+Transfer Data|TD_Transfer_Data
+Payloads|P_Payloads
+All Other|AO_All_Other
+LazyTools|LT_Lazy_Tools
