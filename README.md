@@ -82,3 +82,4 @@
 - [x] [Nesle](https://github.com/Anlominus/Nesle)
 - [x] [HacKing](https://github.com/Anlominus/HacKing)
 - [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
+- [x] Cloning And Upgrading From [rajkumardusad/onex](https://github.com/rajkumardusad/onex)
