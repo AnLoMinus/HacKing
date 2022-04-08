@@ -2,13 +2,13 @@
 
   <a href=""><br><img title="Made in ISRAEL" src="https://img.shields.io/badge/MADE%20IN-ISRAEL-blue?style=for-the-badge"></a>
 
-<h1> 👨‍💻 HคcKᎥήg Installer 👨‍💻 </h1>
+<h1> 👨‍💻 HคcKᎥήg Tools Downloader 👨‍💻 </h1>
   
   #### v0.0.0.1
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-### HacKing Installer: Installing HacKing Tools
+ **HacKing Tools Downloader**: Downloading HacKing Tools and exporting by categories to $HOME directory 
 
 
 - [x] [HacKing Installer](https://github.com/Anlominus/HacKing)
@@ -20,7 +20,22 @@
   
 </div>
 
-# Categories 
+## HacKing Usage:
+-  [x] `sh HacKing start`
+-  [x] `sh HacKing install toolname`
+-  [x] `sh HacKing remove`
+
+![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
+
+## HacKing Menu:
+- [x]  [1]  Install
+- [x]  [2]  Remove
+- [X]  [3]  Update
+- [x]  [q]  Quit to Main Menu
+
+![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
+
+## HacKing Categories 
 - [x] 1 Anonymity
 - [x] 2 Information Gathering
 - [x] 3 Vulnerability Scanner
@@ -45,20 +60,6 @@
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-## HacKing Installer Usage:
--  [x] `sh HacKing start`
--  [x] `sh HacKing install toolname`
--  [x] `sh HacKing remove`
-
-![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
-
-## HacKing Installer Menu:
-- [x]  [1]  Install
-- [x]  [2]  Remove
-- [X]  [3]  Update
-- [x]  [q]  Quit to Main Menu
-
-![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
   
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
