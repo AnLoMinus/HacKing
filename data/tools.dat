@@ -1,3 +1,11 @@
+
+~Sms_Impulse|Impulse|T_Termux,S_Spamming|https://github.com/LimerBoy/Impulse|git
+~Sms_ToolsSpammer|ToolsSpammer|T_Termux,S_Spamming|https://github.com/koleksibot/ToolsSpammer|git
+~Hash_Pyhases|Pyhases|T_Termux|https://github.com/thenurhabib/pyhases|git
+~Design_Funny-Termux|Funny-Termux|T_Termux|https://github.com/mrprogrammer2938/Funny-Termux|git
+~Kits_Get-Linux|Get-Linux|T_Termux|https://github.com/pembriahmad/Get-Linux|git
+~Payloads_Msf-Termux|msf-termux|T_Termux|https://github.com/Deadpool2000/msf-termux|git
+~Universal_debonair|debonair|T_Termux|https://github.com/scalabli/debonair|git
 ~Sms_Death-from-Above|Death-from-Above|T_Termux|https://github.com/nordbearbotdev/Death-from-Above|git
 ~Universal_Web-Hunter|Web-Hunter|T_Termux|https://github.com/darkhunter141/Web-Hunter|git
 ~Universal_Kairav|Kairav|T_Termux|https://github.com/LavSarkari/Kairav|git
@@ -37,9 +45,10 @@ Infect|Infect|T_Termux|https://github.com/noob-hackers/infect|git
 Hacklock|Hacklock|T_Termux|https://github.com/noob-hackers/hacklock|git
 Ighack|Ighack|T_Termux|https://github.com/noob-hackers/ighack|git
 mrphish|mrphish|T_Termux|https://github.com/noob-hackers/mrphish|git
-Hackinfinity AnonSurf|AnonSurf|A_Anonymity|https://github.com/Hackinfinity/anonsurf|git
-ultrafunkamsterdam AnonSurf|AnonSurf|A_Anonymity|https://github.com/ultrafunkamsterdam/AnonSurf|git|git
-4nonimizer|4nonimizer|A_Anonymity|https://github.com/Hackplayers/4nonimizer.git|git|git
+~Anonymity_MAC-Address-Spoofer|MAC-Address-Spoofer|A_Anonymity|https://github.com/MKVO-pts/MAC-Address-Spoofer|git
+~Anonymity_infinity_AnonSurf|AnonSurf|A_Anonymity|https://github.com/Hackinfinity/anonsurf|git
+~Anonymity_Amsterdam_AnonSurf|AnonSurf|A_Anonymity|https://github.com/ultrafunkamsterdam/AnonSurf|git|git
+~Anonymity_4nonimizer|4nonimizer|A_Anonymity|https://github.com/Hackplayers/4nonimizer.git|git|git
 Dracnmap|Dracnmap|IG_Information_Gathering|https://github.com/Screetsec/Dracnmap.git|git|git
 Auxscan|Auxscan|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/Gameye98/Auxscan.git|git|python,git
 Automater|TekDefense-Automater|IG_Information_Gathering|https://github.com/1aN0rmus/TekDefense-Automater.git|git|python,git
@@ -144,7 +153,7 @@ Spammer-Grab|Spammer-Grab|SS_Sniffing_Spoofing|https://github.com/p4kl0nc4t/Spam
 Stitch|Stitch|null|https://github.com/nathanlopez/Stitch.git|git|python,git
 Striker|Striker|VA_Vulnerability_Analysis|https://github.com/s0md3v/Striker.git|git|python,git
 Sublist3r|Sublist3r|IG_Information_Gathering|https://github.com/aboul3la/Sublist3r.git|git|python,git
-Tbomb|Tbomb|S_Spamming|https://github.com/TheSpeedX/TBomb.git|git|python,git
+Tbomb|Tbomb|T_Termux,S_Spamming|https://github.com/TheSpeedX/TBomb.git|git|python,git
 TermuxAlpine|TermuxAlpine|T_Termux|https://github.com/Hax4us/TermuxAlpine.git|git|proot,git
 Th3inspector|Th3inspector|null|https://github.com/Moham3dRiahi/Th3inspector.git|git|perl,git
 The-Eye|The-Eye|null|https://github.com/EgeBalci/The-Eye.git|git|golang,git
