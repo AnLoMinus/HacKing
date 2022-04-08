@@ -16,7 +16,32 @@
   ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
   
 </div>
-  
+
+# Categories 
+- [x] 1 Anonymity
+- [x] 2 Information Gathering
+- [x] 3 Vulnerability Scanner
+- [x] 4 Web Application Hacking
+- [x] 5 Database Assessment
+- [x] 6 Password Attacks
+- [x] 7 Wireless Testing
+- [x] 8 Reverse Engineering
+- [x] 9 Exploit Frameworks
+- [x] 10 Sniffing & Spoofing
+- [x] 11 Maintaining Access
+- [x] 12 Digital Forensics
+- [x] 13 Reporting
+- [x] 14 Social Engineering
+- [x] 15 Malware Analysis
+- [x] 16 Covering Tracks
+- [x] 17 Android
+- [x] 18 Termux
+- [x] 19 Programming Languages
+- [x] 20 Automotive
+- [x] 21 Web Servers
+
+![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
+
 ## HacKing Features:
 -  [x] Installing Hackers Tools 
 -  [x] Updating Tools 
