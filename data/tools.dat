@@ -88,9 +88,9 @@ RED_HAWK|RED_HAWK|IG_Information_Gathering,VA_Vulnerability_Analysis|https://git
 RTLSDR-Scanner|RTLSDR-Scanner|WT_Wireless_Testing|https://github.com/EarToEarOak/RTLSDR-Scanner.git|git|python,git
 ReconDog|ReconDog|IG_Information_Gathering|https://github.com/UltimateHackers/ReconDog.git|git|python,git
 Reconnoitre|Reconnoitre|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/codingo/Reconnoitre.git|git|python,git
-Remot3d|Remot3d|null|https://github.com/KeepWannabe/Remot3d.git|git|git
+Remot3d|Remot3d|WAH_Web_Application_Hacking|https://github.com/KeepWannabe/Remot3d.git|git|git
 Responder|Responder|SS_Sniffing_Spoofing|https://github.com/lgandx/Responder.git|git|python,git
-ReverseAPK|ReverseAPK|null|https://github.com/1N3/ReverseAPK.git|git|git
+ReverseAPK|ReverseAPK|A_Android|https://github.com/1N3/ReverseAPK.git|git|git
 SARA|SARA|A_Android,T_Termux|https://github.com/termuxhackers-id/SARA.git|git|python,git
 SCANNER-INURLBR|SCANNER-INURLBR|WAH_Web_Application_Hacking|https://github.com/googleinurl/SCANNER-INURLBR.git|git|php,git
 SET|social-engineer-toolkit|IG_Information_Gathering,EF_Exploit_Frameworks,PH_Password_Attacks,SS_Sniffing_Spoofing|https://github.com/trustedsec/social-engineer-toolkit.git|git|python,git
@@ -105,7 +105,7 @@ Spammer-Grab|Spammer-Grab|SS_Sniffing_Spoofing|https://github.com/p4kl0nc4t/Spam
 Stitch|Stitch|null|https://github.com/nathanlopez/Stitch.git|git|python,git
 Striker|Striker|VA_Vulnerability_Analysis|https://github.com/s0md3v/Striker.git|git|python,git
 Sublist3r|Sublist3r|IG_Information_Gathering|https://github.com/aboul3la/Sublist3r.git|git|python,git
-Tbomb|Tbomb|null|https://github.com/TheSpeedX/TBomb.git|git|python,git
+Tbomb|Tbomb|S_Spamming|https://github.com/TheSpeedX/TBomb.git|git|python,git
 TermuxAlpine|TermuxAlpine|T_Termux|https://github.com/Hax4us/TermuxAlpine.git|git|proot,git
 Th3inspector|Th3inspector|null|https://github.com/Moham3dRiahi/Th3inspector.git|git|perl,git
 The-Eye|The-Eye|null|https://github.com/EgeBalci/The-Eye.git|git|golang,git
