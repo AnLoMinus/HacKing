@@ -53,7 +53,7 @@ HiddenEye|HiddenEye|null|https://github.com/DarkSecDevelopers/HiddenEye.git|git|
 Hunner|Hunner|null|https://github.com/b3-v3r/Hunner.git|git|python,git
 IP-Tracer|IP-Tracer|02_Information_Gathering,ip_tracking|https://github.com/Rajkumrdusad/IP-Tracer|git|php,git
 IPGeoLocation|IPGeoLocation|ip_tracking|https://github.com/maldevel/IPGeoLocation.git|git|python,git
-ImHex|ImHex|08 - Reverse Engineering|https://github.com/WerWolv/ImHex.git|git|g++,python,git
+ImHex|ImHex|08_Reverse_Engineering|https://github.com/WerWolv/ImHex.git|git|g++,python,git
 InSpy|InSpy|02_Information_Gathering|https://github.com/leapsecurity/InSpy.git|git|python,git
 Infoga|Infoga|02_Information_Gathering|https://github.com/m4ll0k/Infoga.git|git|python,git
 Intersect-2.5|Intersect-2.5|maintaining_access|https://github.com/deadbits/Intersect-2.5.git|git|python,git
@@ -171,7 +171,7 @@ crunch|crunch|06_Password_Attacks|null|package_manager|null
 cuckoo|cuckoo|12_Digital_Forensics|https://github.com/cuckoosandbox/cuckoo.git|git|python,git
 cupp|cupp|06_Password_Attacks|https://github.com/Mebus/cupp.git|git|python,git
 curl|curl|package|null|package_manager|null
-cutter|cutter|08 - Reverse Engineering|https://github.com/rizinorg/cutter.git|git|cmake,git
+cutter|cutter|08_Reverse_Engineering|https://github.com/rizinorg/cutter.git|git|cmake,git
 cymothoa|cymothoa|maintaining_access|null|package_manager|null
 c|clang|19_Programming_Language|null|package_manager|null
 dbd|dbd|maintaining_access|https://github.com/gitdurandal/dbd.git|git|clang,gcc,git
@@ -189,7 +189,7 @@ doork|doork|02_Information_Gathering,04_Web_Application_Hacking|https://github.c
 dotdotpwn|dotdotpwn|02_Information_Gathering,03_Vulnerability_Analysis|https://github.com/wireghoul/dotdotpwn.git|git|perl,git
 dumpzilla|dumpzilla|12_Digital_Forensics|https://gitlab.com/kalilinux/packages/dumpzilla.git|git|python,git
 eaphammer|eaphammer|07_Wireless_Testing|https://github.com/s0lst1c3/eaphammer.git|git|python,git
-edb-debugger|edb-debugger|08 - Reverse Engineering|null|package_manager|null
+edb-debugger|edb-debugger|08_Reverse_Engineering|null|package_manager|null
 elpscrk|elpscrk|06_Password_Attacks|https://github.com/D4Vinci/elpscrk.git|git|python,git
 enum4linux|enum4linux|02_Information_Gathering|https://github.com/portcullislabs/enum4linux.git|git|perl,git
 eternal_scanner|eternal_scanner|null|https://github.com/peterpt/eternal_scanner.git|git|python,git
@@ -247,7 +247,7 @@ iSMTP|ipwn|02_Information_Gathering|https://github.com/altjx/ipwn.git|git|python
 ike-scan|ike-scan|02_Information_Gathering|null|package_manager|null
 infect|infect|null|https://github.com/noob-hackers/infect.git|git|git
 intrace|intrace|02_Information_Gathering|https://github.com/robertswiecki/intrace.git|git|clang,gcc,git
-javasnoop|javasnoop|08 - Reverse Engineering|https://github.com/carterjones/javasnoop.git|git|git
+javasnoop|javasnoop|08_Reverse_Engineering|https://github.com/carterjones/javasnoop.git|git|git
 jboss-autopwn|jboss-autopwn|null|https://github.com/SpiderLabs/jboss-autopwn.git|git|git
 johnny|johnny|06_Password_Attacks|https://github.com/shinnok/johnny.git|git|clang,gcc,g++,git
 joomscan|joomscan|04_Web_Application_Hacking|https://github.com/rezasp/joomscan.git|git|perl,git
@@ -324,7 +324,7 @@ rang3r|rang3r|03_Vulnerability_Analysis|https://github.com/floriankunushevci/ran
 reaver|reaver-wps-fork-t6x|07_Wireless_Testing|https://github.com/t6x/reaver-wps-fork-t6x.git|git|clang,gcc,git
 recon-ng|recon-ng|02_Information_Gathering|https://github.com/lanmaster53/recon-ng.git|git|python,git
 ridenum|ridenum|maintaining_access|https://github.com/trustedsec/ridenum.git|git|python,git
-rizin|rizin|08 - Reverse Engineering|https://github.com/rizinorg/rizin.git|git|gcc,g++,python3,git
+rizin|rizin|08_Reverse_Engineering|https://github.com/rizinorg/rizin.git|git|gcc,g++,python3,git
 rkhunter|rkhunter|03_Vulnerability_Analysis|null|package_manager|null
 routersploit|routersploit|03_Vulnerability_Analysis,09_Exploit_Frameworks|https://github.com/reverse-shell/routersploit.git|git|python,git
 roxysploit|roxysploit|09_Exploit_Frameworks|https://github.com/andyvaikunth/roxysploit.git|git|python,git
@@ -339,7 +339,7 @@ sipvicious|sipvicious|10_Sniffing_Spoofing|https://github.com/EnableSecurity/sip
 skipfish|skipfish|04_Web_Application_Hacking|https://gitlab.com/kalilinux/packages/skipfish.git|git|clang,gcc,git
 slowhttptest|slowhttptest|stress_testing|https://github.com/shekyan/slowhttptest.git|git|clang,gcc,g++,git
 slowloris|slowloris|ddos,stress_testing|https://github.com/gkbrk/slowloris.git|git|python,git
-smali|smali|08 - Reverse Engineering|https://github.com/JesusFreke/smali.git|git|git
+smali|smali|08_Reverse_Engineering|https://github.com/JesusFreke/smali.git|git|git
 smbmap|smbmap|02_Information_Gathering|https://github.com/ShawnDEvans/smbmap.git|git|python,git
 sniffjoke|sniffjoke|10_Sniffing_Spoofing|https://github.com/vecna/sniffjoke.git|git|clang,gcc,g++,git
 social-engineer-toolkit|social-engineer-toolkit|14_Social_Engineering,09_Exploit_Frameworks,06_Password_Attacks,10_Sniffing_Spoofing|https://github.com/trustedsec/social-engineer-toolkit.git|git|python,git
