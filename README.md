@@ -18,7 +18,7 @@
 </div>
   
 ## HacKing Features:
--  [x] Installing Tools 
+-  [x] Installing Hackers Tools 
 -  [x] Updating Tools 
 -  [x] Removing Tools 
 
@@ -26,7 +26,7 @@
 
 ## HacKing Usage:
 -  [x] sh HacKing start
--  [x] sh HacKing install
+-  [x] sh HacKing install toolname
 -  [x] sh HacKing remove
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
@@ -44,9 +44,9 @@
 ---
 
 # INCLUDE: Options
-- [X] Features: Starter
-- [X] Features: Installer
-- [X] Features: Remover
+- [X] Features: Installing Hackers Tools
+- [X] Features: Installing HacKing Installer on System
+- [X] Features: Updating Installed HacKing Installer
 
 # TODO: Algorithm
 - [ ] Adding Anonymity tool:
