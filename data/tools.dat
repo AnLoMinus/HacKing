@@ -1,3 +1,23 @@
+Infoooze|Infoooze|T_Termux|https://github.com/7ORP3DO/infoooze|git
+TORhunter|TORhunter|T_Termux|https://github.com/Err0r-ICA/TORhunter|git
+Free-Proxy|Free-Proxy|T_Termux|https://github.com/mishakorzik/Free-Proxy|git
+Gmail-Hack|Gmail-Hack|T_Termux|https://github.com/mishakorzik/Gmail-Hack|git
+AndroFetch|AndroFetch|T_Termux|https://github.com/laraib07/androfetch|git
+Xteam|Xteam|T_Termux|https://github.com/xploitstech/Xteam|git
+TermuxCyberArmy|TermuxCyberArmy|T_Termux|https://github.com/Err0r-ICA/TermuxCyberArmy|git
+zVirus-Gen|zVirus-Gen|T_Termux|https://github.com/ZechBron/zVirus-Gen|git
+IpHack|IpHack|T_Termux|https://github.com/mishakorzik/IpHack|git
+UserFinder|UserFinder|T_Termux|https://github.com/mishakorzik/UserFinder|git
+AdminHack|AdminHack|T_Termux|https://github.com/mishakorzik/AdminHack|git
+AllHackingTools|AllHackingTools|T_Termux|https://github.com/mishakorzik/AllHackingTools|git
+007-TheBond|007-TheBond|T_Termux|https://github.com/Deadshot0x7/007-TheBond|git
+Host|Host|T_Termux|https://github.com/htr-tech/host|git
+ShortUrl|ShortUrl|T_Termux|https://github.com/htr-tech/shorturl|git
+T-Style|T-Style|T_Termux|https://github.com/htr-tech/tstyle|git
+Termux-Style|Termux-Style|T_Termux|https://github.com/adi1090x/termux-style|git
+Termux-Desktop|Termux-Desktop|T_Termux|https://github.com/adi1090x/termux-desktop|git
+onex|onex|T_Termux|https://github.com/rajkumardusad/onex|git
+H-SPLOIT|H-SPLOIT|T_Termux|https://github.com/jravis-8520/h-sploit|git
 Cracker-Tool|Cracker-Tool|T_Termux|https://github.com/cracker911181/Cracker-Tool|git
 b3x|b3x|T_Termux|https://github.com/joaroque/b3x|git
 Snap|Snap|T_Termux|https://github.com/noob-hackers/snap|git
@@ -63,7 +83,7 @@ HT-WPS-Breaker|HT-WPS-Breaker|null|https://github.com/SilentGhostX/HT-WPS-Breake
 Hash-Buster|Hash-Buster|PH_Password_Attacks|https://github.com/UltimateHackers/Hash-Buster.git|git|python,git
 HiddenEye|HiddenEye|null|https://github.com/DarkSecDevelopers/HiddenEye.git|git|python,git
 Hunner|Hunner|EF_Exploit_Frameworks|https://github.com/b3-v3r/Hunner.git|git|python,git
-IP-Tracer|IP-Tracer|IG_Information_Gathering,ip_tracking|https://github.com/Rajkumrdusad/IP-Tracer|git|php,git
+IP-Tracer|IP-Tracer|T_Termux|https://github.com/Rajkumrdusad/IP-Tracer|git|php,git
 IPGeoLocation|IPGeoLocation|ip_tracking|https://github.com/maldevel/IPGeoLocation.git|git|python,git
 ImHex|ImHex|RE_Reverse_Engineering|https://github.com/WerWolv/ImHex.git|git|g++,python,git
 InSpy|InSpy|IG_Information_Gathering|https://github.com/leapsecurity/InSpy.git|git|python,git
@@ -79,7 +99,7 @@ Lazymux|Lazymux|T_Termux|https://github.com/Gameye98/Lazymux.git|git|python,git
 MHDDoS|MHDDoS|ddos|https://github.com/MHProDev/MHDDoS.git|git|python,git
 MITMf|MITMf|SS_Sniffing_Spoofing|https://github.com/byt3bl33d3r/MITMf.git|git|python2,git
 Meterpreter_Paranoid_Mode-SSL|Meterpreter_Paranoid_Mode-SSL|EF_Exploit_Frameworks|https://github.com/r00t-3xp10it/Meterpreter_Paranoid_Mode-SSL.git|git|git
-MyServer|MyServer|WS_Web_Servers|https://github.com/Rajkumrdusad/MyServer.git|git|python,git
+MyServer|MyServer|T_Termux|https://github.com/Rajkumrdusad/MyServer.git|git|python,git
 Nethunter-In-Termux|Nethunter-In-Termux|null|https://github.com/Hax4us/Nethunter-In-Termux.git|git|git
 OSIF|OSIF|IG_Information_Gathering|https://github.com/ciku370/OSIF.git|git|python,git
 PadBuster|PadBuster|WAH_Web_Application_Hacking|https://github.com/AonCyberLabs/PadBuster.git|git|perl,git
@@ -231,7 +251,7 @@ galleta|galleta|DF_Digital_Forensics|null|ST_System_Tools|null
 gasmask|gasmask|null|https://github.com/twelvesec/gasmask.git|git|python,git
 gcat|gcat|null|https://github.com/byt3bl33d3r/gcat.git|git|python,git
 gcc|gcc|PL_Programming_Language|null|ST_System_Tools|null
-get|get|null|https://github.com/peterpt/get.git|git|git
+get|get|ST_System_Tools|https://github.com/peterpt/get.git|git|git
 ghost-phisher|ghost-phisher|IG_Information_Gathering|https://github.com/savio-code/ghost-phisher.git|git|python,git
 ghost_eye|ghost_eye|IG_Information_Gathering|https://github.com/BullsEye0/ghost_eye.git|git|python3,python3-pip,git
 giskismet|giskismet|WT_Wireless_Testing|https://github.com/xtr4nge/giskismet.git|git|perl,git
@@ -297,7 +317,7 @@ netattack2|netattack2|WT_Wireless_Testing|https://github.com/chrizator/netattack
 netattack|netattack|WT_Wireless_Testing|https://github.com/chrizator/netattack.git|git|python,git
 netdiscover|netdiscover|null|https://github.com/alexxy/netdiscover.git|git|git
 netsniff-ng|netsniff-ng|SS_Sniffing_Spoofing|https://github.com/netsniff-ng/netsniff-ng.git|git|gcc,make,git
-nexphisher|nexphisher|IG_Information_Gathering|https://github.com/htr-tech/nexphisher.git|git|git,php,curl
+nexphisher|nexphisher|T_Termux|https://github.com/htr-tech/nexphisher.git|git|git,php,curl
 nginx|nginx|WS_Web_Servers,package|null|ST_System_Tools|null
 nikto|nikto|IG_Information_Gathering|https://github.com/sullo/nikto.git|git|perl,git
 nishang|nishang|maintaining_access|https://github.com/samratashok/nishang.git|git|git
@@ -376,6 +396,7 @@ torbrowser-launcher|torbrowser-launcher|null|null|ST_System_Tools|null
 torghost|torghost|null|https://github.com/susmithHCK/torghost.git|git|python,git
 torshammer|torshammer|stress_testing|https://github.com/dotfighter/torshammer.git|git|python,git
 tor|tor|package|null|ST_System_Tools|null
+npm|npm|package|null|ST_System_Tools|null
 trackout|trackout|IG_Information_Gathering,ip_tracking|https://github.com/abaykan/trackout.git|git|python,git
 trape|trape|ip_tracking|https://github.com/boxug/trape.git|git|python,git
 trojanizer|trojanizer|null|https://github.com/r00t-3xp10it/trojanizer.git|git|git
@@ -418,4 +439,4 @@ zeal-kali-installer|zeal-kali-installer|null|https://github.com/1RaY-1/zeal-kali
 zenmap-linux-installer|zenmap-linux-installer|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/1RaY-1/zenmap-linux-installer.git|git|nmap,python3,git
 zip|zip|package|null|ST_System_Tools|null
 zirikatu|zirikatu|null|https://github.com/pasahitz/zirikatu.git|git|git
-zphisher|zphisher|IG_Information_Gathering|https://github.com/htr-tech/zphisher.git|git|php,nodejs,git
+zphisher|zphisher|T_Termux|https://github.com/htr-tech/zphisher.git|git|php,nodejs,git
