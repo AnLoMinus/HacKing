@@ -185,7 +185,7 @@ aircrack-ng|aircrack-ng|WT_Wireless_Testing|null|package_manager|null
 airgeddon|airgeddon|WT_Wireless_Testing|https://github.com/v1s1t0r1sh3r3/airgeddon.git|git|git
 android_hid|android_hid|A_Android|https://github.com/androidmalware/android_hid.git|git|git
 angryFuzzer|angryFuzzer|WAH_Web_Application_Hacking|https://github.com/ihebski/angryFuzzer.git|git|python,git
-apache2|apache2|WS_Web_Servers,package|null|package_manager|null
+apache2|apache2|WS_Web_Servers|null|package_manager|null
 TermuxArch|TermuxArch|T_Termux|https://github.com/SDRausty/TermuxArch|git
 arp-scan|arp-scan|IG_Information_Gathering|https://github.com/royhills/arp-scan.git|git|clang,gcc,git
 arping|arping|IG_Information_Gathering|https://github.com/ThomasHabets/arping.git|git|,git
