@@ -1,4 +1,6 @@
+Termux|T_Termux
 Anonymity|A_Anonymity
+Android|A_Android
 Information Gathering|IG_Information_Gathering
 Vulnerability Scanner|VA_Vulnerability_Analysis
 Web Application Hacking|WAH_Web_Application_Hacking
@@ -10,12 +12,10 @@ Exploit Frameworks|EF_Exploit_Frameworks
 Sniffing & Spoofing|SS_Sniffing_Spoofing
 Maintaining Access|MA_Maintaining_Access
 Digital Forensics|DF_Digital_Forensics
-Reporting|R_Reporting
 Social Engineering|SE_Social_Engineering
 Malware Analysis|MA_Malware_Analysis
+Reporting|R_Reporting
 Covering Tracks|CT_Covering_Tracks
-Android|A_Android
-Termux|T_Termux
 Programming Languages|PL_Programming_Language
 Automotive|A_Automotive
 Web Servers|WS_Web_Servers

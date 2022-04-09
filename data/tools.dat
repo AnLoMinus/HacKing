@@ -1,4 +1,7 @@
 
+Seeker|Seeker|SE_Social_Engineering|https://github.com/thewhiteh4t/seeker|git
+~Suid_Termux-Sudo|Termux-Sudo|T_Termux,A_Android|https://github.com/st42/termux-sudo|git
+~Meta_ExifTool|ExifTool|R_Reporting|https://github.com/exiftool/exiftool|git
 ~Sms_Impulse|Impulse|T_Termux,S_Spamming|https://github.com/LimerBoy/Impulse|git
 ~Sms_ToolsSpammer|ToolsSpammer|T_Termux,S_Spamming|https://github.com/koleksibot/ToolsSpammer|git
 ~Hash_Pyhases|Pyhases|T_Termux|https://github.com/thenurhabib/pyhases|git
@@ -264,7 +267,7 @@ foremost|foremost|DF_Digital_Forensics|https://gitlab.com/kalilinux/packages/for
 fping|fping|IG_Information_Gathering|https://github.com/schweikert/fping.git|git|gcc,perl,git
 fragrouter|fragrouter|IG_Information_Gathering|https://gitlab.com/kalilinux/packages/fragrouter.git|git|clang,gcc,git
 fragroute|fragroute|IG_Information_Gathering|https://gitlab.com/kalilinux/packages/fragroute.git|git|clang,gcc,git
-fsociety|fsociety|null|https://github.com/Manisso/fsociety.git|git|python,git
+fsociety|fsociety|T_Termux|https://github.com/Manisso/fsociety.git|git|python,git
 fuckshitup|fuckshitup|null|https://github.com/Smaash/fuckshitup.git|git|php,git
 fuxploider|fuxploider|null|https://github.com/almandin/fuxploider.git|git|python,git
 galleta|galleta|DF_Digital_Forensics|null|ST_System_Tools|null
