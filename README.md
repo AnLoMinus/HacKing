@@ -19,9 +19,41 @@
 </div>
 
 ## HacKing Usage:
--  [x] `sh HacKing start`
--  [x] `sh HacKing install toolname`
--  [x] `sh HacKing remove`
+-  [x] Starting Tool: `sh HacKing start`
+-  [x] Installing specific tool: `sh HacKing install toolname`
+-  [x] Remove HacKing from System: `sh HacKing remove`
+
+## How to use HacKing ?
+
+HacKing is very simple and easy to use tool, its available in both CLI and manual mode.
+
+### CLI Mode :
+`HacKing -h` or `HacKing help` for help.
+
+Options :
+- `HacKing install [tool_name]` install any tool.
+- `HacKing -i [tool_name]` install any tool.
+- `HacKing search [tool_name]` search any tool.
+- `HacKing -s [tool_name]` search any tool.
+- `HacKing list` list all tools.
+- `HacKing list -a` list all tools.
+- `HacKing -l` list all tools.
+- `HacKing -l -a` list all tools.
+- `HacKing help` get help.
+- `HacKing -h` get help.
+
+### Menu Mode :
+
+`HacKing start` to start HacKing menu mode.
+
+Enter a Number for a specific output:
+- (1) : To show all available tools and type the number of a tool which you want to install.
+- (2) : To show tools category.
+- (3) : If you want to update HacKing.
+- (4) : If you want to know About Us.
+- (5) : To exit the tool.
+
+
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
