@@ -1,6 +1,6 @@
-Termux|T_Termux
 Anonymity|A_Anonymity
 Android|A_Android
+Termux|T_Termux
 Information Gathering|IG_Information_Gathering
 Vulnerability Scanner|VA_Vulnerability_Analysis
 Web Application Hacking|WAH_Web_Application_Hacking
@@ -16,11 +16,11 @@ Social Engineering|SE_Social_Engineering
 Malware Analysis|MA_Malware_Analysis
 Reporting|R_Reporting
 Covering Tracks|CT_Covering_Tracks
-Programming Languages|PL_Programming_Language
 Automotive|A_Automotive
 Web Servers|WS_Web_Servers
 Transfer Data|TD_Transfer_Data
 Payloads|P_Payloads
-System Tools|ST_System_Tools
+Programming Languages|PL_Programming_Language
+System Packs|SP_System_Tools
 LazyTools|LT_Lazy_Tools
 Spamming|S_Spamming

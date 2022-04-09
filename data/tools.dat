@@ -185,7 +185,7 @@ aircrack-ng|aircrack-ng|WT_Wireless_Testing|null|package_manager|null
 airgeddon|airgeddon|WT_Wireless_Testing|https://github.com/v1s1t0r1sh3r3/airgeddon.git|git|git
 android_hid|android_hid|A_Android|https://github.com/androidmalware/android_hid.git|git|git
 angryFuzzer|angryFuzzer|WAH_Web_Application_Hacking|https://github.com/ihebski/angryFuzzer.git|git|python,git
-apache2|apache2|WS_Web_Servers|null|package_manager|null
+apache2|apache2|WS_Web_Servers,SP_System_Tools|null|package_manager|null
 TermuxArch|TermuxArch|T_Termux|https://github.com/SDRausty/TermuxArch|git
 arp-scan|arp-scan|IG_Information_Gathering|https://github.com/royhills/arp-scan.git|git|clang,gcc,git
 arping|arping|IG_Information_Gathering|https://github.com/ThomasHabets/arping.git|git|,git
@@ -223,7 +223,7 @@ crowbar|crowbar|PH_Password_Attacks|https://github.com/galkan/crowbar.git|git|py
 crunch|crunch|PH_Password_Attacks|null|package_manager|null
 cuckoo|cuckoo|DF_Digital_Forensics|https://github.com/cuckoosandbox/cuckoo.git|git|python,git
 cupp|cupp|PH_Password_Attacks|https://github.com/Mebus/cupp.git|git|python,git
-curl|curl|package|null|package_manager|null
+curl|curl|SP_System_Tools|null|package_manager|null
 cutter|cutter|RE_Reverse_Engineering|https://github.com/rizinorg/cutter.git|git|cmake,git
 cymothoa|cymothoa|maintaining_access|null|package_manager|null
 c|clang|PL_Programming_Language|null|package_manager|null
@@ -258,7 +258,7 @@ fbvid|fbvid|null|https://github.com/Tuhinshubhra/fbvid.git|git|php,git
 fcrackzip|fcrackzip|PH_Password_Attacks|null|package_manager|null
 fern-wifi-cracker|fern-wifi-cracker|WT_Wireless_Testing|https://github.com/savio-code/fern-wifi-cracker.git|git|python,git
 fierce|fierce|IG_Information_Gathering|https://github.com/mschwager/fierce.git|git|python,git
-figlet|figlet|package|null|package_manager|null
+figlet|figlet|SP_System_Tools|null|package_manager|null
 findmyhash|findmyhash|PH_Password_Attacks|https://gitlab.com/kalilinux/packages/findmyhash.git|git|python,git
 firewalk|firewalk|IG_Information_Gathering|https://gitlab.com/kalilinux/packages/firewalk.git|git|clang,gcc,git
 flashsploit|flashsploit|EF_Exploit_Frameworks|https://github.com/thewhiteh4t/flashsploit.git|git|python,git
@@ -278,7 +278,7 @@ get|get|package_manager|https://github.com/peterpt/get.git|git|git
 ghost-phisher|ghost-phisher|IG_Information_Gathering|https://github.com/savio-code/ghost-phisher.git|git|python,git
 ghost_eye|ghost_eye|IG_Information_Gathering|https://github.com/BullsEye0/ghost_eye.git|git|python3,python3-pip,git
 giskismet|giskismet|WT_Wireless_Testing|https://github.com/xtr4nge/giskismet.git|git|perl,git
-git|git|package|null|package_manager|null
+git|git|SP_System_Tools|null|package_manager|null
 gobuster|gobuster|WAH_Web_Application_Hacking|https://github.com/OJ/gobuster.git|git|golang,git
 golang|golang|PL_Programming_Language|null|package_manager|null
 golismero|golismero|IG_Information_Gathering|https://github.com/golismero/golismero.git|git|python,git
@@ -334,14 +334,14 @@ mitmproxy|mitmproxy|SS_Sniffing_Spoofing|https://github.com/mitmproxy/mitmproxy.
 morpheus|morpheus|null|https://github.com/r00t-3xp10it/morpheus.git|git|python,git
 msfpc|msfpc|EF_Exploit_Frameworks|https://github.com/g0tmi1k/msfpc.git|git|git
 multimon-ng|multimon-ng|WT_Wireless_Testing|https://github.com/EliasOenal/multimon-ng.git|git|python,clang,gcc,git
-nano|nano|package|null|package_manager|null
+nano|nano|SP_System_Tools|null|package_manager|null
 nasm|nasm|PL_Programming_Language|null|package_manager|null
 netattack2|netattack2|WT_Wireless_Testing|https://github.com/chrizator/netattack2.git|git|python,git
 netattack|netattack|WT_Wireless_Testing|https://github.com/chrizator/netattack.git|git|python,git
 netdiscover|netdiscover|null|https://github.com/alexxy/netdiscover.git|git|git
 netsniff-ng|netsniff-ng|SS_Sniffing_Spoofing|https://github.com/netsniff-ng/netsniff-ng.git|git|gcc,make,git
 nexphisher|nexphisher|T_Termux|https://github.com/htr-tech/nexphisher.git|git|git,php,curl
-nginx|nginx|WS_Web_Servers,package|null|package_manager|null
+nginx|nginx|WS_Web_Servers,SP_System_Tools|null|package_manager|null
 nikto|nikto|IG_Information_Gathering|https://github.com/sullo/nikto.git|git|perl,git
 nishang|nishang|maintaining_access|https://github.com/samratashok/nishang.git|git|git
 nmapAutomator|nmapAutomator|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/21y4d/nmapAutomator.git|git|nmap,ffuf,gobuster,git
@@ -414,12 +414,12 @@ Termux-Ubuntu|Termux-Ubuntu|T_Termux|https://github.com/Neo-Oli/termux-ubuntu.gi
 thc-ipv6|thc-ipv6|IG_Information_Gathering,VA_Vulnerability_Analysis,EF_Exploit_Frameworks|https://github.com/vanhauser-thc/thc-ipv6.git|git|clang,gcc,git
 the-backdoor-factory|the-backdoor-factory|EF_Exploit_Frameworks|https://github.com/secretsquirrel/the-backdoor-factory.git|git|python,git
 theHarvester|theHarvester|IG_Information_Gathering|https://github.com/laramies/theHarvester.git|git|python,git
-toilet|toilet|package|null|package_manager|null
+toilet|toilet|SP_System_Tools|null|package_manager|null
 torbrowser-launcher|torbrowser-launcher|null|null|package_manager|null
 torghost|torghost|null|https://github.com/susmithHCK/torghost.git|git|python,git
 torshammer|torshammer|stress_testing|https://github.com/dotfighter/torshammer.git|git|python,git
-tor|tor|package|null|package_manager|null
-npm|npm|package|null|package_manager|null
+tor|tor|SP_System_Tools|null|package_manager|null
+npm|npm|SP_System_Tools|null|package_manager|null
 trackout|trackout|IG_Information_Gathering,ip_tracking|https://github.com/abaykan/trackout.git|git|python,git
 trape|trape|ip_tracking|https://github.com/boxug/trape.git|git|python,git
 trojanizer|trojanizer|null|https://github.com/r00t-3xp10it/trojanizer.git|git|git
@@ -429,7 +429,7 @@ unix-privesc-check|unix-privesc-check|VA_Vulnerability_Analysis|https://github.c
 voiphopper|voiphopper|VA_Vulnerability_Analysis|https://github.com/iknowjason/voiphopper.git|git|gcc,make,git
 volatility|volatility|DF_Digital_Forensics|https://github.com/volatilityfoundation/volatility.git|git|python,git
 w3af|w3af|WAH_Web_Application_Hacking|https://github.com/andresriancho/w3af.git|git|python,git
-w3m|w3m|package|null|package_manager|null
+w3m|w3m|SP_System_Tools|null|package_manager|null
 wafw00f|wafw00f|WAH_Web_Application_Hacking|https://github.com/EnableSecurity/wafw00f.git|git|python,git
 webdav|webdav|WAH_Web_Application_Hacking|https://github.com/hacdias/webdav.git|git|golang,git
 webpwn3r|webpwn3r|WAH_Web_Application_Hacking|https://github.com/zigoo0/webpwn3r.git|git|python,git
@@ -439,7 +439,7 @@ weeman|weeman|null|https://github.com/evait-security/weeman.git|git|python,git
 weevely3|weevely3|WAH_Web_Application_Hacking|https://github.com/epinna/weevely3.git|git|python,git
 wfdroid-termux|wfdroid-termux|null|https://github.com/bytezcrew/wfdroid-termux.git|git|git
 wfuzz|wfuzz|WAH_Web_Application_Hacking|https://github.com/xmendez/wfuzz.git|git|python,git
-wget|wget|package|null|package_manager|null
+wget|wget|SP_System_Tools|null|package_manager|null
 wifi-hacker|wifi-hacker|WT_Wireless_Testing|https://github.com/esc0rtd3w/wifi-hacker.git|git|git
 wifiphisher|wifiphisher|WT_Wireless_Testing|https://github.com/wifiphisher/wifiphisher.git|git|python,git
 wifitap|wifitap|WT_Wireless_Testing|https://github.com/GDSSecurity/wifitap.git|git|python,git
@@ -460,6 +460,6 @@ zaproxy|zaproxy|WAH_Web_Application_Hacking|https://github.com/zaproxy/zaproxy.g
 zarp|zarp|null|https://github.com/hatRiot/zarp.git|git|python,git
 zeal-kali-installer|zeal-kali-installer|null|https://github.com/1RaY-1/zeal-kali-installer.git|git|git
 zenmap-linux-installer|zenmap-linux-installer|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/1RaY-1/zenmap-linux-installer.git|git|nmap,python3,git
-zip|zip|package|null|package_manager|null
+zip|zip|SP_System_Tools|null|package_manager|null
 zirikatu|zirikatu|null|https://github.com/pasahitz/zirikatu.git|git|git
 zphisher|zphisher|T_Termux|https://github.com/htr-tech/zphisher.git|git|php,nodejs,git
