@@ -862,7 +862,7 @@ update() {
 about() {
   clear
   echo "$logo"
-  echo " ${yellow}WorKing ${red} v0.1${nc}"
+  echo " ${yellow}WorKing ${red} v0.4.6.7${nc}"
   echo " WorKing is a library of"
   echo " WorKing tools for termux"
   echo " and other linux distribution.\n"
@@ -883,6 +883,7 @@ menu() {
     echo "$logo"
     echo "${cyan}     [as] ${WHITE}Anonymity Surfing"
     echo "${cyan}     [ag] ${WHITE}Any Generators"
+    # echo "${cyan}     [mp] ${WHITE}Multi Purpose"
     echo " "
     echo "${cyan}     [1] ${green} All tools $RED$tools"
     echo "${cyan}     [2] ${green} Tools category $RED$category"
@@ -902,6 +903,11 @@ menu() {
         sh AnyGen start
         cd ..
       ;;
+      # mp|MP)
+      # clear
+      # echo "     [!] Not Done Yet !"
+      # sleep 3
+      # ;;
       1)
         all_tools
       ;;
