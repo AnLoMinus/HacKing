@@ -1,7 +1,7 @@
 #!/bin/sh
-# Name : HacKing
+# Name : WorKing
 # Date : 1 November 2021
-# Description : HacKing is a hacking tools installer and package manager for hacker's.
+# Description : WorKing is a WorKing tools installer and package manager for hacker's.
 # |
 nc="\033[00m"
 white="\033[1;37m"
@@ -56,7 +56,7 @@ Banner(){
   ▒         ▀▀█▀▀ █▀▀█ █▀▀█ █   █▀▀             ▒
   ▒           █   █  █ █  █ █   ▀▀█             ▒
   ▒           ▀   ▀▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀$ORANGE v0.4.6.4    ▒
-  ▒ https://www.github.com/Anlominus/HacKing    ▒
+  ▒ https://www.github.com/Anlominus/WorKing    ▒
   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
   "
 }
@@ -65,7 +65,7 @@ logo="$(Banner)"
 
 PromptFun(){
   echo ""
-  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}HacKing${cyan}$~${orange}]${cyan}"
+  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}WorKing${cyan}$~${orange}]${cyan}"
   echo "  ${orange}  └──╼${green}"
 }
 prompt="$(PromptFun)"
@@ -96,12 +96,12 @@ elif [ -d /etc ]; then
 fi
 
 # configuration files
-if [ -d $conf_dir/HacKing ]; then
-  if [ -e $conf_dir/HacKing/data/tools.dat ]; then
-    tools_data="$conf_dir/HacKing/data/tools.dat"
+if [ -d $conf_dir/WorKing ]; then
+  if [ -e $conf_dir/WorKing/data/tools.dat ]; then
+    tools_data="$conf_dir/WorKing/data/tools.dat"
   fi
-  if [ -e $conf_dir/HacKing/data/category.dat ]; then
-    category_data="$conf_dir/HacKing/data/category.dat"
+  if [ -e $conf_dir/WorKing/data/category.dat ]; then
+    category_data="$conf_dir/WorKing/data/category.dat"
   fi
 else
   if [ -e data/tools.dat ]; then
@@ -123,10 +123,6 @@ fi
 if [ -e /data/data/com.termux/files/usr/bin/pkg ]; then
   pac="pkg"
   system="termux"
-elif [ `command -v brew` ]; then
-  pac="brew"
-  system="mac"
-  sudo=""
 elif [ `command -v apt` ]; then
   pac="apt"
   system="linux"
@@ -139,26 +135,32 @@ elif [ `command -v apk` ]; then
 elif [ `command -v yum` ]; then
   pac="yum"
   system="fedora"
+elif [ `command -v brew` ]; then
+  pac="brew"
+  system="mac"
+  sudo=""
 fi
 
 # install tools
 install() {
   # get tool alias name
   tool_name=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f1`
-  # package name or tool name
-  tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
   # get tool category name
   tool_category=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f3`
-  # tool url
-  tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
   # get tool package manager
   tool_installer=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
+
     case $tool_installer in
+
     # for default package
     package_manager)
       # check tool is already installed or not
@@ -222,7 +224,7 @@ install() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -241,7 +243,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_name
+              $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -263,14 +265,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_name
+              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${purple}'$tool_name' ${green} is installed successfully !!${nc}"
@@ -282,7 +284,7 @@ install() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -301,7 +303,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -323,14 +325,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -342,7 +344,7 @@ install() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -361,7 +363,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -383,76 +385,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
-          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
-        else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
-        fi
-      else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
-      fi
-    ;;
-    # for any new installer
-    # put here
-    # for default package
-    brew)
-      # check tool is already installed or not
-      if [ ! `command -v $tool_pac` ]; then
-        # check sudo is null or not
-        if [ $sudo ]; then
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $sudo $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $sudo $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry you are offline !!${nc}"
-          fi
-        else
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
-          fi
-        fi
-        # check tool is installed or not
-        if [ ! `command -v $tool_pac` ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -462,6 +402,8 @@ install() {
       fi
     ;;
 
+    # for any new installer
+    # put here
     esac
   fi
   # wait for user any input
@@ -473,20 +415,22 @@ install() {
 install_category_tool() {
   # get tool alias name
   tool_name=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f1`
-  # package name or tool name
-  tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
   # get tool category name
   tool_category=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f3`
-  # tool url
-  tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
   # get tools package manager
   tool_installer=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
+
     case $tool_installer in
+
     # for default package
     package_manager)
       # check tool is already installed or not
@@ -550,7 +494,7 @@ install_category_tool() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -569,7 +513,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-                $sudo git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+                $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -591,14 +535,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -610,7 +554,7 @@ install_category_tool() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -629,7 +573,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -651,14 +595,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -670,7 +614,7 @@ install_category_tool() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -689,7 +633,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -711,14 +655,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -727,68 +671,9 @@ install_category_tool() {
         echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
       fi
     ;;
+
     # for any new installer
     # put here
-    # for default package
-    brew)
-      # check tool is already installed or not
-      if [ ! `command -v $tool_pac` ]; then
-        # check sudo is null or not
-        if [ $sudo ]; then
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $sudo $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $sudo $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry you are offline !!${nc}"
-          fi
-        else
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
-          fi
-        fi
-        # check tool is installed or not
-        if [ ! `command -v $tool_pac` ]; then
-          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
-        else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
-        fi
-      else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
-      fi
-    ;;
     esac
   fi
   # wait for user any input
@@ -916,7 +801,7 @@ category() {
   done
 }
 
-# update HacKing function
+# update WorKing function
 update() {
   while true; do
     clear
@@ -934,28 +819,28 @@ update() {
           sleep 1
           if [ `command -v git` ]; then
             if [ $sudo ]; then
-              $sudo git clone https://github.com/Anlominus/HacKing.git ~/HacKing
-              $sudo chmod +x ~/HacKing/install
-              $sudo sh ~/HacKing/install
+              $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+              $sudo chmod +x ~/WorKing/install
+              $sudo sh ~/WorKing/install
             else
-              git clone https://github.com/Anlominus/HacKing.git ~/HacKing
-              chmod +x ~/HacKing/install
-              sh ~/HacKing/install
+              git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+              chmod +x ~/WorKing/install
+              sh ~/WorKing/install
             fi
           else
             if [ $sudo ]; then
               $sudo $pac install git -y
-              $sudo git clone https://github.com/Anlominus/HacKing.git ~/HacKing
-              $sudo chmod +x ~/HacKing/install
-              $sudo sh ~/HacKing/install
+              $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+              $sudo chmod +x ~/WorKing/install
+              $sudo sh ~/WorKing/install
             else
               $pac install git -y
-              git clone https://github.com/Anlominus/HacKing.git ~/HacKing
-              chmod +x ~/HacKing/install
-              sh ~/HacKing/install
+              git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+              chmod +x ~/WorKing/install
+              sh ~/WorKing/install
             fi
           fi
-          echo "${green} HacKing updated !!${nc}"
+          echo "${green} WorKing updated !!${nc}"
           sleep 1
         else
           echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
@@ -973,13 +858,13 @@ update() {
   done
 }
 
-# about HacKing function
+# about WorKing function
 about() {
   clear
   echo "$logo"
-  echo " ${yellow}HacKing ${red} v0.1${nc}"
-  echo " HacKing is a library of"
-  echo " hacking tools for termux"
+  echo " ${yellow}WorKing ${red} v0.1${nc}"
+  echo " WorKing is a library of"
+  echo " WorKing tools for termux"
   echo " and other linux distribution.\n"
   echo " ${red}Warning:${nc}"
   echo " We are not responsible for any misuse"
@@ -996,19 +881,19 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     category=`grep -n '.' $category_data | wc -l`
     echo "$logo"
-    echo "${cyan}     [w] ${orange}Working"
+    echo "${cyan}     [a] ${WHITE}Anonymity Surfing"
     echo " "
     echo "${cyan}     [1] ${green} All tools $RED$tools"
     echo "${cyan}     [2] ${green} Tools category $RED$category"
-    echo "${cyan}     [3] ${green} Update HacKing"
+    echo "${cyan}     [3] ${green} Update WorKing"
     echo "${cyan}     [4] ${green} About us"
     echo "${cyan}     [5] ${green} Exit"
     echo "$prompt"
     read cmd
     case ${cmd} in
-      w|W)
-        cd WorKing
-        sh WorKing start
+      a|A)
+        cd Anonymity_Surfing
+        sh AnonymitySurfing start
         cd ..
       ;;
       1)
@@ -1057,41 +942,41 @@ cli_category() {
 # update process
 update_process() {
   # check file is downloaded or not
-  if [ -e $home/HacKing/HacKing ]; then
+  if [ -e $home/WorKing/WorKing ]; then
     # removing old one
-    if [ -e $bin/HacKing ]; then
-      if [ -d $conf_dir/HacKing ]; then
+    if [ -e $bin/WorKing ]; then
+      if [ -d $conf_dir/WorKing ]; then
         if [ $sudo ]; then
-          $sudo rm -rf $bin/HacKing
-          $sudo rm -rf $conf_dir/HacKing
+          $sudo rm -rf $bin/WorKing
+          $sudo rm -rf $conf_dir/WorKing
         else
-          rm -rf $bin/HacKing
-          rm -rf $conf_dir/HacKing
+          rm -rf $bin/WorKing
+          rm -rf $conf_dir/WorKing
         fi
       fi
     fi
   fi
 
-  # updating HacKing
-  if [ -e $home/HacKing/HacKing ]; then
+  # updating WorKing
+  if [ -e $home/WorKing/WorKing ]; then
     if [ $sudo ]; then
-      $sudo mv -v $home/HacKing/HacKing $bin
-      $sudo chmod +x $bin/HacKing
+      $sudo mv -v $home/WorKing/WorKing $bin
+      $sudo chmod +x $bin/WorKing
     else
-      mv -v $home/HacKing/HacKing $bin
-      chmod +x $bin/HacKing
+      mv -v $home/WorKing/WorKing $bin
+      chmod +x $bin/WorKing
     fi
   fi
-  if [ -d $home/HacKing ]; then
+  if [ -d $home/WorKing ]; then
     if [ $sudo ]; then
-    $sudo mv -v $home/HacKing $conf_dir
+    $sudo mv -v $home/WorKing $conf_dir
     else
-      mv -v $home/HacKing $conf_dir
+      mv -v $home/WorKing $conf_dir
     fi
   fi
 }
 
-# update HacKing function
+# update WorKing function
 cli_update() {
   # check user is online or not
   wget -q --spider http://google.com
@@ -1100,24 +985,24 @@ cli_update() {
     sleep 1
     if [ `command -v git` ]; then
       if [ $sudo ]; then
-        $sudo git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+        $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
         update_process
       else
-        git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+        git clone https://github.com/Anlominus/WorKing.git ~/WorKing
         update_process
        fi
     else
       if [ $sudo ]; then
         $sudo $pac install git -y
-        $sudo git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+        $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
         update_process
       else
         $pac install git -y
-        git clone https://github.com/Anlominus/HacKing.git ~/HacKing
+        git clone https://github.com/Anlominus/WorKing.git ~/WorKing
         update_process
       fi
     fi
-    echo "${nc}'HacKing' ${green} updated successfully !!${nc}"
+    echo "${nc}'WorKing' ${green} updated successfully !!${nc}"
   else
     echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
   fi
@@ -1127,14 +1012,16 @@ cli_update() {
 install_process() {
   # get tool alias name
   tool_name=`echo $1 | cut -d"|" -f1`
+  # package name or tool name
+  tool_pac=`echo $1 | cut -d"|" -f2`
+  # get tool category name
+  tool_category=`echo $1 | cut -d"|" -f3`
+  # tool url
+  tool_url=`echo $1 | cut -d"|" -f4`
   # get tool package manager
   tool_installer=`echo $1 | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`echo $1 | cut -d"|" -f6 | tr ' ' ','`
-  # tool url
-  tool_url=`echo $1 | cut -d"|" -f4`
-  # package name or tool name
-  tool_pac=`echo $1 | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
@@ -1204,7 +1091,7 @@ install_process() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1223,7 +1110,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_name
+              $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1245,14 +1132,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/HacKingPro/$tool_category/$tool_name
+              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1264,7 +1151,7 @@ install_process() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1283,7 +1170,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1305,14 +1192,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1324,7 +1211,7 @@ install_process() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1343,7 +1230,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1365,14 +1252,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/HacKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/HacKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1430,23 +1317,23 @@ cli_search() {
 
 # remove function
 cli_remove() {
-  # add remove tools functionality for remove tools data now it only uninstall HacKing.
-  # removing HacKing only
-  if [ -e $bin/HacKing ]; then
-    if [ -d $conf_dir/HacKing ]; then
+  # add remove tools functionality for remove tools data now it only uninstall WorKing.
+  # removing WorKing only
+  if [ -e $bin/WorKing ]; then
+    if [ -d $conf_dir/WorKing ]; then
       if [ $sudo ]; then
-        $sudo rm -rf $bin/HacKing
-        $sudo rm -rf $conf_dir/HacKing
+        $sudo rm -rf $bin/WorKing
+        $sudo rm -rf $conf_dir/WorKing
       else
-        rm -rf $bin/HacKing
-        rm -rf $conf_dir/HacKing
+        rm -rf $bin/WorKing
+        rm -rf $conf_dir/WorKing
       fi
     fi
   fi
-  # check HacKing removed or not
-  if [ ! -e $bin/HacKing ]; then
-    if [ ! -d $conf_dir/HacKing ]; then
-      echo "${nc}'HacKing' : ${green} uninstalled successfully !!${nc}"
+  # check WorKing removed or not
+  if [ ! -e $bin/WorKing ]; then
+    if [ ! -d $conf_dir/WorKing ]; then
+      echo "${nc}'WorKing' : ${green} uninstalled successfully !!${nc}"
     fi
   fi
 }
@@ -1467,8 +1354,8 @@ if [ $# -eq 1 ]; then
       cli_remove
     ;;
     help|-h)
-      echo "${yellow}HacKing ${red} v0.1"
-      echo "${nc}Usage ${nc}: ${yellow} HacKing ${nc}[option]... [toolname]...${nc}"
+      echo "${yellow}WorKing ${red} v0.1"
+      echo "${nc}Usage ${nc}: ${yellow} WorKing ${nc}[option]... [toolname]...${nc}"
       echo "\n  ${blue}Option  \tDescription${nc}"
       echo "  -----------  \t--------------------"
       echo "  help, -h  \tdisplay this help."
@@ -1477,12 +1364,12 @@ if [ $# -eq 1 ]; then
       echo "  -l a  \tlist all tools."
       echo "  install, -i  \tinstall any tools."
       echo "  search, -s  \tsearch tools."
-      echo "  update, -u  \tupdate HacKing."
-      echo "  start  \tstart HacKing menu mode."
+      echo "  update, -u  \tupdate WorKing."
+      echo "  start  \tstart WorKing menu mode."
     ;;
     *)
       echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
-      echo "${blue}type ${nc}:\n  'HacKing -h' or 'HacKing help' for help.${nc}"
+      echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
     ;;
   esac
 elif [ $# -eq 2 ]; then
@@ -1494,7 +1381,7 @@ elif [ $# -eq 2 ]; then
          ;;
         *)
           echo "${red}Sorry ${nc}: '$2' ${red} invalid option!!${nc}"
-          echo "${blue}type ${nc}:\n  'HacKing -h' or 'HacKing help' for help.${nc}"
+          echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
         ;;
       esac
     ;;
@@ -1506,9 +1393,9 @@ elif [ $# -eq 2 ]; then
     ;;
     *)
       echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
-      echo "${blue}type ${nc}:\n  'HacKing -h' or 'HacKing help' for help.${nc}"
+      echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
     ;;
   esac
 else
-  echo "${blue}type ${nc}:\n  'HacKing -h' or 'HacKing help' for help.${nc}"
+  echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
 fi

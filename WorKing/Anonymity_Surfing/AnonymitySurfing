@@ -123,10 +123,6 @@ fi
 if [ -e /data/data/com.termux/files/usr/bin/pkg ]; then
   pac="pkg"
   system="termux"
-elif [ `command -v brew` ]; then
-  pac="brew"
-  system="mac"
-  sudo=""
 elif [ `command -v apt` ]; then
   pac="apt"
   system="linux"
@@ -139,26 +135,32 @@ elif [ `command -v apk` ]; then
 elif [ `command -v yum` ]; then
   pac="yum"
   system="fedora"
+elif [ `command -v brew` ]; then
+  pac="brew"
+  system="mac"
+  sudo=""
 fi
 
 # install tools
 install() {
   # get tool alias name
   tool_name=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f1`
-  # package name or tool name
-  tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
   # get tool category name
   tool_category=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f3`
-  # tool url
-  tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
   # get tool package manager
   tool_installer=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "$1p" | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
+
     case $tool_installer in
+
     # for default package
     package_manager)
       # check tool is already installed or not
@@ -399,69 +401,9 @@ install() {
         echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
       fi
     ;;
+
     # for any new installer
     # put here
-    # for default package
-    brew)
-      # check tool is already installed or not
-      if [ ! `command -v $tool_pac` ]; then
-        # check sudo is null or not
-        if [ $sudo ]; then
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $sudo $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $sudo $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry you are offline !!${nc}"
-          fi
-        else
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
-          fi
-        fi
-        # check tool is installed or not
-        if [ ! `command -v $tool_pac` ]; then
-          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
-        else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
-        fi
-      else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
-      fi
-    ;;
-
     esac
   fi
   # wait for user any input
@@ -473,20 +415,22 @@ install() {
 install_category_tool() {
   # get tool alias name
   tool_name=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f1`
-  # package name or tool name
-  tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
   # get tool category name
   tool_category=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f3`
-  # tool url
-  tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
   # get tools package manager
   tool_installer=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f6 | tr ' ' ','`
+  # tool url
+  tool_url=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f4`
+  # package name or tool name
+  tool_pac=`grep '.' $tools_data | sort -f | sed -n "/$1/p" | sed -n "$2 p" | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
+
     case $tool_installer in
+
     # for default package
     package_manager)
       # check tool is already installed or not
@@ -727,68 +671,9 @@ install_category_tool() {
         echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
       fi
     ;;
+
     # for any new installer
     # put here
-    # for default package
-    brew)
-      # check tool is already installed or not
-      if [ ! `command -v $tool_pac` ]; then
-        # check sudo is null or not
-        if [ $sudo ]; then
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $sudo $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $sudo $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry you are offline !!${nc}"
-          fi
-        else
-          #check user is online or not
-          wget -q --spider http://google.com
-          if [ $? -eq 0 ]; then
-            echo "${green}Installing ...${nc}"
-            sleep 1
-            # install tool dependency
-            if [ $tool_dependency != "null" ]; then
-              for dep_name in `echo $tool_dependency | tr ',' ' '`; do
-                # installing dependency
-                if [ ! `command -v $dep_name` ]; then
-                  $pac install $dep_name
-                fi
-              done
-            fi
-            # installing tools
-            if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $pac install $tool_pac
-            fi
-          else
-            echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
-          fi
-        fi
-        # check tool is installed or not
-        if [ ! `command -v $tool_pac` ]; then
-          echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
-        else
-          echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
-        fi
-      else
-        echo "${red}Sorry ${nc}: '$tool_name' ${green} is already installed !!${nc}"
-      fi
-    ;;
     esac
   fi
   # wait for user any input
@@ -996,8 +881,6 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     category=`grep -n '.' $category_data | wc -l`
     echo "$logo"
-    echo "${cyan}     [w] ${orange}Working"
-    echo " "
     echo "${cyan}     [1] ${green} All tools $RED$tools"
     echo "${cyan}     [2] ${green} Tools category $RED$category"
     echo "${cyan}     [3] ${green} Update HacKing"
@@ -1006,11 +889,6 @@ menu() {
     echo "$prompt"
     read cmd
     case ${cmd} in
-      w|W)
-        cd WorKing
-        sh WorKing start
-        cd ..
-      ;;
       1)
         all_tools
       ;;
@@ -1127,14 +1005,16 @@ cli_update() {
 install_process() {
   # get tool alias name
   tool_name=`echo $1 | cut -d"|" -f1`
+  # package name or tool name
+  tool_pac=`echo $1 | cut -d"|" -f2`
+  # get tool category name
+  tool_category=`echo $1 | cut -d"|" -f3`
+  # tool url
+  tool_url=`echo $1 | cut -d"|" -f4`
   # get tool package manager
   tool_installer=`echo $1 | cut -d"|" -f5`
   # tool dependency (requirements)
   tool_dependency=`echo $1 | cut -d"|" -f6 | tr ' ' ','`
-  # tool url
-  tool_url=`echo $1 | cut -d"|" -f4`
-  # package name or tool name
-  tool_pac=`echo $1 | cut -d"|" -f2`
 
   # check tool name is null or not
   if [ "$tool_name" ]; then
