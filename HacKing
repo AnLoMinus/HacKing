@@ -977,7 +977,7 @@ update() {
 about() {
   clear
   echo "$logo"
-  echo " ${yellow}HacKing ${red} v0.1${nc}"
+  echo " ${yellow}HacKing ${red} v0.4.6.4${nc}"
   echo " HacKing is a library of"
   echo " hacking tools for termux"
   echo " and other linux distribution.\n"

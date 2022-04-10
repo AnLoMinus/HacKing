@@ -1,7 +1,7 @@
 #!/bin/sh
-# Name : WorKing
-# Date : 1 November 2021
-# Description : WorKing is a WorKing tools installer and package manager for hacker's.
+# Name : AnyGen
+# Date : April 2022
+# Description : AnyGen is a AnyGen tools installer and package manager for hacker's.
 # |
 nc="\033[00m"
 white="\033[1;37m"
@@ -56,7 +56,7 @@ Banner(){
   ▒         ▀▀█▀▀ █▀▀█ █▀▀█ █   █▀▀             ▒
   ▒           █   █  █ █  █ █   ▀▀█             ▒
   ▒           ▀   ▀▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀$ORANGE v0.4.6.4    ▒
-  ▒ https://www.github.com/Anlominus/WorKing    ▒
+  ▒ https://www.github.com/Anlominus/AnyGen    ▒
   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
   "
 }
@@ -65,7 +65,7 @@ logo="$(Banner)"
 
 PromptFun(){
   echo ""
-  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}WorKing${cyan}$~${orange}]${cyan}"
+  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyGen${cyan}$~${orange}]${cyan}"
   echo "  ${orange}  └──╼${green}"
 }
 prompt="$(PromptFun)"
@@ -96,12 +96,12 @@ elif [ -d /etc ]; then
 fi
 
 # configuration files
-if [ -d $conf_dir/WorKing ]; then
-  if [ -e $conf_dir/WorKing/data/tools.dat ]; then
-    tools_data="$conf_dir/WorKing/data/tools.dat"
+if [ -d $conf_dir/AnyGen ]; then
+  if [ -e $conf_dir/AnyGen/data/tools.dat ]; then
+    tools_data="$conf_dir/AnyGen/data/tools.dat"
   fi
-  if [ -e $conf_dir/WorKing/data/category.dat ]; then
-    category_data="$conf_dir/WorKing/data/category.dat"
+  if [ -e $conf_dir/AnyGen/data/category.dat ]; then
+    category_data="$conf_dir/AnyGen/data/category.dat"
   fi
 else
   if [ -e data/tools.dat ]; then
@@ -224,7 +224,7 @@ install() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -243,7 +243,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
+              $sudo git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -265,14 +265,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
+              git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${purple}'$tool_name' ${green} is installed successfully !!${nc}"
@@ -284,7 +284,7 @@ install() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -303,7 +303,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -325,14 +325,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -344,7 +344,7 @@ install() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -363,7 +363,7 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -385,14 +385,14 @@ install() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -494,7 +494,7 @@ install_category_tool() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -513,7 +513,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-                $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+                $sudo git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -535,14 +535,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -554,7 +554,7 @@ install_category_tool() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -573,7 +573,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -595,14 +595,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -614,7 +614,7 @@ install_category_tool() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -633,7 +633,7 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -655,14 +655,14 @@ install_category_tool() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -728,7 +728,7 @@ category() {
     clear
     # get all category data
     echo " ${red} ___
-//___// ${yellow}Tool Category
+//___// ${yellow}Generators Categories
 "
     for data in `grep "." $category_data | grep -n '.' | sed -n 's/:/|/p' | cut -d"|" -f1,2 | tr ' ' '@'`; do
       # display category alias name from data
@@ -801,7 +801,7 @@ category() {
   done
 }
 
-# update WorKing function
+# update AnyGen function
 update() {
   while true; do
     clear
@@ -819,28 +819,28 @@ update() {
           sleep 1
           if [ `command -v git` ]; then
             if [ $sudo ]; then
-              $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
-              $sudo chmod +x ~/WorKing/install
-              $sudo sh ~/WorKing/install
+              $sudo git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
+              $sudo chmod +x ~/AnyGen/install
+              $sudo sh ~/AnyGen/install
             else
-              git clone https://github.com/Anlominus/WorKing.git ~/WorKing
-              chmod +x ~/WorKing/install
-              sh ~/WorKing/install
+              git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
+              chmod +x ~/AnyGen/install
+              sh ~/AnyGen/install
             fi
           else
             if [ $sudo ]; then
               $sudo $pac install git -y
-              $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
-              $sudo chmod +x ~/WorKing/install
-              $sudo sh ~/WorKing/install
+              $sudo git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
+              $sudo chmod +x ~/AnyGen/install
+              $sudo sh ~/AnyGen/install
             else
               $pac install git -y
-              git clone https://github.com/Anlominus/WorKing.git ~/WorKing
-              chmod +x ~/WorKing/install
-              sh ~/WorKing/install
+              git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
+              chmod +x ~/AnyGen/install
+              sh ~/AnyGen/install
             fi
           fi
-          echo "${green} WorKing updated !!${nc}"
+          echo "${green} AnyGen updated !!${nc}"
           sleep 1
         else
           echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
@@ -858,13 +858,13 @@ update() {
   done
 }
 
-# about WorKing function
+# about AnyGen function
 about() {
   clear
   echo "$logo"
-  echo " ${yellow}WorKing ${red} v0.1${nc}"
-  echo " WorKing is a library of"
-  echo " WorKing tools for termux"
+  echo " ${yellow}AnyGen ${red} v0.1${nc}"
+  echo " AnyGen is a library of"
+  echo " AnyGen tools for termux"
   echo " and other linux distribution.\n"
   echo " ${red}Warning:${nc}"
   echo " We are not responsible for any misuse"
@@ -881,27 +881,14 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     category=`grep -n '.' $category_data | wc -l`
     echo "$logo"
-    echo "${cyan}     [a] ${WHITE}Anonymity Surfing"
-    echo "${cyan}     [b] ${WHITE}Any Generators"
-    echo " "
-    echo "${cyan}     [1] ${green} All tools $RED$tools"
-    echo "${cyan}     [2] ${green} Tools category $RED$category"
-    echo "${cyan}     [3] ${green} Update WorKing"
+    echo "${cyan}     [1] ${green} All Generators $RED$tools"
+    echo "${cyan}     [2] ${green} Generators Categories $RED$category"
+    echo "${cyan}     [3] ${green} Update AnyGen"
     echo "${cyan}     [4] ${green} About us"
     echo "${cyan}     [5] ${green} Exit"
     echo "$prompt"
     read cmd
     case ${cmd} in
-      a|A)
-        cd Anonymity_Surfing
-        sh AnonymitySurfing start
-        cd ..
-      ;;
-      b|B)
-        cd AnyGen
-        sh AnyGen start
-        cd ..
-      ;;
       1)
         all_tools
       ;;
@@ -948,41 +935,41 @@ cli_category() {
 # update process
 update_process() {
   # check file is downloaded or not
-  if [ -e $home/WorKing/WorKing ]; then
+  if [ -e $home/AnyGen/AnyGen ]; then
     # removing old one
-    if [ -e $bin/WorKing ]; then
-      if [ -d $conf_dir/WorKing ]; then
+    if [ -e $bin/AnyGen ]; then
+      if [ -d $conf_dir/AnyGen ]; then
         if [ $sudo ]; then
-          $sudo rm -rf $bin/WorKing
-          $sudo rm -rf $conf_dir/WorKing
+          $sudo rm -rf $bin/AnyGen
+          $sudo rm -rf $conf_dir/AnyGen
         else
-          rm -rf $bin/WorKing
-          rm -rf $conf_dir/WorKing
+          rm -rf $bin/AnyGen
+          rm -rf $conf_dir/AnyGen
         fi
       fi
     fi
   fi
 
-  # updating WorKing
-  if [ -e $home/WorKing/WorKing ]; then
+  # updating AnyGen
+  if [ -e $home/AnyGen/AnyGen ]; then
     if [ $sudo ]; then
-      $sudo mv -v $home/WorKing/WorKing $bin
-      $sudo chmod +x $bin/WorKing
+      $sudo mv -v $home/AnyGen/AnyGen $bin
+      $sudo chmod +x $bin/AnyGen
     else
-      mv -v $home/WorKing/WorKing $bin
-      chmod +x $bin/WorKing
+      mv -v $home/AnyGen/AnyGen $bin
+      chmod +x $bin/AnyGen
     fi
   fi
-  if [ -d $home/WorKing ]; then
+  if [ -d $home/AnyGen ]; then
     if [ $sudo ]; then
-    $sudo mv -v $home/WorKing $conf_dir
+    $sudo mv -v $home/AnyGen $conf_dir
     else
-      mv -v $home/WorKing $conf_dir
+      mv -v $home/AnyGen $conf_dir
     fi
   fi
 }
 
-# update WorKing function
+# update AnyGen function
 cli_update() {
   # check user is online or not
   wget -q --spider http://google.com
@@ -991,24 +978,24 @@ cli_update() {
     sleep 1
     if [ `command -v git` ]; then
       if [ $sudo ]; then
-        $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+        $sudo git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
         update_process
       else
-        git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+        git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
         update_process
        fi
     else
       if [ $sudo ]; then
         $sudo $pac install git -y
-        $sudo git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+        $sudo git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
         update_process
       else
         $pac install git -y
-        git clone https://github.com/Anlominus/WorKing.git ~/WorKing
+        git clone https://github.com/Anlominus/AnyGen.git ~/AnyGen
         update_process
       fi
     fi
-    echo "${nc}'WorKing' ${green} updated successfully !!${nc}"
+    echo "${nc}'AnyGen' ${green} updated successfully !!${nc}"
   else
     echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
   fi
@@ -1097,7 +1084,7 @@ install_process() {
     # for github tools
     git)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1116,7 +1103,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
+              $sudo git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1138,14 +1125,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              git clone $tool_url ~/Anlominus/WorKingPro/$tool_category/$tool_name
+              git clone $tool_url ~/Anlominus/AnyGenPro/$tool_category/$tool_name
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1157,7 +1144,7 @@ install_process() {
     # for curl tools
     curl)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1176,7 +1163,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              $sudo curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1198,14 +1185,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              curl -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac $tool_url
+              curl -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac $tool_url
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1217,7 +1204,7 @@ install_process() {
     # for wget tools
     wget)
       # check tool is already installed or not
-      if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+      if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
         # check sudo is null or not
         if [ $sudo ]; then
           #check user is online or not
@@ -1236,7 +1223,7 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              $sudo wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              $sudo wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry you are offline !!${nc}"
@@ -1258,14 +1245,14 @@ install_process() {
             fi
             # installing tools
             if [ $tool_url != "" -a $tool_url != "null" ]; then
-              wget $tool_url -o ~/Anlominus/WorKingPro/$tool_category/$tool_pac
+              wget $tool_url -o ~/Anlominus/AnyGenPro/$tool_category/$tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!${nc}"
           fi
         fi
         # check tool is installed or not
-        if [ ! -e ~/Anlominus/WorKingPro/$tool_category/$tool_pac ]; then
+        if [ ! -e ~/Anlominus/AnyGenPro/$tool_category/$tool_pac ]; then
           echo "${red}Sorry ${nc}: '$tool_name' ${red} is not installed !!${nc}"
         else
           echo "${nc}'$tool_name' ${nc}: ${green} is installed successfully !!${nc}"
@@ -1323,23 +1310,23 @@ cli_search() {
 
 # remove function
 cli_remove() {
-  # add remove tools functionality for remove tools data now it only uninstall WorKing.
-  # removing WorKing only
-  if [ -e $bin/WorKing ]; then
-    if [ -d $conf_dir/WorKing ]; then
+  # add remove tools functionality for remove tools data now it only uninstall AnyGen.
+  # removing AnyGen only
+  if [ -e $bin/AnyGen ]; then
+    if [ -d $conf_dir/AnyGen ]; then
       if [ $sudo ]; then
-        $sudo rm -rf $bin/WorKing
-        $sudo rm -rf $conf_dir/WorKing
+        $sudo rm -rf $bin/AnyGen
+        $sudo rm -rf $conf_dir/AnyGen
       else
-        rm -rf $bin/WorKing
-        rm -rf $conf_dir/WorKing
+        rm -rf $bin/AnyGen
+        rm -rf $conf_dir/AnyGen
       fi
     fi
   fi
-  # check WorKing removed or not
-  if [ ! -e $bin/WorKing ]; then
-    if [ ! -d $conf_dir/WorKing ]; then
-      echo "${nc}'WorKing' : ${green} uninstalled successfully !!${nc}"
+  # check AnyGen removed or not
+  if [ ! -e $bin/AnyGen ]; then
+    if [ ! -d $conf_dir/AnyGen ]; then
+      echo "${nc}'AnyGen' : ${green} uninstalled successfully !!${nc}"
     fi
   fi
 }
@@ -1360,8 +1347,8 @@ if [ $# -eq 1 ]; then
       cli_remove
     ;;
     help|-h)
-      echo "${yellow}WorKing ${red} v0.1"
-      echo "${nc}Usage ${nc}: ${yellow} WorKing ${nc}[option]... [toolname]...${nc}"
+      echo "${yellow}AnyGen ${red} v0.1"
+      echo "${nc}Usage ${nc}: ${yellow} AnyGen ${nc}[option]... [toolname]...${nc}"
       echo "\n  ${blue}Option  \tDescription${nc}"
       echo "  -----------  \t--------------------"
       echo "  help, -h  \tdisplay this help."
@@ -1370,12 +1357,12 @@ if [ $# -eq 1 ]; then
       echo "  -l a  \tlist all tools."
       echo "  install, -i  \tinstall any tools."
       echo "  search, -s  \tsearch tools."
-      echo "  update, -u  \tupdate WorKing."
-      echo "  start  \tstart WorKing menu mode."
+      echo "  update, -u  \tupdate AnyGen."
+      echo "  start  \tstart AnyGen menu mode."
     ;;
     *)
       echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
-      echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
+      echo "${blue}type ${nc}:\n  'AnyGen -h' or 'AnyGen help' for help.${nc}"
     ;;
   esac
 elif [ $# -eq 2 ]; then
@@ -1387,7 +1374,7 @@ elif [ $# -eq 2 ]; then
          ;;
         *)
           echo "${red}Sorry ${nc}: '$2' ${red} invalid option!!${nc}"
-          echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
+          echo "${blue}type ${nc}:\n  'AnyGen -h' or 'AnyGen help' for help.${nc}"
         ;;
       esac
     ;;
@@ -1399,9 +1386,9 @@ elif [ $# -eq 2 ]; then
     ;;
     *)
       echo "${red}Sorry ${nc}: '$1' ${red} invalid option!!${nc}"
-      echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
+      echo "${blue}type ${nc}:\n  'AnyGen -h' or 'AnyGen help' for help.${nc}"
     ;;
   esac
 else
-  echo "${blue}type ${nc}:\n  'WorKing -h' or 'WorKing help' for help.${nc}"
+  echo "${blue}type ${nc}:\n  'AnyGen -h' or 'AnyGen help' for help.${nc}"
 fi
