@@ -466,3 +466,4 @@ zenmap-linux-installer|zenmap-linux-installer|Information_Gathering,Vulnerabilit
 zip|zip|SP_System_Tools|null|package_manager|null
 zirikatu|zirikatu|null|https://github.com/pasahitz/zirikatu.git|git|git
 zphisher|zphisher|T_Termux|https://github.com/htr-tech/zphisher.git|git|php,nodejs,git
+KitHack|KitHack|Universal_Kits|https://github.com/AdrMXR/KitHack|git|python,git

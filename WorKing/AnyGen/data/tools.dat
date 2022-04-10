@@ -1,2 +1,20 @@
-GoblinWordGenerator 2.0|GoblinWordGenerator|Generators_Password|https://github.com/UndeadSec/GoblinWordGenerator|git|python,github
-Generator Tricks|Generators|Generators_Mix|https://github.com/UndeadSec/GoblinWordGenerator|git|python,github
+GoblinWordGenerator 2.0|GoblinWordGenerator|Generators_Password|https://github.com/UndeadSec/GoblinWordGenerator|git|python,git
+Generator Tricks|Generators|Generators_Mix|https://github.com/dabeaz/generators|git|python,git
+Reverse Shell generator|R Reverse Shell generator|Generators_Reverse_Shells|https://github.com/0dayCTF/reverse-shell-generator|git|javascript,git
+Hershell|Hershell|Generators_Reverse_Shells|https://github.com/lesnuages/hershell|git|go,git
+reverse-shell-generator|reverse-shell-generator|Generators_Reverse_Shells|https://github.com/weibell/reverse-shell-generator|git|go,git
+revshellgen|revshellgen|Generators_Reverse_Shells|https://github.com/t0thkr1s/revshellgen|git|python,git
+shellback|shellback|Generators_Reverse_Shells|https://github.com/chrispetrou/shellback|git|python,git
+Shell_Gen|Shell_Gen|Generators_Reverse_Shells|https://github.com/CyDefUnicorn/Shell_Gen|git|python,git
+rs|rs|Generators_Reverse_Shells|https://github.com/ihebski/rs|git|python,git
+EzpzShell|EzpzShell|Generators_Reverse_Shells|https://github.com/H0j3n/EzpzShell|git|python,git
+Shelly|Shelly|Generators_Reverse_Shells|https://github.com/d4t4s3c/Shelly|git|git
+shp|shp|Generators_Reverse_Shells|https://github.com/etc5had0w/shp|git|git
+sheller|sheller|Generators_Reverse_Shells|https://github.com/Ak-wa/sheller|git|git
+ShellStorm|ShellStorm|Generators_Reverse_Shells|https://github.com/0bfxgh0st/ShellStorm|git|git
+rcX|rcX|Generators_Reverse_Shells|https://github.com/FlyfishSec/rcX|git|git
+Kusanagi|Kusanagi|Generators_Reverse_Shells|https://github.com/cytopia/kusanagi|git|git
+Genshell|Genshell|Generators_Reverse_Shells|https://github.com/djjoa/genshell|git|git
+revshells|revshells|Generators_Reverse_Shells|https://github.com/evildevill/revshells|git|git
+BackHAck|BackHAck|Generators_BackDoors|https://github.com/AngelSecurityTeam/BackHAck|git|python,git
+HIROO|HIROO|Generators_BackDoors|https://github.com/cinaaaa/HIROO|git|python,git
