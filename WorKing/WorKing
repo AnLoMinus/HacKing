@@ -881,8 +881,8 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     category=`grep -n '.' $category_data | wc -l`
     echo "$logo"
-    echo "${cyan}     [a] ${WHITE}Anonymity Surfing"
-    echo "${cyan}     [b] ${WHITE}Any Generators"
+    echo "${cyan}     [as] ${WHITE}Anonymity Surfing"
+    echo "${cyan}     [ag] ${WHITE}Any Generators"
     echo " "
     echo "${cyan}     [1] ${green} All tools $RED$tools"
     echo "${cyan}     [2] ${green} Tools category $RED$category"
@@ -892,12 +892,12 @@ menu() {
     echo "$prompt"
     read cmd
     case ${cmd} in
-      a|A)
+      as|AS)
         cd Anonymity_Surfing
         sh AnonymitySurfing start
         cd ..
       ;;
-      b|B)
+      ag|AG)
         cd AnyGen
         sh AnyGen start
         cd ..
