@@ -461,4 +461,4 @@ zeal-kali-installer|zeal-kali-installer|null|https://github.com/1RaY-1/zeal-kali
 zenmap-linux-installer|zenmap-linux-installer|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/1RaY-1/zenmap-linux-installer.git|git|nmap,python3,git
 zip|zip|SP_System_Tools|null|package_manager|null
 zirikatu|zirikatu|null|https://github.com/pasahitz/zirikatu.git|git|git
-zphisher|zphisher|T_Termux|https://github.com/htr-tech/zphisher.git|git|php,nodejs,git
+zphisher|zphisher|T_Termux|https://github.com/htr-tech/zphisher.git|git|php,node,git
