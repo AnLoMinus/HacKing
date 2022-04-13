@@ -4,9 +4,9 @@
 
 <h1> 👨‍💻 HคcKᎥήg Tools Downloader 👨‍💻 </h1>
 
-<img width="836" alt="image" src="https://user-images.githubusercontent.com/51442719/162573852-32c0c97b-d697-409a-a9e5-11a8d6466635.png">
+<img width="530" alt="image" src="https://user-images.githubusercontent.com/51442719/163238417-5ad83755-2c6c-42a2-bd2f-a27107f74740.png">
 
-<br>  
+  <br>  
 
   <img width="485" alt="image" src="https://user-images.githubusercontent.com/51442719/163238123-9e93d2a4-224a-480f-91a7-515f94385afb.png">
   
