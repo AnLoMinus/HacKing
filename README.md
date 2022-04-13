@@ -20,7 +20,7 @@
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnySpam">AnySpam</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyGen">AnyGen</a></li>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRat">AnyRat</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRat#--remote-administration-tool---downloader--">AnyRat</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRecon">AnyRecon</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPhishing">AnyPhishing</a></li>
         </ul>
