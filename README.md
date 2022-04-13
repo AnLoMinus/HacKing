@@ -19,7 +19,7 @@
       <ul>
         <li><a href="https://github.com/Anlominus/HacKing">Hacking</a></li>
         <li><a href="https://github.com/Anlominus/PenTest">PenTest</a></li>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyGen</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
         <li><a href="https://github.com/Anlominus/AnySpam">AnySpam</a></li>
         <li><a href="https://github.com/Anlominus/AnyPhishing">AnyPhishing</a></li>
       </ul>
