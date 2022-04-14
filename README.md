@@ -30,69 +30,7 @@
         </ul>
       </td>
    </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/PenTest">PenTest</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyInfo">AnyInfo</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyGen">AnyGen</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnySpam">AnySpam</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRat#--remote-administration-tool---downloader--">AnyRat</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRecon#--reconnaissance-tools-downloader--">AnyRecon</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPhishing">AnyPhishing</a></li>
-        </ul>
-      </td>
-  </tr>
-  <tr>
-      <td>
-        <ul>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/CoreMan">CoreMan</a></li>
-        </ul>
-      </td>
-        </ul>
+       </ul>
       </td>
   </tr>
     
