@@ -20,7 +20,7 @@
         <li><a href="https://github.com/Anlominus/PenTest">PenTest</a></li><br>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyInfo">AnyInfo</a></li>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyPass/AnyPass">AnyPass</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPass">AnyPass</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPhishing">AnyPhishing</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyGen">AnyGen</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnySpam">AnySpam</a></li>
