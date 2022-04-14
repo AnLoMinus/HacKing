@@ -14,11 +14,13 @@
         <ul>
         <li><a href="https://github.com/Anlominus/PenTest">PenTest</a></li><br>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnySpam">AnySpam</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyInfo">AnyInfo</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyGen">AnyGen</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnySpam">AnySpam</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRat#--remote-administration-tool---downloader--">AnyRat</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyRecon#--reconnaissance-tools-downloader--">AnyRecon</a></li>
-        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPhishing">AnyPhishing</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPhishing">AnyPhishing</a></li><br>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/CoreMan">CoreMan</a></li>
         </ul>
     </td>
       <td>
@@ -29,7 +31,7 @@
    </tr>
 </table>
 </div>
-      
+
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
  **HacKing Tools Downloader**: Downloading HacKing Tools and exporting by categories to $HOME directory
@@ -91,7 +93,7 @@ Enter a Number for a specific output:
   <summary>
     <h2> HacKing Categories <h2>
   </summary>
-      
+
 - [x] 1 Anonymity
 - [x] 2 Information Gathering
 - [x] 3 Vulnerability Scanner
