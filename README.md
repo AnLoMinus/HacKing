@@ -29,30 +29,33 @@
    </tr>
 </table>
 </div>
-    
-
-  <br>  
-
-  <img width="485" alt="image" src="https://user-images.githubusercontent.com/51442719/163238123-9e93d2a4-224a-480f-91a7-515f94385afb.png">
-  
-  #### v0.4.6.4
-
+      
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
  **HacKing Tools Downloader**: Downloading HacKing Tools and exporting by categories to $HOME directory
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-  ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
-
 </div>
 
-## HacKing Usage:
+## HacKing Menu:
+- [x]  [1]  Install
+- [x]  [2]  Remove
+- [X]  [3]  Update
+- [x]  [q]  Quit to Main Menu
+
+
+![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
+
+<details>
+  <summary>
+    <h2> HacKing Usage: <h2>
+  </summary>
+
+## How to use HacKing ?
 -  [x] Starting Tool: `sh HacKing start`
 -  [x] Installing specific tool: `sh HacKing install toolname`
 -  [x] Remove HacKing from System: `sh HacKing remove`
-
-## How to use HacKing ?
 
 HacKing is very simple and easy to use tool, its available in both CLI and manual mode.
 
@@ -82,19 +85,15 @@ Enter a Number for a specific output:
 - (4) : If you want to know About Us.
 - (5) : To exit the tool.
 
-
-
-![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
-
-## HacKing Menu:
-- [x]  [1]  Install
-- [x]  [2]  Remove
-- [X]  [3]  Update
-- [x]  [q]  Quit to Main Menu
+</details>
 
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
-## HacKing Categories
+<details>
+  <summary>
+    <h2> HacKing Categories <h2>
+  </summary>
+      
 - [x] 1 Anonymity
 - [x] 2 Information Gathering
 - [x] 3 Vulnerability Scanner
@@ -122,6 +121,8 @@ Enter a Number for a specific output:
 - [x] 25 LazyTools
 - [x] 26 Spamming
 
+</details>
+
 ![image](https://user-images.githubusercontent.com/51442719/149520330-b3bce735-5a57-481d-b122-fda4e2052cf8.png)
 
 
@@ -129,10 +130,14 @@ Enter a Number for a specific output:
 
 ---
 
-# INCLUDE: Options
-- [X] Features: Installing Hackers Tools
-- [X] Features: Installing HacKing Installer on System
-- [X] Features: Updating Installed HacKing Installer
+#### v0.4.6.4
+# INCLUDE : Options
+- [X] Features: Downloading Hackers Tools & Exporting to /$HOME/Anlominus/HacKingPro/${tool_category}/${tool_name} Directory
+- [X] Features: Installing HacKing Downloader on System
+- [X] Features: Updating HacKing Downloader
+
+# IMPLEMENTED Kits: AnyTool/*
+- [X] Implemented: AnyTool: Many implemented Downloaders Kits
 
 # TODO:
 - [ ] Arrange and organize the order
@@ -141,6 +146,5 @@ Enter a Number for a specific output:
 ---
 
 - [x] [Nesle](https://github.com/Anlominus/Nesle)
-- [x] [HacKing](https://github.com/Anlominus/HacKing)
-- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
-- [x] Cloning And Upgrading From [rajkumardusad/onex](https://github.com/rajkumardusad/onex)
+- [x] [KitStart](https://github.com/Anlominus/KitStart)
+- [x] Cloning And Upgrading From rajkumardusad/[onex](https://github.com/rajkumardusad/onex)
