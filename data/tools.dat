@@ -212,8 +212,8 @@ commix|commix|EF_Exploit_Frameworks,WAH_Web_Application_Hacking|https://github.c
 cowpatty|cowpatty|WT_Wireless_Testing|https://github.com/joswr1ght/cowpatty.git|git|clang,gcc,git
 cpscan|cpscan|null|https://github.com/susmithHCK/cpscan.git|git|python,git
 crackle|crackle|EF_Exploit_Frameworks,WT_Wireless_Testing|https://github.com/mikeryan/crackle.git|git|clang,gcc,perl,git
-creddump|creddump|PH_Password_Attacks|https://github.com/moyix/creddump.git|git|python,git
 credmap|credmap|null|https://github.com/lightos/credmap.git|git|python,git
+creddump|creddump|PH_Password_Attacks|https://github.com/moyix/creddump.git|git|python,git
 crowbar|crowbar|PH_Password_Attacks|https://github.com/galkan/crowbar.git|git|python,git
 cupp|cupp|PH_Password_Attacks|https://github.com/Mebus/cupp.git|git|python,git
 cutter|cutter|RE_Reverse_Engineering|https://github.com/rizinorg/cutter.git|git|cmake,git
@@ -233,7 +233,6 @@ doork|doork|IG_Information_Gathering,WAH_Web_Application_Hacking|https://github.
 dotdotpwn|dotdotpwn|IG_Information_Gathering,VA_Vulnerability_Analysis|https://github.com/wireghoul/dotdotpwn.git|git|perl,git
 dumpzilla|dumpzilla|DF_Digital_Forensics|https://gitlab.com/kalilinux/packages/dumpzilla.git|git|python,git
 eaphammer|eaphammer|WT_Wireless_Testing|https://github.com/s0lst1c3/eaphammer.git|git|python,git
-elpscrk|elpscrk|PH_Password_Attacks|https://github.com/D4Vinci/elpscrk.git|git|python,git
 enum4linux|enum4linux|IG_Information_Gathering|https://github.com/portcullislabs/enum4linux.git|git|perl,git
 eternal_scanner|eternal_scanner|null|https://github.com/peterpt/eternal_scanner.git|git|python,git
 evilginx2|evilginx2|null|https://github.com/kgretzky/evilginx2.git|git|make,git
@@ -275,6 +274,8 @@ hash-generator|hash-generator|PH_Password_Attacks|https://github.com/CiKu370/has
 hashcat|hashcat|PH_Password_Attacks|https://github.com/hashcat/hashcat.git|git|clang,gcc,git
 hasherdotid|hasherdotid|PH_Password_Attacks|https://github.com/galauerscrew/hasherdotid.git|git|python,git
 hasher|hasher|PH_Password_Attacks|https://github.com/CiKu370/hasher.git|git|python,git
+johnny|johnny|PH_Password_Attacks|https://github.com/shinnok/johnny.git|git|clang,gcc,g++,git
+keimpx|keimpx|PH_Password_Attacks|https://github.com/inquisb/keimpx.git|git|python,git
 httptunnel|httptunnel|maintaining_access|https://github.com/larsbrinkhoff/httptunnel.git|git|clang,gcc,git
 hulk|hulk|ddos|https://github.com/grafov/hulk.git|git|python,git
 iSMTP|ipwn|IG_Information_Gathering|https://github.com/altjx/ipwn.git|git|python,git
@@ -282,14 +283,12 @@ infect|infect|null|https://github.com/noob-hackers/infect.git|git|git
 intrace|intrace|IG_Information_Gathering|https://github.com/robertswiecki/intrace.git|git|clang,gcc,git
 javasnoop|javasnoop|RE_Reverse_Engineering|https://github.com/carterjones/javasnoop.git|git|git
 jboss-autopwn|jboss-autopwn|null|https://github.com/SpiderLabs/jboss-autopwn.git|git|git
-johnny|johnny|PH_Password_Attacks|https://github.com/shinnok/johnny.git|git|clang,gcc,g++,git
 joomscan|joomscan|WAH_Web_Application_Hacking|https://github.com/rezasp/joomscan.git|git|perl,git
 jsql-injection|jsql-injection|VA_Vulnerability_Analysis|https://github.com/ron190/jsql-injection.git|git|php,git
 kali-anonsurf|kali-anonsurf|A_Anonymity|https://github.com/Und3rf10w/kali-anonsurf.git|git|git
 kalibrate-rtl|kalibrate-rtl|WT_Wireless_Testing|https://github.com/steve-m/kalibrate-rtl.git|git|clang,gcc,g++,git
 kalitorify|kalitorify|null|https://github.com/brainfucksec/kalitorify.git|git|tor,curl,make,git
 katoolin|katooling|null|https://github.com/LionSec/katoolin.git|git|python2,git
-keimpx|keimpx|PH_Password_Attacks|https://github.com/inquisb/keimpx.git|git|python,git
 kickthemout|kickthemout|WT_Wireless_Testing|https://github.com/k4m4/kickthemout.git|git|python,git
 killcast|killcast|null|https://github.com/thewhiteh4t/killcast.git|git|python,git
 killchain|killchain|null|https://github.com/ruped24/killchain.git|git|python,git
