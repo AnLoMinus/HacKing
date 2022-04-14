@@ -31,7 +31,6 @@
 <li>Snapchat Recon</li>
 <li>Facebook Recon</li>
 <li>Linkedin Recon</li>
-<li>GitHub_Recon</li>
 <li>Telegram Recon</li>
 <li>Instagram Recon</li>
 <li>JavaScript Recon</li>
