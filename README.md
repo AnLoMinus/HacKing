@@ -7,7 +7,7 @@
 <table>
   <tr>
     <th>Screenshot</th>
-    <th>Implemented</th>
+    <th>Implemented Kits</th>
   </tr>
     <tr>
       <td>
