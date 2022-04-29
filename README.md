@@ -18,6 +18,8 @@
       <td>
         <ul>
         <li><a href="https://github.com/Anlominus/PenTest">PenTest</a></li><br>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/Anonimity">Anonimity</a></li>
+        <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyBackdoor">AnyBackdoor</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyEnum#--enumeration-tools-downloader--">AnyEnum</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyInfo">AnyInfo</a></li>
         <li><a href="https://github.com/Anlominus/HacKing/tree/main/AnyTool/AnyPass">AnyPass</a></li>
