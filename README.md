@@ -6,8 +6,8 @@
 
 <table>
   <tr>
-    <th>Tool</th>
-    <th>ScreenShot</th>
+    <th>Screenshot</th>
+    <th>Implemented</th>
   </tr>
     <tr>
       <td>
