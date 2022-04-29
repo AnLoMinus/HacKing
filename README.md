@@ -145,6 +145,17 @@ Enter a Number for a specific output:
 
 # IMPLEMENTED Kits: AnyTool/*
 - [X] Implemented: AnyTool: Many implemented Downloaders Kits
+  - [Anonimity]()
+  - [AnyBackdoor]()
+  - [AnyEnum]()
+  - [AnyInfo]()
+  - [AnyPass]()
+  - [AnyPhishing]()
+  - [AnyGen]()
+  - [AnySpam]()
+  - [AnyRat]()
+  - [AnyRecon]()
+  - [CoreMan]()
 
 # TODO:
 - [ ] Arrange and organize the order
