@@ -13,3 +13,4 @@ Rock-ON|Rock-ON|SubDomain_Enum|https://github.com/SilverPoision/Rock-ON|git|ruby
 Censys|Censys|SubDomain_Enum|https://github.com/christophetd/censys-subdomain-finder|git|python
 SubScraper|SubScraper|SubDomain_Enum|https://github.com/m8r0wn/subscraper|git|python
 Knock|Knock|SubDomain_Enum|https://github.com/guelfoweb/knock|git|python
+Dirhunt|Dirhunt|SubDomain_Enum|https://github.com/Nekmo/dirhunt|git|python
