@@ -50,9 +50,10 @@ Banner(){
 logo="$(Banner)"
 
 PromptFun(){
-  echo ""
-  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}CoreMan${cyan}$~${orange}]${cyan}"
-  echo "  ${orange}  └──╼${green}"
+  promptfunc=$(echo "
+  ${orange}  ┌──[${blue}Anlominus${purple}👽${cafe}CoreMan${cyan}$~${orange}]${cyan}
+  ${orange}  └──╼${green} ")
+  echo "$promptfunc"
 }
 prompt="$(PromptFun)"
 

@@ -64,9 +64,10 @@ logo="$(Banner)"
 
 
 PromptFun(){
-  echo ""
-  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyRat${cyan}$~${orange}]${cyan}"
-  echo "  ${orange}  └──╼${green}"
+  promptfunc=$(echo "
+  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyRat${cyan}$~${orange}]${cyan}
+  ${orange}  └──╼${green} ")
+  echo "$promptfunc"
 }
 prompt="$(PromptFun)"
 
@@ -205,7 +206,7 @@ install() {
             fi
             # installing tools
             if [ $tool_pac != "" -a $tool_pac != "null" ]; then
-              $pac install $tool_pac 
+              $pac install $tool_pac
             fi
           else
             echo "${red}Sorry ${nc}: you are ${red} offline ${nc}!!"
@@ -886,8 +887,7 @@ menu() {
     echo "${cyan}     [3] ${green} Update AnyRat"
     echo "${cyan}     [4] ${green} About us"
     echo "${cyan}     [x] ${green} Exit"
-    echo "$prompt"
-    read cmd
+    read -p "$prompt" cmd
     case ${cmd} in
       1)
         all_tools

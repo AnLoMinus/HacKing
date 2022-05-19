@@ -64,9 +64,10 @@ logo="$(Banner)"
 
 
 PromptFun(){
-  echo ""
-  echo "  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyGen${cyan}$~${orange}]${cyan}"
-  echo "  ${orange}  └──╼${green}"
+  promptfunc=$(echo "
+  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyGen${cyan}$~${orange}]${cyan}
+  ${orange}  └──╼${green} ")
+  echo "$promptfunc"
 }
 prompt="$(PromptFun)"
 
@@ -886,8 +887,7 @@ menu() {
     echo "${cyan}     [3] ${green} Update AnyGen"
     echo "${cyan}     [4] ${green} About us"
     echo "${cyan}     [x] ${green} Exit"
-    echo "$prompt"
-    read cmd
+    read -p "$prompt" cmd
     case ${cmd} in
       1)
         all_tools
