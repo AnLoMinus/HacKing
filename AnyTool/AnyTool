@@ -58,7 +58,7 @@ PromptFun(){
   promptfunc=$(echo "
   ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyTool${cyan}$~${orange}]${cyan}
   ${orange}  └──╼${green} ")
-  echo "$promptfunc"
+  echo "$promptfunc" 
 }
 
 prompt="$(PromptFun)"
@@ -85,8 +85,7 @@ main_Menu="$(MainMenu)"
     clear
     echo "$logo"
     echo "$main_Menu"
-    echo  "$prompt"
-    read cmd
+    read -p "$prompt" cmd
     case ${cmd} in
       1)
       cd Anonymity
