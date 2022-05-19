@@ -996,6 +996,8 @@ menu() {
     tools=`grep -n '.' $tools_data | wc -l`
     category=`grep -n '.' $category_data | wc -l`
     echo "$logo"
+    echo "${cyan}     [a] ${green} HacKing/AnyTool $RED$tools"
+    echo " "
     echo "${cyan}     [1] ${green} All tools $RED$tools"
     echo "${cyan}     [2] ${green} Tools category $RED$category"
     echo "${cyan}     [3] ${green} Update HacKing"
@@ -1004,9 +1006,9 @@ menu() {
     echo "$prompt"
     read cmd
     case ${cmd} in
-      w|W)
-        cd WorKing
-        sh WorKing start
+      a|A)
+        cd AnyTool
+        sh AnyTool
         cd ..
       ;;
       1)
