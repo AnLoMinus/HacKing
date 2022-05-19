@@ -1,7 +1,7 @@
 #!/bin/sh
 # Name : AnyTool
+# Source: github.com/Anlominus/HacKing/AnyTool/AnyTool
 # Date : May 2022
-# Description : AnyTool is a AnyTool tools installer and package manager for hacker's.
 # |
 nc="\033[00m"
 white="\033[1;37m"
@@ -54,14 +54,6 @@ Banner(){
 }
 logo="$(Banner)"
 # |
-PromptFun(){
-  promptfunc=$(echo "
-  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyTool${cyan}$~${orange}]${cyan}
-  ${orange}  └──╼${green} ")
-  echo "$promptfunc" 
-}
-
-prompt="$(PromptFun)"
 MainMenu(){
   echo "${cyan}     [1] ${green} Anonymity"
   echo "${cyan}     [2] ${green} AnyBackdoor"
@@ -78,6 +70,15 @@ MainMenu(){
   echo "${cyan}     [x] ${green} Exit"
 }
 main_Menu="$(MainMenu)"
+# |
+PromptFun(){
+  promptfunc=$(echo "
+  ${orange}  ┌──[${blue}Anlominus${purple}👽${red}AnyTool${cyan}$~${orange}]${cyan}
+  ${orange}  └──╼${green} ")
+  echo "$promptfunc"
+}
+prompt="$(PromptFun)"
+# |
 # this is the main function
   while true; do
     # tools=`grep -n '.' $tools_data | wc -l`
