@@ -15,3 +15,4 @@ SubScraper|SubScraper|SubDomain_Enum|https://github.com/m8r0wn/subscraper|git|py
 Knock|Knock|SubDomain_Enum|https://github.com/guelfoweb/knock|git|python
 Dirhunt|Dirhunt|SubDomain_Enum|https://github.com/Nekmo/dirhunt|git|python
 Sublist3r|Sublist3r|SubDomain_Enum|https://github.com/aboul3la/Sublist3r|git|python
+LinEnum|LinEnum|Linux_Enum|https://github.com/rebootuser/LinEnum|git|shell
