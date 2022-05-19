@@ -108,6 +108,46 @@ prompt="$(PromptFun)"
       sh AnyExploit start
       cd ..
       ;;
+      5)
+      cd AnyGen
+      sh AnyGen start
+      cd ..
+      ;;
+      6)
+      cd AnyInfo
+      sh AnyInfo start
+      cd ..
+      ;;
+      7)
+      cd AnyPass
+      sh AnyPass start
+      cd ..
+      ;;
+      8)
+      cd AnyPhishing
+      sh AnyPhishing start
+      cd ..
+      ;;
+      9)
+      cd AnyRat
+      sh AnyRat start
+      cd ..
+      ;;
+      10)
+      cd AnyRecon
+      sh AnyRecon start
+      cd ..
+      ;;
+      11)
+      cd AnySpam
+      sh AnySpam start
+      cd ..
+      ;;
+      12)
+      cd CoreMan
+      sh CoreMan start
+      cd ..
+      ;;
       x|exit|Exit)
         echo "${green}Exiting ....${nc}"
         break
