@@ -35,22 +35,23 @@
     - [ ] 02 - Networks Information
       - [ ] [nmap](https://github.com/nmap/nmap)
     - [ ] 03 - Social Information
-  - [ ] 02 - Vulnerability Analysis
-  - [ ] 03 - Web Application Analysis
+  - [ ] 02 - Vulnerability Assessment 
+  - [ ] 03 - Web Application HacKing
   - [ ] 04 - Database Assessment
-  - [ ] 05 - Password Attacks
+  - [ ] 05 - Password HacKing
     - [ ] [JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
     - [ ] [hashcat](https://github.com/hashcat/hashcat)
     - [ ] [thc-hydra](https://github.com/vanhauser-thc/thc-hydra)
-  - [ ] 06 - Wireless Attacks
+  - [ ] 06 - Wireless HacKing
     - [ ] [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
     - [ ] [bettercap](https://github.com/bettercap/bettercap)
     - [ ] [WiFi-Pumpkin](https://github.com/P0cL4bs/WiFi-Pumpkin)
     - [ ] [Wifipumpkin3](https://github.com/P0cL4bs/wifipumpkin3)
     - [ ] [Airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
     - [ ] [Airbash](https://github.com/tehw0lf/airbash)
+    - [ ] [WireSpy](https://github.com/aress31/wirespy)
   - [ ] 07 - Reverse Engineering
-  - [ ] 08 - Exploit Frameworks
+  - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
     - [ ] [BeEF](https://github.com/beefproject/beef)
     - [ ] [The Social-Engineer Toolkit (SET)](https://github.com/trustedsec/social-engineer-toolkit)
@@ -60,11 +61,14 @@
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
     - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
   - [ ] 09 - Sniffing - Spoofing
-  - [ ] 10 - Maintaining Access
-  - [ ] 11 - Forensic Tools
-  - [ ] 12 - Reporting Tools
-  - [ ] 13 - Social Engineering Tools
-  - [ ] 14 - Privilege Escalation
-    - [ ] [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-  - [ ] 15 - Malware Analysis
+  - [ ] 10 - Gaining & Maintaining Access
+  - [ ] 11 - Digital Forensic
+  - [ ] 12 - Analysis & Reporting 
+  - [ ] 13 - Social Engineering 
+  - [ ] 14 - Privilege Enumeration & Escalation
+    - [ ] Linux Enumeration:
+      - [ ] [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+      - [ ] [PEASS-ng](https://github.com/carlospolop/PEASS-ng)
+    - [ ] 
+  - [ ] 15 - Malware Analysis Labs/Tools
   - [ ] 16 - Covering Tracks
