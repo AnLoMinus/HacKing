@@ -50,6 +50,8 @@
     - [ ] [Airbash](https://github.com/tehw0lf/airbash)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks
+    - [ ] [TheFatRat](https://github.com/Screetsec/TheFatRat)
+    - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
   - [ ] 09 - Sniffing - Spoofing
   - [ ] 10 - Maintaining Access
   - [ ] 11 - Forensic Tools
