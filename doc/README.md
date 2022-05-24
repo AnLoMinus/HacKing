@@ -46,6 +46,7 @@
     - [ ] [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
     - [ ] [bettercap](https://github.com/bettercap/bettercap)
     - [ ] [WiFi-Pumpkin](https://github.com/P0cL4bs/WiFi-Pumpkin)
+    - [ ] [Wifipumpkin3](https://github.com/P0cL4bs/wifipumpkin3)
     - [ ] [Airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
     - [ ] [Airbash](https://github.com/tehw0lf/airbash)
   - [ ] 07 - Reverse Engineering
@@ -53,6 +54,8 @@
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
     - [ ] [BeEF](https://github.com/beefproject/beef)
     - [ ] [The Social-Engineer Toolkit (SET)](https://github.com/trustedsec/social-engineer-toolkit)
+    - [ ] [Bettercap](https://github.com/bettercap/bettercap)
+    - [ ] [MITMf](https://github.com/byt3bl33d3r/MITMf)
     - [ ] [TheFatRat](https://github.com/Screetsec/TheFatRat)
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
     - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
