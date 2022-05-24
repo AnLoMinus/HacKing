@@ -38,13 +38,13 @@
       ### Some examples below, change the IP to your targets IP.
 
       - FTP:
-        - `hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.13.37 ftp -o ftp-result.txt`
+        - `hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.1.1 ftp -o ftp-result.txt`
 
       - TELNET:
-        - `hydra -L /usr/share/wordlists/common-usernames -P /usr/share/wordlists/rockyou.txt 192.168.13.37 telnet`
+        - `hydra -L /usr/share/wordlists/common-usernames -P /usr/share/wordlists/rockyou.txt 192.168.1.1 telnet`
 
       - SSH:
-        - `hydra -l root -P /usr/share/wordlists/rockyou.txt 192.168.13.37 ssh -o ssh-result.txt`
+        - `hydra -l root -P /usr/share/wordlists/rockyou.txt 192.168.1.1 ssh -o ssh-result.txt`
 
       - Windows Remote Desktop
         - `hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://$ip`
