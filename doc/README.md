@@ -19,11 +19,22 @@
 ---
 
 - [ ] Anlominus:
-  - [ ] 00 - Start
+  - [ ] 00 - Anonymity
+    - [ ] 00 - Firewall Rules
+    - [ ] 01 - Clear Logs
+    - [ ] 02 - Clear History
+    - [ ] 03 - Change MAC Address
+    - [ ] 04 - Change IP Address
+    - [ ] 05 - Change Routing    
+
   - [ ] 01 - Information Gathering
-    - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
-    - [ ] [theHarvester](https://github.com/laramies/theHarvester)
-    - [ ] [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
+    - [ ] 01 - Systems Information
+      - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
+      - [ ] [theHarvester](https://github.com/laramies/theHarvester)
+      - [ ] [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
+    - [ ] 02 - Networks Information
+      - [ ] [nmap](https://github.com/nmap/nmap)
+    - [ ] 03 - Social Information
   - [ ] 02 - Vulnerability Analysis
   - [ ] 03 - Web Application Analysis
   - [ ] 04 - Database Assessment
