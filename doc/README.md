@@ -15,3 +15,24 @@
   - [ ] 13 - Social Engineering
   - [ ] 15 - Malware Analysis
   - [ ] 16 - Covering Tracks
+
+---
+
+- [ ] Anlominus:
+  - [ ] 00 - Start
+  - [ ] 01 - Information Gathering
+  - [ ] 02 - Vulnerability Analysis
+  - [ ] 03 - Web Application Analysis
+  - [ ] 04 - Database Assessment
+  - [ ] 05 - Password Attacks
+  - [ ] 06 - Wireless Attacks
+  - [ ] 07 - Reverse Engineering
+  - [ ] 08 - Exploit Frameworks
+  - [ ] 09 - Sniffing - Spoofing
+  - [ ] 10 - Maintaining Access
+  - [ ] 11 - Forensic Tools
+  - [ ] 12 - Reporting Tools
+  - [ ] 13 - Social Engineering Tools
+  - [ ] 14 - Privilege Escalation
+  - [ ] 15 - Malware Analysis
+  - [ ] 16 - Covering Tracks
