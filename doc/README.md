@@ -50,6 +50,9 @@
     - [ ] [Airbash](https://github.com/tehw0lf/airbash)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks
+    - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
+    - [ ] [BeEF](https://github.com/beefproject/beef)
+    - [ ] [The Social-Engineer Toolkit (SET)](https://github.com/trustedsec/social-engineer-toolkit)
     - [ ] [TheFatRat](https://github.com/Screetsec/TheFatRat)
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
     - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
