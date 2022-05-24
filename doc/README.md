@@ -16,6 +16,8 @@
     - [ ] 02 - Networks Information
       - [ ] [nmap](https://github.com/nmap/nmap)
     - [ ] 03 - Social Information
+    - [ ] 04 - SubDomain Information
+      - [ ] [Anubis](https://github.com/jonluca/Anubis) 
   - [ ] 02 - Vulnerability Assessment
   - [ ] 03 - Web Application HacKing
   - [ ] 04 - Database Assessment
