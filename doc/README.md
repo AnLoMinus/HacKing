@@ -21,6 +21,7 @@
 - [ ] Anlominus:
   - [ ] 00 - Start
   - [ ] 01 - Information Gathering
+    - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
   - [ ] 02 - Vulnerability Analysis
   - [ ] 03 - Web Application Analysis
   - [ ] 04 - Database Assessment
@@ -34,5 +35,6 @@
   - [ ] 12 - Reporting Tools
   - [ ] 13 - Social Engineering Tools
   - [ ] 14 - Privilege Escalation
+    - [ ] [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
   - [ ] 15 - Malware Analysis
   - [ ] 16 - Covering Tracks
