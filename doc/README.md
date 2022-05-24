@@ -22,11 +22,21 @@
   - [ ] 00 - Start
   - [ ] 01 - Information Gathering
     - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
+    - [ ] [theHarvester](https://github.com/laramies/theHarvester)
+    - [ ] [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
   - [ ] 02 - Vulnerability Analysis
   - [ ] 03 - Web Application Analysis
   - [ ] 04 - Database Assessment
   - [ ] 05 - Password Attacks
+    - [ ] [JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
+    - [ ] [hashcat](https://github.com/hashcat/hashcat)
+    - [ ] [thc-hydra](https://github.com/vanhauser-thc/thc-hydra)
   - [ ] 06 - Wireless Attacks
+    - [ ] [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
+    - [ ] [bettercap](https://github.com/bettercap/bettercap)
+    - [ ] [WiFi-Pumpkin](https://github.com/P0cL4bs/WiFi-Pumpkin)
+    - [ ] [Airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
+    - [ ] [Airbash](https://github.com/tehw0lf/airbash)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks
   - [ ] 09 - Sniffing - Spoofing
