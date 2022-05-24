@@ -10,6 +10,7 @@
   - [ ] 01 - Information Gathering
     - [ ] 01 - Systems Information
       - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
+      - [ ] [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)
       - [ ] [theHarvester](https://github.com/laramies/theHarvester)
       - [ ] [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
     - [ ] 02 - Networks Information
