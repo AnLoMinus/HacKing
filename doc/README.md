@@ -7,7 +7,6 @@
     - [ ] 03 - Change MAC Address
     - [ ] 04 - Change IP Address
     - [ ] 05 - Change Routing    
-
   - [ ] 01 - Information Gathering
     - [ ] 01 - Systems Information
       - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
