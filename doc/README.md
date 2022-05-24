@@ -2,6 +2,7 @@
 - [ ] Anlominus:
   - [ ] 00 - Anonymity
     - [ ] 00 - Firewall Rules
+      - [ ] [Iptables Essentials: Common Firewall Rules and Commands](https://github.com/trimstray/iptables-essentials)
     - [ ] 01 - Clear Logs
     - [ ] 02 - Clear History
     - [ ] 03 - Change MAC Address
