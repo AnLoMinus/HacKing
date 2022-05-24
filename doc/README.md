@@ -52,6 +52,7 @@
   - [ ] 08 - Exploit Frameworks
     - [ ] [TheFatRat](https://github.com/Screetsec/TheFatRat)
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
+    - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
   - [ ] 09 - Sniffing - Spoofing
   - [ ] 10 - Maintaining Access
   - [ ] 11 - Forensic Tools
