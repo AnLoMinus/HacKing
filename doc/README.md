@@ -4,19 +4,21 @@
     - [ ] 00 - Firewall Rules
       - [ ] [Iptables Essentials: Common Firewall Rules and Commands](https://github.com/trimstray/iptables-essentials)
     - [ ] 01 - Clear Logs
+      - [ ] [Nullog](https://github.com/MrEmpy/Nullog)
     - [ ] 02 - Clear History
     - [ ] 03 - Change MAC Address
     - [ ] 04 - Change IP Address
     - [ ] 05 - Change Routing    
   - [ ] 01 - Information Gathering
     - [ ] 01 - Systems Information
-      - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
       - [ ] [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)
       - [ ] [theHarvester](https://github.com/laramies/theHarvester)
       - [ ] [RED_HAWK](https://github.com/Tuhinshubhra/RED_HAWK)
     - [ ] 02 - Networks Information
       - [ ] [nmap](https://github.com/nmap/nmap)
     - [ ] 03 - Social Information
+      - [ ] [sherlock](https://github.com/sherlock-project/sherlock)
+
     - [ ] 04 - SubDomain Information
       - [ ] [Anubis](https://github.com/jonluca/Anubis) 
   - [ ] 02 - Vulnerability Assessment
