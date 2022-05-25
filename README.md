@@ -171,3 +171,5 @@ Enter a Number for a specific output:
 ---
     
 - [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)
+- [Awesome Hacking Resources](https://github.com/vitalysim/Awesome-Hacking-Resources)
+- [h4cker: Cyber Security Resources](https://github.com/The-Art-of-Hacking/h4cker)
