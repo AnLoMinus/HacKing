@@ -75,7 +75,7 @@
     - [ ] [WireSpy](https://github.com/aress31/wirespy)
     - [ ] [aircrack-ng-gui](https://github.com/t-gitt/aircrack-ng-gui)
     - [ ] [Websploit](https://github.com/f4rih/websploit)
-    - [ ] [lazyaircrack](https://github.com/3xploitGuy/lazyaircrack)
+    - [ ] [LazyAircrack](https://github.com/3xploitGuy/lazyaircrack)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
