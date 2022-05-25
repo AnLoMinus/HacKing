@@ -21,6 +21,7 @@
       - [ ] [Anubis](https://github.com/jonluca/Anubis) 
   - [ ] 02 - Vulnerability Assessment
   - [ ] 03 - Web Application HacKing
+    - [ ] [Hack-Tools](https://github.com/LasCC/Hack-Tools)
   - [ ] 04 - Database Assessment
   - [ ] 05 - Password HacKing
     - [ ] [JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
@@ -72,6 +73,9 @@
     - [ ] [Airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
     - [ ] [Airbash](https://github.com/tehw0lf/airbash)
     - [ ] [WireSpy](https://github.com/aress31/wirespy)
+    - [ ] [aircrack-ng-gui](https://github.com/t-gitt/aircrack-ng-gui)
+    - [ ] [Websploit](https://github.com/f4rih/websploit)
+    - [ ] [lazyaircrack](https://github.com/3xploitGuy/lazyaircrack)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
@@ -84,6 +88,7 @@
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
     - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
   - [ ] 09 - Sniffing - Spoofing
+    - [ ] [ettercap](https://github.com/Ettercap/ettercap)
   - [ ] 10 - Gaining & Maintaining Access
   - [ ] 11 - Digital Forensic
   - [ ] 12 - Analysis & Reporting
