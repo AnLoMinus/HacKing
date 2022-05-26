@@ -78,6 +78,7 @@
     - [ ] [aircrack-ng-gui](https://github.com/t-gitt/aircrack-ng-gui)
     - [ ] [Websploit](https://github.com/f4rih/websploit)
     - [ ] [LazyAircrack](https://github.com/3xploitGuy/lazyaircrack)
+    - [ ] [SniffAir](https://github.com/Tylous/SniffAir)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
