@@ -1,4 +1,24 @@
 
+  - [ ] 00 - Anonymity
+  - [ ] 01 - Information Gathering
+  - [ ] 02 - Vulnerability Assessment
+  - [ ] 03 - Web Application HacKing
+  - [ ] 04 - Database Assessment
+  - [ ] 05 - Password HacKing
+  - [ ] 06 - Wireless HacKing
+  - [ ] 07 - Reverse Engineering
+  - [ ] 08 - Exploit Frameworks & DataBases
+  - [ ] 09 - Sniffing - Spoofing
+  - [ ] 10 - Gaining & Maintaining Access
+  - [ ] 11 - Digital Forensic
+  - [ ] 12 - Analysis & Reporting
+  - [ ] 13 - Social Engineering
+  - [ ] 14 - Privilege Enumeration & Escalation
+  - [ ] 15 - Malware Analysis Labs/Tools
+  - [ ] 16 - Covering Tracks
+
+---
+
 - [ ] Anlominus:
   - [ ] 00 - Anonymity
     - [ ] 00 - Firewall Rules
