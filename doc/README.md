@@ -100,6 +100,9 @@
     - [ ] [LazyAircrack](https://github.com/3xploitGuy/lazyaircrack)
     - [ ] [SniffAir](https://github.com/Tylous/SniffAir)
     - [ ] [Kismet](https://github.com/kismetwireless/kismet)
+    - [ ] [AirStrike](https://github.com/redcode-labs/AirStrike)
+    - [ ] [Wireless IDS](https://github.com/SYWorks/wireless-ids/)
+    - [ ] [Fern Wifi Cracker](https://github.com/savio-code/fern-wifi-cracker)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
