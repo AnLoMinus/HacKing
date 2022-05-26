@@ -43,6 +43,7 @@
       - [ ] [Anubis](https://github.com/jonluca/Anubis) 
   - [ ] 02 - Vulnerability Assessment
     - [ ] [PentMenu](https://github.com/GinjaChris/pentmenu)
+    - [ ] [Legion](https://github.com/carlospolop/legion)
   - [ ] 03 - Web Application HacKing
     - [ ] [Hack-Tools](https://github.com/LasCC/Hack-Tools)
     - [ ] [BruteXSS](https://github.com/rajeshmajumdar/BruteXSS)
