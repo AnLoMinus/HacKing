@@ -107,6 +107,9 @@
     - [ ] [getAir2U](https://github.com/v1s1t0r999/getAir2U)
     - [ ] [BeaconGraph](https://github.com/daddycocoaman/BeaconGraph)
     - [ ] [Wifi-Hacker](https://github.com/esc0rtd3w/wifi-hacker)
+    - [ ] [Wifite2](https://github.com/derv82/wifite2)
+    - [ ] [Infernal-Wireless v3](https://github.com/entropy1337/infernal-twin)
+    - [ ] [BoopSuite](https://github.com/MisterBianco/BoopSuite)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
