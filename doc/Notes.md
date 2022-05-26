@@ -8,6 +8,11 @@
   - [ ] 04 - Database Assessment
   - [ ] 05 - Password HacKing
   - [ ] 06 - Wireless HacKing
+    - [ ] [Wireless Penetration Testing: Aircrack-ng](https://www.hackingarticles.in/wireless-penetration-testing-aircrack-ng/)
+    - [ ] [Wireless Penetration Testing Cheat Sheet](https://gist.github.com/dogrocker/86881d2403fee138487054da82d5dc2e)
+    - [ ] [Wireless Penetration Testing Cheat Sheet by kennedykan](https://cheatography.com/kennedykan/cheat-sheets/wireless-penetration-testing/)
+    - [ ] [Pentesting Wifi](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi)
+    - [ ] 
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
   - [ ] 09 - Sniffing - Spoofing
