@@ -91,6 +91,7 @@
 
   - [ ] 06 - Wireless HacKing
     - [ ] [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
+    - [ ] [FruityWifi](https://github.com/xtr4nge/FruityWifi)
     - [ ] [bettercap](https://github.com/bettercap/bettercap)
     - [ ] [WiFi-Pumpkin](https://github.com/P0cL4bs/WiFi-Pumpkin)
     - [ ] [Wifipumpkin3](https://github.com/P0cL4bs/wifipumpkin3)
