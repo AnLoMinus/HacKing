@@ -44,6 +44,7 @@
   - [ ] 02 - Vulnerability Assessment
   - [ ] 03 - Web Application HacKing
     - [ ] [Hack-Tools](https://github.com/LasCC/Hack-Tools)
+    - [ ] [BruteXSS](https://github.com/rajeshmajumdar/BruteXSS)
   - [ ] 04 - Database Assessment
   - [ ] 05 - Password HacKing
     - [ ] [JohnTheRipper](https://github.com/magnumripper/JohnTheRipper)
