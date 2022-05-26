@@ -122,6 +122,7 @@
     - [ ] [TheFatRat](https://github.com/Screetsec/TheFatRat)
     - [ ] [LAZY](https://github.com/arismelachroinos/lscript)
     - [ ] [KitHack](https://github.com/AdrMXR/KitHack)
+    - [ ] [PenBox](https://github.com/x3omdax/PenBox)
   - [ ] 09 - Sniffing - Spoofing
     - [ ] [ettercap](https://github.com/Ettercap/ettercap)
   - [ ] 10 - Gaining & Maintaining Access
