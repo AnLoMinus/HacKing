@@ -105,6 +105,8 @@
     - [ ] [Fern Wifi Cracker](https://github.com/savio-code/fern-wifi-cracker)
     - [ ] [OWT](https://github.com/clu3bot/OWT)
     - [ ] [getAir2U](https://github.com/v1s1t0r999/getAir2U)
+    - [ ] [BeaconGraph](https://github.com/daddycocoaman/BeaconGraph)
+    - [ ] [Wifi-Hacker](https://github.com/esc0rtd3w/wifi-hacker)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
