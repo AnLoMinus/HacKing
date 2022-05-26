@@ -21,9 +21,45 @@
 
 ---
 
+- [ ] 06 - Wireless HacKing
+
 ### Monitor Mode Supported WiFi Chipset/Adapter List :
 
-- [ ] 06 - Wireless HacKing
+- Set Up Access Point
+  - 1 `nano dnsmasq.conf`
+```SHELL
+#Set the wireless interface
+interface=wlan0
+
+#Set the IP range for the clients
+dhcp-range=192.168.1.2,192.168.1.250,12h
+
+#Set the gateway IP address
+dhcp-option=3,192.168.1.1
+
+#Set DNS server address
+dhcp-option=6,192.168.1.1
+
+#Redirect all requests to 192.168.1.1
+address=/#/192.168.1.1
+```
+
+  - 2 `nano hostapd.conf`
+```SHELL
+#Set wireless interface
+interface=wlan0
+
+#Set network name
+ssid=Free-WiFi
+
+#Set channel
+channel=11
+
+#Set driver
+driver=nl80211
+```
+  - 3 `dnsmasq -C /directory_to_dnsmasq.conf`
+  - 4 `hostapd /directory_to_hostapd.conf -B`
 
 - Atheros Chipset List with monitor mode support
   - Atheros AR5000
