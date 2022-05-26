@@ -99,6 +99,7 @@
     - [ ] [Websploit](https://github.com/f4rih/websploit)
     - [ ] [LazyAircrack](https://github.com/3xploitGuy/lazyaircrack)
     - [ ] [SniffAir](https://github.com/Tylous/SniffAir)
+    - [ ] [Kismet](https://github.com/kismetwireless/kismet)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
