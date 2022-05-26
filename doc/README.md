@@ -112,6 +112,8 @@
     - [ ] [Wifite2](https://github.com/derv82/wifite2)
     - [ ] [Infernal-Wireless v3](https://github.com/entropy1337/infernal-twin)
     - [ ] [BoopSuite](https://github.com/MisterBianco/BoopSuite)
+    - [ ] [NetAttack2](https://github.com/chrizator/netattack2)
+    - [ ] [HT-WPS-Breaker](https://github.com/SilentGhostX/HT-WPS-Breaker)
   - [ ] 07 - Reverse Engineering
   - [ ] 08 - Exploit Frameworks & DataBases
     - [ ] [Metasploit Framework](https://github.com/rapid7/metasploit-framework)
