@@ -1,6 +1,6 @@
 #!/bin/sh
 # Name : HacKing
-# Date : 1 November 2021
+# Date : 27 May 2022
 # Description : HacKing is a hacking tools installer and package manager for hacker's.
 # |
 nc="\033[00m"
