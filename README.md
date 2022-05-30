@@ -163,7 +163,8 @@ Enter a Number for a specific output:
 - [ ] Adding Tools..
 
 ---
-
+    
+- [x] [HacKingPro](https://github.com/Anlominus/HacKingPro)
 - [x] [Nesle](https://github.com/Anlominus/Nesle)
 - [x] [KitStart](https://github.com/Anlominus/KitStart)
 - [x] Cloning And Upgrading From rajkumardusad/[onex](https://github.com/rajkumardusad/onex)
