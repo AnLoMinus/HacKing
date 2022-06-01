@@ -174,3 +174,7 @@ Enter a Number for a specific output:
 - [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)
 - [Awesome Hacking Resources](https://github.com/vitalysim/Awesome-Hacking-Resources)
 - [h4cker: Cyber Security Resources](https://github.com/The-Art-of-Hacking/h4cker)
+
+---
+    
+![Alt](https://repobeats.axiom.co/api/embed/c1f0e200ac5bbcf5817d521cd16da7ae1adeec5e.svg "Repobeats analytics image")
