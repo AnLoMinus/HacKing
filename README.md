@@ -178,3 +178,9 @@ Enter a Number for a specific output:
 ---
     
 ![Alt](https://repobeats.axiom.co/api/embed/c1f0e200ac5bbcf5817d521cd16da7ae1adeec5e.svg "Repobeats analytics image")
+
+---
+    
+ - [Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking): A collection of various awesome lists for hackers, pentesters and security researchers
+-     
+    
